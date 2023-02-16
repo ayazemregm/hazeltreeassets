@@ -68,16 +68,25 @@ function initializeSwiper() {
 
 </div>`;
   const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    direction: "vertical",
     loop: true,
-
-    // If we need pagination
-
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    nextButton: ".swiper-button-next",
+    prevButton: ".swiper-button-prev",
+    slidesPerView: 3,
+    paginationClickable: false,
+    spaceBetween: 20,
+    breakpoints: {
+      1920: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1028: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
     },
   });
 
