@@ -69,7 +69,7 @@ function initializeSwiper() {
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let catalogCourses = document.getElementById("catalog-courses");
   let sliders = document.getElementById("sliders");
-  for (const child of catalogCourses.children) {
+  for (let child of catalogCourses.children) {
     let temp = document.createElement("div");
     temp.appendChild(child);
     let swiperSlide = `<div class="swiper-slide">${temp.innerHTML}</div>`;
