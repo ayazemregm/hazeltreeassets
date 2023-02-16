@@ -100,6 +100,7 @@ function initializeSwiper() {
       },
     },
   });
+  swiper();
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let catalogCourses = document.getElementById("catalog-courses");
