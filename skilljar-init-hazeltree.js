@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
       console.log("testPage");
       let template = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", template);
-      addTest();
+      addCourseTitle();
 
       break;
     default:
@@ -28,19 +28,18 @@ function defaultActions() {
   footer.remove();
 }
 
-function addTest() {
-  let testTemplate = `
- <div >
-   <h2 >
-     How Hazeltree University works for you?
+function addCourseTitle() {
+  let courseTitles = `
+<div id="courseTitle">
+   <h2>
+     Available Courses
    </h2>
-   <p c>
+   <p>
      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
      libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
      sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
    </p>
  </div>`;
-  let test = document.getElementById("catalog-content");
-  console.log(test);
-  test.insertAdjacentHTML("afterbegin", testTemplate);
+  let catalogContent = document.getElementById("catalog-content");
+  catalogContent.insertAdjacentHTML("afterbegin", courseTitles);
 }
