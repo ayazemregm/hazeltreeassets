@@ -47,14 +47,12 @@ function initializeSwiper() {
   let swiperTemplate = `  
 <!-- Slider main container -->
 <div class="swiper">
-
   <!-- Additional required wrapper -->
   <div id="sliders" class="swiper-wrapper ">
     <!-- Slides --></div>
   <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
-
 </div>`;
   let topRow = document.querySelector(".top-row");
   let catalogCourses = document.getElementById("catalog-courses");
@@ -62,16 +60,16 @@ function initializeSwiper() {
   let sliders = document.getElementById("sliders");
   console.log(catalogCourses.children.length);
   console.log(catalogCourses.children);
-  /*   for (let i = 0; i < catalogCourses.children.length; i++) {
+  for (let i = 0; i < catalogCourses.children.length; i++) {
     console.log("loop start");
     let temp = document.createElement("div");
     temp.appendChild(catalogCourses.children[i]);
     let swiperSlide = `<div class="swiper-slide">${temp.innerHTML}</div>`;
     sliders.insertAdjacentHTML("beforeend", swiperSlide);
     console.log("loop end");
-  } */
+  }
 
-  /*  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper(".swiper", {
     loop: false,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -95,5 +93,4 @@ function initializeSwiper() {
       },
     },
   });
- */
 }
