@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
       let script = `<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="${sourceLink}catalog-page.js"></script>`;
       document.head.insertAdjacentHTML("beforeend", css);
-      document.body.insertAdjacentHTML("afterend", script);
+      document.body.insertAdjacentHTML("beforeend", script);
 
       break;
     default:
