@@ -75,7 +75,8 @@ function initializeSwiper() {
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
 }
 
-addCourseTitle();
-initializeSwiper();
-
-console.log("test");
+window.addEventListener("load", () => {
+  addCourseTitle();
+  initializeSwiper();
+  console.log("test");
+});
