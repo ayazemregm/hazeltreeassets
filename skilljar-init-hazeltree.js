@@ -55,26 +55,29 @@ function initializeSwiper() {
 
   let swiperTemplate = `  
 <!-- Slider main container -->
-<div class="swiper swiper">
+<div class="swiper">
 
   <!-- Additional required wrapper -->
   <div id="sliders" class="swiper-wrapper ">
     <!-- Slides -->
-    
-    </div>
+
+</div>
    
 
   <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev "></div>
+  <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 
 </div>`;
   const swiper = new Swiper(".swiper", {
     // Optional parameters
-
-    loop: false,
+    direction: "vertical",
+    loop: true,
 
     // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+    },
 
     // Navigation arrows
     navigation: {
@@ -82,25 +85,11 @@ function initializeSwiper() {
       prevEl: ".swiper-button-prev",
     },
 
-    slidesPerView: 3,
-    spaceBetween: 10,
-    // using "ratio" endpoints
-    breakpoints: {
-      "@0.75": {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      "@1.00": {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-      "@1.50": {
-        slidesPerView: 4,
-        spaceBetween: 50,
-      },
+    // And if we need scrollbar
+    scrollbar: {
+      el: ".swiper-scrollbar",
     },
   });
-  swiper();
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let catalogCourses = document.getElementById("catalog-courses");
