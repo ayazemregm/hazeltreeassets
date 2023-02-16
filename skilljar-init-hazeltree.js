@@ -59,7 +59,7 @@ function initializeSwiper() {
   let catalogContent = document.getElementById("catalog-content");
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
-  let loopCount = catalogContent.children.length;
+  let loopCount = catalogCourses.children.length;
   for (let i = 0; i < loopCount; i++) {
     let sliders = document.getElementById("sliders");
     console.log("loop " + i);
