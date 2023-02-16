@@ -10,14 +10,11 @@ window.addEventListener("load", () => {
       console.log("Main Page");
       break;
     case "/page/hazeltree-university":
-      addCourseTitle();
-      initializeSwiper();
       console.log("testPage");
       let css = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
-      let script = `<script type="text/javascript"  src="${sourceLink}catalog-page.js"></script>`;
       document.head.insertAdjacentHTML("beforeend", css);
-      document.body.insertAdjacentHTML("beforeend", script);
-
+      addCourseTitle();
+      initializeSwiper();
       break;
     default:
       console.log("Default Fired");
