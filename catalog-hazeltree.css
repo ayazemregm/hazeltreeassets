@@ -16,4 +16,6 @@
 
 .top-row {
   background-image: url("https://ayazemregm.github.io/hazeltreeassets/bg-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
