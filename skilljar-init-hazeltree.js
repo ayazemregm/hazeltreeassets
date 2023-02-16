@@ -72,8 +72,8 @@ function initializeSwiper() {
   for (const child of catalogCourses.children) {
     let temp = document.createElement("div");
     temp.appendChild(child);
-    let swiperSlide = `<div class="swiper-slide md:md:max-w-lg space-y-6 ">${temp.innerHTML}</div>`;
-    sliders.insertAdjacentHTML("afterbegin", swiperSlide);
+    let swiperSlide = `<div class="swiper-slide">${temp.innerHTML}</div>`;
+    sliders.insertAdjacentHTML("beforeend", swiperSlide);
   }
   console.log(catalogCourses.children);
 
@@ -85,21 +85,21 @@ function initializeSwiper() {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    slidesPerView: 3,
+    slidesPerView: 5,
     paginationClickable: false,
-    spaceBetween: 20,
+
     breakpoints: {
-      1920: {
+      1280: {
+        slidesPerView: 4,
+      },
+      960: {
         slidesPerView: 3,
-        spaceBetween: 30,
       },
-      1028: {
+      600: {
         slidesPerView: 2,
-        spaceBetween: 30,
       },
-      480: {
+      400: {
         slidesPerView: 1,
-        spaceBetween: 10,
       },
     },
   });
