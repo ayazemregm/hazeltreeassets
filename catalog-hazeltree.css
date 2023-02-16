@@ -14,6 +14,15 @@
   color: orange;
 }
 
+.catalog-header {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 0 auto;
+}
+
 .top-row {
   background-image: url("https://ayazemregm.github.io/hazeltreeassets/bg-header.jpg");
   background-repeat: no-repeat;
