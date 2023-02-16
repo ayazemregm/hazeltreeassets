@@ -1,4 +1,5 @@
 let end = window.location.pathname;
+let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
 
 window.addEventListener("load", () => {
     console.log("loaded");
@@ -9,7 +10,7 @@ window.addEventListener("load", () => {
             break;
         case "/page/hazeltree-university":
             console.log("testPage");
-            let template = `<link rel="stylesheet" href="https://hc.greenmusk.com/assets/hazeltree/catalog-hazeltree.css">`;
+            let template = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
             document.head.insertAdjacentHTML("beforeend", template);
             break;
         default:
