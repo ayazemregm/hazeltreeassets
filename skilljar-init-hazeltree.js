@@ -11,10 +11,9 @@ switch (end) {
   case "/page/hazeltree-university":
     console.log("testPage");
     let css = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>`;
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>`;
     let script = `<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script  src="${sourceLink}catalog-page.js"></script>`;
+    <script src="${sourceLink}catalog-page.js"></script>`;
     document.head.insertAdjacentHTML("beforeend", css);
     document.head.insertAdjacentHTML("beforeend", script);
 

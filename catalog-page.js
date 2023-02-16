@@ -80,3 +80,4 @@ window.addEventListener("load", () => {
   initializeSwiper();
   console.log("test");
 });
+console.log("test");
