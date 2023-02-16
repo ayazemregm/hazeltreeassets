@@ -25,7 +25,6 @@ function defaultActions() {
   footer.remove();
 }
 let test = `
-
  <div >
    <h2 >
      How Hazeltree University works for you?
@@ -39,4 +38,4 @@ let test = `
 
 document
   .getElementById("catalog-content")
-  .insertAdjacentHTML("beforebegin", test);
+  .insertAdjacentHTML("afterbegin", test);
