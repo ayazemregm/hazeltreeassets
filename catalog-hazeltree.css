@@ -43,7 +43,7 @@ body {
   background-color: #f57f13;
   border-radius: 0.5rem;
 }
-.catalog-center-width {
+.one-col-full {
   display: flex;
   justify-content: center;
   background-image: url("https://ayazemregm.github.io/hazeltreeassets/bg-header.jpg");
