@@ -63,6 +63,7 @@ function initializeSwiper() {
   let catalogCourses = document.getElementById("catalog-courses");
   let sliders = document.getElementById("sliders");
   console.log(catalogCourses.children.length);
+  console.log(catalogCourses.children);
   for (let i = 0; i < catalogCourses.children.length; i++) {
     console.log("loop start");
     let temp = document.createElement("div");
@@ -71,9 +72,6 @@ function initializeSwiper() {
     sliders.insertAdjacentHTML("beforeend", swiperSlide);
     console.log("loop end");
   }
-  console.log(catalogCourses.children);
-
-  console.log(swiperTemplate);
 
   const swiper = new Swiper(".swiper", {
     loop: true,
