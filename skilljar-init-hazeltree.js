@@ -24,7 +24,6 @@ window.addEventListener("load", () => {
 
 function defaultActions() {
   let footer = document.getElementById("ep-footer");
-  console.log(footer);
   footer.remove();
 }
 
@@ -47,9 +46,6 @@ function addCourseTitle() {
 function initializeSwiper() {
   let catalogContent = document.getElementById("catalog-content");
 
-  let swiperSlide = `  <div class="swiper-slide md:md:max-w-lg space-y-6 ">
-      </div>`;
-
   let swiperTemplate = `  
 <!-- Slider main container -->
 <div class="swiper">
@@ -66,6 +62,7 @@ function initializeSwiper() {
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let catalogCourses = document.getElementById("catalog-courses");
   let sliders = document.getElementById("sliders");
+  console.log(catalogCourses.children.length);
   for (let i = 0; i < catalogCourses.children.length; i++) {
     console.log("loop start");
     let temp = document.createElement("div");
