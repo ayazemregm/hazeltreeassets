@@ -95,4 +95,6 @@ function initializeSwiper() {
       },
     },
   });
+
+  console.log(swiper);
 }
