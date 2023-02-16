@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>`;
 
       let script = `<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script defer src="${sourceLink}catalog-page.js"></script>`;
+    <script  src="${sourceLink}catalog-page.js"></script>`;
       document.head.insertAdjacentHTML("beforeend", css);
       document.body.insertAdjacentHTML("beforeend", script);
 
