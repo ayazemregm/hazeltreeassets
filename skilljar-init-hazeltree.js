@@ -64,7 +64,7 @@ function initializeSwiper() {
     let sliders = document.getElementById("sliders");
     console.log("loop " + i);
 
-    let swiperSlide = `<div class="swiper-slide"></div>`;
+    let swiperSlide = `<div class="swiper-slide">aasdadasd</div>`;
     sliders.insertAdjacentHTML("beforeend", swiperSlide);
   }
 
