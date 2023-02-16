@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
 
 #header {
-  padding: 3%;
+  padding: 5%;
 }
 #skilljar-content {
   background-color: black;
@@ -35,14 +35,36 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .top-row {
 }
 
-.catalog-center-width .one-col-full {
-  width: 100%;
+@media only screen and (min-width: 801px) {
+  .no-catalog-filters .catalog-center-width {
+    /* width: 784px; */
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 926px) {
+  .no-catalog-filters .catalog-center-width {
+    /* width: 909px; */
+    width: 100%;
+    padding: 0 24px;
+  }
+}
+@media only screen and (min-width: 1213px) {
+  .no-catalog-filters .catalog-center-width {
+    /* width: 1196px; */
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .no-catalog-filters .catalog-center-width {
+    /* width: 1483px; */
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
