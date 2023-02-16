@@ -77,3 +77,5 @@ function initializeSwiper() {
 
 addCourseTitle();
 initializeSwiper();
+
+console.log("test");
