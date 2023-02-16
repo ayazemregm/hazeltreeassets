@@ -12,6 +12,8 @@ window.addEventListener("load", () => {
       console.log("testPage");
       let template = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", template);
+      const catalogContent = document.getElementById("#catalog-content");
+      catalogContent.insertAdjacentHTML("afterbegin", test);
       break;
     default:
       console.log("Default Fired");
@@ -36,6 +38,5 @@ let test = `
    </p>
  </div>`;
 
-document
-  .getElementById("catalog-content")
-  .insertAdjacentHTML("afterbegin", test);
+const catalogContent = document.getElementById("#catalog-content");
+catalogContent.insertAdjacentHTML("afterbegin", test);
