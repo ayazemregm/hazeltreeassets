@@ -64,7 +64,7 @@ function initializeSwiper() {
   let sliders = document.getElementById("sliders");
   console.log(catalogCourses.children.length);
   console.log(catalogCourses.children);
-  for (let i = 0; i < catalogCourses.children.length; i++) {
+  for (let i = 0; i < 11; i++) {
     console.log("loop start");
     let temp = document.createElement("div");
     temp.appendChild(catalogCourses.children[i]);
