@@ -51,8 +51,8 @@ function initializeSwiper() {
   <div id="sliders" class="swiper-wrapper ">
     <!-- Slides --></div>
   <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <div class="courses-swiper-button-prev"></div>
+  <div class="courses-swiper-button-next"></div>
 </div>`;
 
   let catalogCourses = document.getElementById("catalog-courses");
@@ -77,14 +77,14 @@ function initializeSwiper() {
   let swiperSliders = document.querySelectorAll(".swiper-slide");
 
   for (let i = 0; i < filteredCourses.length; i++) {
-    swiperSliders.item(i).appendChild(filteredCourses.item(i));
+    swiperSliders.item(i).appendChild(filteredCourses[i]);
   }
 
   const swiper = new Swiper(".courses-swiper", {
     loop: false,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".courses-swiper-button-next",
+      prevEl: ".courses-swiper-button-prev",
     },
     slidesPerView: 5,
     paginationClickable: false,
