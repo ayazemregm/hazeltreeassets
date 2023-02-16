@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
       let css = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", css);
       addCourseTitle();
-      initializeSwiper();
+      setTimeout(initializeSwiper(), 2000);
       break;
     default:
       console.log("Default Fired");
@@ -60,11 +60,12 @@ function initializeSwiper() {
 </div>`;
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
+
   let catalogCourses = document.getElementById("catalog-courses");
   let sliders = document.getElementById("sliders");
   console.log(catalogCourses.children.length);
   console.log(catalogCourses.children);
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < catalogCourses.children.length; i++) {
     console.log("loop start");
     let temp = document.createElement("div");
     temp.appendChild(catalogCourses.children[i]);
