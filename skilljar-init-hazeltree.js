@@ -56,7 +56,7 @@ function initializeSwiper() {
   let swiperTemplate = `  
 <!-- Slider main container -->
 <div class="swiper">
-  <p class="mt-12 mb-10 font-bold text-lg md:text-2xl px-4 md:px-0">Assets Managers</p>
+
   <!-- Additional required wrapper -->
   <div id="sliders" class="swiper-wrapper ">
     <!-- Slides -->
@@ -101,6 +101,7 @@ function initializeSwiper() {
     },
   });
 
+  catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let catalogCourses = document.getElementById("catalog-courses");
   let sliders = document.getElementById("sliders");
   for (const child of catalogContent.children) {
@@ -110,5 +111,4 @@ function initializeSwiper() {
 
   catalogCourses.remove();
   console.log(swiperTemplate);
-  catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
 }
