@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
       let css = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", css);
       addCourseTitle();
-      setTimeout(initializeSwiper(), 2000);
+
       break;
     default:
       console.log("Default Fired");
