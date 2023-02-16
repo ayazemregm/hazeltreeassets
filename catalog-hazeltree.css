@@ -19,12 +19,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  text-align: center;
+  max-width: 70%;
   margin: 0 auto;
-}
-
-.top-row {
   background-image: url("https://ayazemregm.github.io/hazeltreeassets/bg-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.top-row {
 }
