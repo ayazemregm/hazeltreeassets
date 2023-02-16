@@ -4,7 +4,7 @@ let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
 console.log("loaded");
 //   defaultActions();
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   switch (end) {
     case "/":
       console.log("Main Page");
