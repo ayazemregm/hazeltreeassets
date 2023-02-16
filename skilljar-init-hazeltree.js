@@ -14,6 +14,7 @@ window.addEventListener("load", () => {
       let template = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", template);
       addCourseTitle();
+      initializeSwiper();
 
       break;
     default:
@@ -101,6 +102,6 @@ function initializeSwiper() {
   });
 
   let catalogCourses = document.getElementById("catalog-courses");
-
+  console.log(swiperTemplate);
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
 }
