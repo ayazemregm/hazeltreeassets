@@ -14,9 +14,10 @@ window.addEventListener("DOMContentLoaded", () => {
       let css = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>`;
       let script = `<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="${sourceLink}catalog-page.js"></script>`;
+    <script id="pScript" src="${sourceLink}catalog-page.js"></script>`;
       document.head.insertAdjacentHTML("beforeend", css);
       document.body.insertAdjacentHTML("beforeend", script);
+      document.getElementById("pScript").execute();
 
       break;
     default:
