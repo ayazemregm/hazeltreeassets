@@ -102,11 +102,10 @@ function initializeSwiper() {
   });
 
   let catalogCourses = document.getElementById("catalog-courses");
-  catalogContent.children.forEach((element) => {
-    let swiperSlide = `  <div class="swiper-slide md:md:max-w-lg space-y-6 ">
-            ${element}
-      </div>`;
-  });
+  for (const child of catalogContent.children) {
+    let swiperSlide = `<div class="swiper-slide md:md:max-w-lg space-y-6 ">${child}</div>`;
+  }
+
   catalogCourses.remove();
   console.log(swiperTemplate);
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
