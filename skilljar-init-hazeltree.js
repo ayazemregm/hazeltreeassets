@@ -1,31 +1,6 @@
 let end = window.location.pathname;
 let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
 
-window.addEventListener("load", () => {
-  console.log("loaded");
-  defaultActions();
-  switch (end) {
-    case "/":
-      console.log("Main Page");
-      break;
-    case "/page/hazeltree-university":
-      console.log("testPage");
-      let template = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
-      document.head.insertAdjacentHTML("beforeend", template);
-      const catalogContent = document.getElementById("#catalog-content");
-      catalogContent.insertAdjacentHTML("afterbegin", test);
-      break;
-    default:
-      console.log("Default Fired");
-      break;
-  }
-});
-
-function defaultActions() {
-  let footer = document.getElementById("ep-footer");
-  console.log(footer);
-  footer.remove();
-}
 let test = `
  <div >
    <h2 >
@@ -38,5 +13,31 @@ let test = `
    </p>
  </div>`;
 
+window.addEventListener("load", () => {
+  console.log("loaded");
+  defaultActions();
+  switch (end) {
+    case "/":
+      console.log("Main Page");
+      break;
+    case "/page/hazeltree-university":
+      console.log("testPage");
+      let template = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
+      document.head.insertAdjacentHTML("beforeend", template);
+      const catalogContent = document.getElementById("#catalog-content");
+      catalogContent.insertAdjacentElement("afterbegin", test);
+      break;
+    default:
+      console.log("Default Fired");
+      break;
+  }
+});
+
+function defaultActions() {
+  let footer = document.getElementById("ep-footer");
+  console.log(footer);
+  footer.remove();
+}
+
 const catalogContent = document.getElementById("#catalog-content");
-catalogContent.insertAdjacentHTML("afterbegin", test);
+catalogContent.insertAdjacentElement("afterbegin", test);
