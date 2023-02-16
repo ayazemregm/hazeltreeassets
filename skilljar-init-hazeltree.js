@@ -60,8 +60,6 @@ function initializeSwiper() {
   <!-- Additional required wrapper -->
   <div id="sliders" class="swiper-wrapper ">
     <!-- Slides --></div>
-   
-
   <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
@@ -81,8 +79,10 @@ function initializeSwiper() {
 
   const swiper = new Swiper(".swiper", {
     loop: true,
-    nextButton: ".swiper-button-next",
-    prevButton: ".swiper-button-prev",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
     slidesPerView: 3,
     paginationClickable: false,
     spaceBetween: 20,
