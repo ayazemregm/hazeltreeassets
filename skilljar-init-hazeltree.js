@@ -59,18 +59,22 @@ function initializeSwiper() {
   let catalogContent = document.getElementById("catalog-content");
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
-  let loopCount = catalogCourses.children.length;
-  for (let i = 0; i < loopCount; i++) {
-    let sliders = document.getElementById("sliders");
-    console.log("loop " + i);
+  let courses = catalogCourses.children;
+  console.log(catalogCourses.children);
+  for (let i = 0; i < courses.length; i++) {
+    if (!catalogCourses.children.item(i).classList.contains("not-found")) {
+      let sliders = document.getElementById("sliders");
+      console.log("loop " + i);
 
-    let swiperSlide = `<div class="swiper-slide">aasdadasd</div>`;
-    sliders.insertAdjacentHTML("beforeend", swiperSlide);
+      let swiperSlide = `<div class="swiper-slide"></div>`;
+      sliders.insertAdjacentHTML("beforeend", swiperSlide);
+    }
   }
 
-  document.querySelectorAll(".swiper-slide").forEach((el) => {
-    console.log(el);
-  });
+  let swiperSliders = document.querySelectorAll(".swiper-slide");
+  for (let i = 0; i < courses.length; i++) {
+    swiperSliders.item(i).appendChild(courses.item(i));
+  }
 
   const swiper = new Swiper(".courses-swiper", {
     loop: false,
