@@ -59,14 +59,18 @@ function initializeSwiper() {
   let catalogContent = document.getElementById("catalog-content");
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
-
-  for (let i = 0; i < catalogCourses.children.length; i++) {
+  let loopCount = catalogContent.children.length;
+  for (let i = 0; i < loopCount; i++) {
     let sliders = document.getElementById("sliders");
     console.log("loop " + i);
 
     let swiperSlide = `<div class="swiper-slide"></div>`;
     sliders.insertAdjacentHTML("beforeend", swiperSlide);
   }
+
+  document.querySelectorAll(".swiper-slide").forEach((el) => {
+    console.log(el);
+  });
 
   const swiper = new Swiper(".courses-swiper", {
     loop: false,
