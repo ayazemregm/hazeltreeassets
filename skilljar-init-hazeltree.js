@@ -61,6 +61,8 @@ function initializeSwiper() {
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let courses = catalogCourses.children;
   console.log(catalogCourses.children);
+  let filteredCourses = [];
+
   for (let i = 0; i < courses.length; i++) {
     if (!catalogCourses.children.item(i).classList.contains("not-found")) {
       let sliders = document.getElementById("sliders");
@@ -68,12 +70,14 @@ function initializeSwiper() {
 
       let swiperSlide = `<div class="swiper-slide"></div>`;
       sliders.insertAdjacentHTML("beforeend", swiperSlide);
+      filteredCourses.push(courses.item(i));
     }
   }
 
   let swiperSliders = document.querySelectorAll(".swiper-slide");
-  for (let i = 0; i < courses.length; i++) {
-    swiperSliders.item(i).appendChild(courses.item(i));
+
+  for (let i = 0; i < filteredCourses.length; i++) {
+    swiperSliders.item(i).appendChild(filteredCourses.item(i));
   }
 
   const swiper = new Swiper(".courses-swiper", {
