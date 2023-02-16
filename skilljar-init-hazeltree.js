@@ -108,7 +108,7 @@ function initializeSwiper() {
     let swiperSlide = `<div class="swiper-slide md:md:max-w-lg space-y-6 ">${child}</div>`;
     sliders.insertAdjacentHTML("afterbegin", swiperSlide);
   }
-
+  console.log(catalogContent.children);
   catalogCourses.remove();
   console.log(swiperTemplate);
 }
