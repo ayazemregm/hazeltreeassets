@@ -49,7 +49,7 @@ function addCourseTitle() {
 
 function initializeSwiper() {
   let catalogContent = document.getElementById("catalog-content");
-  catalogContent.style = "display:none";
+  //   catalogContent.style = "display:none";
   console.log(catalogContent.children);
   let swiperTemplate = `  
 <!-- Slider main container -->
@@ -104,6 +104,7 @@ function initializeSwiper() {
   });
 
   let catalogCourses = document.getElementById("catalog-courses");
+  catalogCourses.style = "display: none";
   console.log(swiperTemplate);
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
 }
