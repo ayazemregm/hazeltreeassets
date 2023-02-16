@@ -54,7 +54,7 @@ function initializeSwiper() {
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>`;
-  let catalogContent = document.querySelectorAll("#catalog-content");
+  let catalogContent = document.querySelector("#catalog-content");
   let catalogCourses = document.getElementById("catalog-courses");
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   console.log(catalogCourses.children.length);
