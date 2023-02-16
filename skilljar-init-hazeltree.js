@@ -53,7 +53,7 @@ function initializeSwiper() {
   let swiperSlide = `  <div class="swiper-slide md:md:max-w-lg space-y-6 ">
       </div>`;
 
-  let swiperTemplate = `  
+  /*   let swiperTemplate = `  
 <!-- Slider main container -->
 <div class="swiper">
 
@@ -68,7 +68,31 @@ function initializeSwiper() {
   <div class="swiper-button-prev "></div>
   <div class="swiper-button-next"></div>
 
-</div>`;
+</div>`; */
+
+  let swiperTemplate = `
+  <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">Slide 10</div>
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+`;
   const swiper = new Swiper(".swiper", {
     // Optional parameters
 
@@ -103,11 +127,11 @@ function initializeSwiper() {
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let catalogCourses = document.getElementById("catalog-courses");
-  let sliders = document.getElementById("sliders");
-  for (const child of catalogCourses.children) {
+  //   let sliders = document.getElementById("sliders");
+  /*   for (const child of catalogCourses.children) {
     let swiperSlide = `<div class="swiper-slide md:md:max-w-lg space-y-6 ">${child.innerHTML}</div>`;
     sliders.insertAdjacentHTML("afterbegin", swiperSlide);
-  }
+  } */
   console.log(catalogCourses.children);
   catalogCourses.remove();
   console.log(swiperTemplate);
