@@ -79,6 +79,10 @@ html {
   font-size: 1.125rem;
 }
 
+.swiper-slide {
+  background-color: aqua;
+}
+
 .top-row {
 }
 
