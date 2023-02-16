@@ -85,17 +85,20 @@ function initializeSwiper() {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    slidesPerView: 3,
+    slidesPerView: 5,
     paginationClickable: false,
 
     breakpoints: {
-      1920: {
+      1280: {
+        slidesPerView: 4,
+      },
+      960: {
         slidesPerView: 3,
       },
-      1028: {
+      600: {
         slidesPerView: 2,
       },
-      480: {
+      400: {
         slidesPerView: 1,
       },
     },
