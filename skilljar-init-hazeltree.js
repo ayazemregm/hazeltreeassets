@@ -55,7 +55,7 @@ function initializeSwiper() {
 
   let swiperTemplate = `  
 <!-- Slider main container -->
-<div class="swiper">
+<div class="swiper swiper">
 
   <!-- Additional required wrapper -->
   <div id="sliders" class="swiper-wrapper ">
