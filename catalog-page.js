@@ -38,7 +38,7 @@ function initializeSwiper() {
   <div class="swiper-button-next"></div>
 
 </div>`;
-  const swiper = new Swiper(".swiper1", {
+  const swiper = new Swiper(".swiper", {
     // Optional parameters
 
     loop: false,
@@ -75,7 +75,5 @@ function initializeSwiper() {
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
 }
 
-window.addEventListener("load", () => {
-  addCourseTitle();
-  initializeSwiper();
-});
+addCourseTitle();
+initializeSwiper();
