@@ -80,7 +80,8 @@ html {
 }
 
 .swiper-slide {
-  background-color: aqua;
+  width: 20%;
+  height: 20%;
 }
 
 .top-row {

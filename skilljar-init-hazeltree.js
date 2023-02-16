@@ -74,7 +74,7 @@ function initializeSwiper() {
     sliders.insertAdjacentHTML("afterbegin", swiperSlide);
   }
   console.log(catalogCourses.children);
-  catalogCourses.remove();
+
   console.log(swiperTemplate);
 
   const swiper = new Swiper(".swiper", {
