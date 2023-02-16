@@ -43,5 +43,5 @@ let test = `
 function addTest() {
   let test = document.getElementById("catalog-content");
   console.log(test);
-  test.insertAdjacentHTML("afterbegin", test);
+  test.insertAdjacentElement("afterbegin", test);
 }
