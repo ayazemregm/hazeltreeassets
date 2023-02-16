@@ -55,22 +55,18 @@ function initializeSwiper() {
   <div class="swiper-button-next"></div>
 </div>`;
 
-  let courses = document.querySelectorAll(".coursebox-container");
+  let catalogCourses = document.getElementById("catalog-courses");
   let catalogContent = document.getElementById("catalog-content");
 
-  console.log(courses.length);
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
 
-  /*   for (let i = 0; i < catalogCourses.children.length; i++) {
+  for (let i = 0; i < catalogCourses.children.length; i++) {
     let sliders = document.getElementById("sliders");
-    console.log("loop start");
-    let temp = document.createElement("div");
-    let child = catalogCourses.children.item(i);
-    temp.appendChild(child);
-    let swiperSlide = `<div class="swiper-slide">${temp.innerHTML}</div>`;
+    console.log("loop " + i);
+
+    let swiperSlide = `<div class="swiper-slide"></div>`;
     sliders.insertAdjacentHTML("beforeend", swiperSlide);
-    console.log("loop end");
-  } */
+  }
 
   const swiper = new Swiper(".courses-swiper", {
     loop: false,
