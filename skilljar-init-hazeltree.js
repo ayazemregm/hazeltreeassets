@@ -80,7 +80,6 @@ function initializeSwiper() {
       prevEl: ".swiper-button-prev",
     },
   });
-  swiper();
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let catalogCourses = document.getElementById("catalog-courses");
