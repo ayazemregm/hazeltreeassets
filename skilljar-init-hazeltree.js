@@ -28,12 +28,6 @@ function defaultActions() {
   footer.remove();
 }
 
-function addTest() {
-  let test = document.getElementById("catalog-content");
-  console.log(test);
-  test.insertAdjacentHTML("afterbegin", test);
-}
-
 let test = `
  <div >
    <h2 >
@@ -45,3 +39,9 @@ let test = `
      sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
    </p>
  </div>`;
+
+function addTest() {
+  let test = document.getElementById("catalog-content");
+  console.log(test);
+  test.insertAdjacentHTML("afterbegin", test);
+}
