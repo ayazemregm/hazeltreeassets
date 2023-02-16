@@ -70,10 +70,12 @@ function initializeSwiper() {
   let catalogCourses = document.getElementById("catalog-courses");
   let sliders = document.getElementById("sliders");
   for (let child of catalogCourses.children) {
+    console.log("loop start");
     let temp = document.createElement("div");
     temp.appendChild(child);
     let swiperSlide = `<div class="swiper-slide">${temp.innerHTML}</div>`;
     sliders.insertAdjacentHTML("beforeend", swiperSlide);
+    console.log("loop end");
   }
   console.log(catalogCourses.children);
 
