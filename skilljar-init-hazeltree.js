@@ -70,7 +70,9 @@ function initializeSwiper() {
   let catalogCourses = document.getElementById("catalog-courses");
   let sliders = document.getElementById("sliders");
   for (const child of catalogCourses.children) {
-    let swiperSlide = `<div class="swiper-slide md:md:max-w-lg space-y-6 ">${child.outerHTML}</div>`;
+    let temp = document.createElement("div");
+    temp.appendChild(child);
+    let swiperSlide = `<div class="swiper-slide md:md:max-w-lg space-y-6 ">${temp.innerHTML}</div>`;
     sliders.insertAdjacentHTML("afterbegin", swiperSlide);
   }
   console.log(catalogCourses.children);
