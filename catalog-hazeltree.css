@@ -23,6 +23,8 @@
   border-radius: 0.5rem;
 }
 .catalog-center-width {
+  display: flex;
+  justify-content: center;
   background-image: url("https://ayazemregm.github.io/hazeltreeassets/bg-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
