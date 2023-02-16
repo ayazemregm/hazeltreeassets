@@ -28,7 +28,8 @@ function defaultActions() {
   footer.remove();
 }
 
-let test = `
+function addTest() {
+  let testTemplate = `
  <div >
    <h2 >
      How Hazeltree University works for you?
@@ -39,9 +40,7 @@ let test = `
      sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
    </p>
  </div>`;
-
-function addTest() {
   let test = document.getElementById("catalog-content");
   console.log(test);
-  test.insertAdjacentElement("afterbegin", test);
+  test.insertAdjacentHTML("afterbegin", testTemplate);
 }
