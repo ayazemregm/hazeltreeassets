@@ -90,6 +90,7 @@ function initializeSwiper() {
       el: ".swiper-scrollbar",
     },
   });
+  swiper();
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let catalogCourses = document.getElementById("catalog-courses");
