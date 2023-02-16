@@ -49,22 +49,20 @@ function addCourseTitle() {
 
 function initializeSwiper() {
   let catalogContent = document.getElementById("catalog-content");
-  //   catalogContent.style = "display:none";
-  console.log(catalogContent.children);
+
+  let swiperSlide = `  <div class="swiper-slide md:md:max-w-lg space-y-6 ">
+      </div>`;
+
   let swiperTemplate = `  
 <!-- Slider main container -->
-<div class="swiper swiper1">
+<div class="swiper">
   <p class="mt-12 mb-10 font-bold text-lg md:text-2xl px-4 md:px-0">Assets Managers</p>
   <!-- Additional required wrapper -->
-  <div class="swiper-wrapper ">
+  <div id="sliders" class="swiper-wrapper ">
     <!-- Slides -->
-      <div class="swiper-slide md:md:max-w-lg space-y-6 ">
-      </div>
-      <div class="swiper-slide md:max-w-lg space-y-6 ">
-      
-        </div>
-            <div class="swiper-slide md:max-w-lg space-y-6 "></div>
-            <div class="swiper-slide md:max-w-lg space-y-6 "></div>
+    
+    </div>
+   
 
   <!-- If we need navigation buttons -->
   <div class="swiper-button-prev "></div>
@@ -104,7 +102,12 @@ function initializeSwiper() {
   });
 
   let catalogCourses = document.getElementById("catalog-courses");
-  catalogCourses.style = "display: none";
+  catalogContent.children.forEach((element) => {
+    let swiperSlide = `  <div class="swiper-slide md:md:max-w-lg space-y-6 ">
+            ${element}
+      </div>`;
+  });
+  catalogCourses.remove();
   console.log(swiperTemplate);
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
 }
