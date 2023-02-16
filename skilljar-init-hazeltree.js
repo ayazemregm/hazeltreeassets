@@ -71,7 +71,7 @@ function initializeSwiper() {
     console.log("loop end");
   }
 
-  const swiper = new Swiper(".swiper", {
+  /*  const swiper = new Swiper(".swiper", {
     loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -95,6 +95,5 @@ function initializeSwiper() {
       },
     },
   });
-
-  console.log(swiper);
+ */
 }
