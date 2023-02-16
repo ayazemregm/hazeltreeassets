@@ -45,6 +45,9 @@ function addCourseTitle() {
 }
 
 function initializeSwiper() {
+  let catalogContent = document.getElementById("catalog-content");
+  catalogContent.style = "display:none";
+  console.log(catalogContent.children);
   let swiperTemplate = `  
 <!-- Slider main container -->
 <div class="swiper swiper1">
@@ -98,8 +101,6 @@ function initializeSwiper() {
   });
 
   let catalogCourses = document.getElementById("catalog-courses");
-  let catalogContent = document.getElementById("catalog-content");
-  catalogCourses;
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
 }

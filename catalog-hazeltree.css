@@ -61,7 +61,9 @@ html {
   justify-content: center;
   text-align: center;
 }
-
+#catalog-content {
+  padding: 0 10%;
+}
 #courseTitle {
   max-width: 72rem;
   padding-top: 2rem;
