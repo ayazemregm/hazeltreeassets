@@ -2,7 +2,6 @@
   background-color: black;
 }
 #heroSection {
-  max-width: 70%;
 }
 #heroTitle {
   color: #28b7a8;
@@ -20,6 +19,9 @@
 
 .catalog-header {
   height: 90vh;
+  width: 100%;
+  max-width: 72rem;
+  padding: 1.5rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,4 +34,28 @@
 }
 
 .top-row {
+}
+
+@media (min-width: 640px) {
+  .catalog-header {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog-header {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog-header {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .catalog-header {
+    max-width: 1280px;
+  }
 }
