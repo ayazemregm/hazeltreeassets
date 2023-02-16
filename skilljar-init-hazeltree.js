@@ -104,11 +104,11 @@ function initializeSwiper() {
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let catalogCourses = document.getElementById("catalog-courses");
   let sliders = document.getElementById("sliders");
-  for (const child of catalogContent.children) {
-    let swiperSlide = `<div class="swiper-slide md:md:max-w-lg space-y-6 ">${child}</div>`;
+  for (const child of catalogCourses.children) {
+    let swiperSlide = `<div class="swiper-slide md:md:max-w-lg space-y-6 ">${child.innerHTML}</div>`;
     sliders.insertAdjacentHTML("afterbegin", swiperSlide);
   }
-  console.log(catalogContent.children);
+  console.log(catalogCourses.children);
   catalogCourses.remove();
   console.log(swiperTemplate);
 }
