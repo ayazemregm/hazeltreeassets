@@ -248,10 +248,9 @@ function footer() {
         <p>New York(HQ)</p>
 
         <address>
-          150 West 30th Street, 11th FL
-          New York, NY 10001
-          United States
-         
+          "150 West 30th Street, 11th FL"<br>
+          "New York, NY 10001"<br>
+         "United States"<br>
         </address>
         <p>
          Tel: <a href="tel:2127270883">(212) 727-0883</a>
@@ -262,9 +261,9 @@ function footer() {
         <p>London</p>
 
         <address>
-          20 North Audley Street,
-          London, W1K 6WE
-          United Kingdom
+          "20 North Audley Street,"<br>
+          "London, W1K 6WE"<br>
+          "United Kingdom"<br>
         </address>
 
         <p>
@@ -276,9 +275,9 @@ function footer() {
         <p>Hong Kong</p>
 
         <address>
-        Unit 905, 9/F, Kinwick Centre, 32
-        Hollywood Rd
-        Central, Hong Kong
+        "Unit 905, 9/F, Kinwick Centre, 32"<br>
+        "Hollywood Rd"<br>
+        "Central, Hong Kong"<br>
         </address>
 
         <p>
