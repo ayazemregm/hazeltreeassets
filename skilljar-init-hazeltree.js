@@ -254,7 +254,7 @@ function footer() {
          
         </address>
         <p>
-          <a href="tel:2127270883">(212) 727-0883</a>
+         Tel: <a href="tel:2127270883">(212) 727-0883</a>
         </p>
       </div>
 
