@@ -149,7 +149,7 @@ footer {
 }
 
 /* resets */
-##skilljar-content:after {
+#skilljar-content:after {
   height: 0;
 }
 
