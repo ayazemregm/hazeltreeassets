@@ -136,15 +136,7 @@ function tabs() {
       <section class="tabs">
         <div id="tabs-title">
         <div class="tabs-nav">
-          <button  class="tab-nav-item active" data-tab="asset-managers">Asset
-            Managers</button>
-          <button class="tab-nav-item " data-tab="hedge-funs">Hedge
-            Funs</button>
-          <button class="tab-nav-item " data-tab="financial">Financial
-            Institutions & Administrators</button>
-          <button class="tab-nav-item" data-tab="pensions">Pensions
-            &
-            Endowments</button>
+       
         </div>
       </div>
 
@@ -196,6 +188,7 @@ function tabs() {
     ) {
       console.log("loop " + i);
       filteredCourses.push(courses.item(i));
+      courses.item(i).remove();
     }
   }
 
