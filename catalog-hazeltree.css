@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
 
+* {
+  background-color: black;
+  /* text-color: white; */
+}
 html {
   font-family: "Montserrat", sans-serif;
 }
@@ -58,7 +62,8 @@ html {
   text-align: center;
 }
 #catalog-content {
-  padding: 0 10%;
+  /* padding: 0 10%; */
+  background-color: #fff;
 }
 #courseTitle {
   max-width: 72rem;
@@ -74,9 +79,9 @@ html {
 #courseTitle p {
   font-size: 1.125rem;
 }
-
+/* #skilljar-content{} */
 .tabs-wrapper {
-  background-color: black;
+  background-color: white;
 }
 
 .top-row {
