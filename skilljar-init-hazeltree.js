@@ -221,7 +221,7 @@ tab-4
             </div>
         </div>
 
-             <div class="swiper-slide md:max-w-lg space-y-6 ">
+           <div class="swiper-slide md:max-w-lg space-y-6 ">
             <div>
               <img class="w-[360px] h-[250px]" src="img/slider1.png" alt="">
             </div>
@@ -232,11 +232,38 @@ tab-4
                 aliquet odio
                 mattis.</p>
             </div>
+        </div>
+
+           <div class="swiper-slide md:max-w-lg space-y-6 ">
+            <div>
+              <img class="w-[360px] h-[250px]" src="img/slider1.png" alt="">
             </div>
+            <div class="space-y-4 max-w-xs">
+              <p class="font-medium text-lg">Lorem Ipsum</p>
+              <p class="font-light leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                libero et velit interdum, ac
+                aliquet odio
+                mattis.</p>
+            </div>
+        </div>
+
+           <div class="swiper-slide md:max-w-lg space-y-6 ">
+            <div>
+              <img class="w-[360px] h-[250px]" src="img/slider1.png" alt="">
+            </div>
+            <div class="space-y-4 max-w-xs">
+              <p class="font-medium text-lg">Lorem Ipsum</p>
+              <p class="font-light leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                libero et velit interdum, ac
+                aliquet odio
+                mattis.</p>
+            </div>
+        </div>
+
            
                
           
-          </div>
+    </div>
   </div>
 
   <!-- If we need navigation buttons -->
