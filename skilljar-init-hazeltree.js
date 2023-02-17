@@ -191,6 +191,8 @@ tab-4
     });
   });
 
+  console.log("test");
+
   document
     .getElementById("asset-managers")
     .insertAdjacentHTML("afterbegin", tabTemplate);

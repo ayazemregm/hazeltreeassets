@@ -78,11 +78,6 @@ html {
 #courseTitle p {
   font-size: 1.125rem;
 }
-.swiper-container {
-  width: 800px;
-  height: 800px;
-  margin: 40px auto;
-}
 
 /* #skilljar-content{} */
 .tabs-wrapper {
