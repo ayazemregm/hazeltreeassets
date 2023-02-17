@@ -78,6 +78,12 @@ html {
 #courseTitle p {
   font-size: 1.125rem;
 }
+.swiper-container {
+  width: 600px;
+  height: 300px;
+  margin: 40px auto;
+}
+
 /* #skilljar-content{} */
 .tabs-wrapper {
   background-color: white;

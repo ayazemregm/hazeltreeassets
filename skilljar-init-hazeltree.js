@@ -176,7 +176,7 @@ tab-4
 
   document.getElementById("asset-managers").innerHTML = `  
 <!-- Slider main container -->
-<div class="swiper1">
+<div class="swiper-container swiper1">
   <p class="mt-12 mb-10 font-bold text-lg md:text-2xl px-4 md:px-0">Assets Managers</p>
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper ">
