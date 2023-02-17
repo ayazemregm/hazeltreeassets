@@ -272,7 +272,7 @@ tab-4
 
 </div>`;
 
-  const swiper = new Swiper(".swiper1", {
+  const swiper1 = new Swiper(".swiper1", {
     loop: false,
     navigation: {
       nextEl: ".swiper-button-next",
