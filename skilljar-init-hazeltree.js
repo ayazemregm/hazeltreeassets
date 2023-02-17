@@ -116,11 +116,13 @@ function initializeSwiper() {
 
 // tabs
 function tabs() {
-  let tabsText = `<div class="tabs-wrapper">
+  let tabsText = `<div class="">
+  <div class="tabs-text-wrapper">
   <div class="tabs-center">
     <div class="tabs-text-content">
       <p>Hazeltree University brings all your creativity together ! </p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
     </div>
     
       <section class="tabs">
@@ -231,22 +233,16 @@ tab-4
 // footer
 function footer() {
   let footer = `
-
      <footer id="footer" class=" ">
       <div class="footer-wrapper">  
-        
-     
       <div>
         <img height="17px" width="150px" src="https://hazeltree.com/wp-content/uploads/2020/04/Hazeltree-nav-logo.png" />
-
         <div>
           <a href="mailto:webmaster@example.com">info@hazeltree.com</a>
         </div>
       </div>
-
       <div>
         <p>New York(HQ)</p>
-
         <address>
           150 West 30th Street, 11th FL<br>
           New York, NY 10001<br>
@@ -256,37 +252,29 @@ function footer() {
          Tel: <a href="tel:2127270883">(212) 727-0883</a>
         </p>
       </div>
-
       <div>
         <p>London</p>
-
         <address>
           20 North Audley Street,<br>
           London, W1K 6WE<br>
           United Kingdom<br>
         </address>
-
         <p>
           Tel: <a href="tel:442081583200">44 208 158 3200</a>
         </p>
       </div>
-
       <div>
         <p>Hong Kong</p>
-
         <address>
         Unit 905, 9/F, Kinwick Centre, 32<br>
         Hollywood Rd<br>
         Central, Hong Kong<br>
         </address>
-
         <p>
           Tel: <a href="tel:852 5808 2954">+852 5808 2954</a>
         </p>
       </div>
-
       </div>
-  
     </footer>
   `;
 

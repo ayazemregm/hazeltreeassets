@@ -98,6 +98,9 @@ body {
 .tabs-wrapper {
   background-color: black;
 }
+.tabs-text-wrapper {
+  background-color: black;
+}
 .tabs-center {
   max-width: 72rem;
   margin: 0 auto;
