@@ -240,7 +240,7 @@ function footer() {
         <img height="17px" width="150px" src="https://hazeltree.com/wp-content/uploads/2020/04/Hazeltree-nav-logo.png" />
 
         <div>
-          <a href="mailto:webmaster@example.com">Jon Doe</a>
+          <a href="mailto:webmaster@example.com">info@hazeltree.com</a>
         </div>
       </div>
 
