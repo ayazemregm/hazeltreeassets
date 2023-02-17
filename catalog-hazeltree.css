@@ -148,6 +148,11 @@ footer {
   justify-content: space-between;
 }
 
+/* resets */
+##skilljar-content:after {
+  height: 0;
+}
+
 @media only screen and (min-width: 801px) {
   .no-catalog-filters .catalog-center-width {
     /* width: 784px; */
