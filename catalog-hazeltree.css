@@ -125,6 +125,25 @@ html {
 .top-row {
 }
 
+.catalog-center-width {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0px;
+  width: 100%;
+}
+.catalog-center-width .catalog-header {
+  padding-left: 0px;
+}
+
+footer {
+  background-color: black;
+}
+.footer-wrapper {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+}
+
 @media only screen and (min-width: 801px) {
   .no-catalog-filters .catalog-center-width {
     /* width: 784px; */
@@ -151,15 +170,6 @@ html {
   }
 }
 
-.catalog-center-width {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 0px;
-  width: 100%;
-}
-.catalog-center-width .catalog-header {
-  padding-left: 0px;
-}
 @media only screen and (min-width: 545px) {
   .catalog-center-width {
     width: 100%;
