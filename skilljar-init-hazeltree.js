@@ -201,7 +201,7 @@ function tabs() {
   }
 
   filteredCourses.forEach((e) => {
-    console.log(e.children.item(2));
+    console.log(e.children.item(2).innerText);
   });
 
   document
