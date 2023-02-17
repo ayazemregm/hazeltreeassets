@@ -107,8 +107,10 @@ html {
 .tab-content.active {
   display: block;
 }
-.tabs-titles {
-  font-color: white;
+.tabs-text-content {
+  color: white;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .top-row {
 }
