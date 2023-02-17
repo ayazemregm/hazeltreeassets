@@ -238,50 +238,51 @@ function footer() {
      
       <div>
         <img height="17px" width="150px" src="https://hazeltree.com/wp-content/uploads/2020/04/Hazeltree-nav-logo.png" />
+
+        <div>
+          <a href="mailto:webmaster@example.com">Jon Doe</a>
+        </div>
       </div>
 
       <div>
         <p>New York(HQ)</p>
 
-        <p>
+        <address>
           150 West 30th Street, 11th FL
           New York, NY 10001
           United States
-          Tel: (212) 727-0883
-        </p>
-
+         
+        </address>
         <p>
-            Tel: (212) 727-0883
+          <a href="tel:2127270883">(212) 727-0883</a>
         </p>
       </div>
 
       <div>
-        <p>New York(HQ)</p>
+        <p>London</p>
+
+        <address>
+          20 North Audley Street,
+          London, W1K 6WE
+          United Kingdom
+        </address>
 
         <p>
-          150 West 30th Street, 11th FL
-          New York, NY 10001
-          United States
-          Tel: (212) 727-0883
-        </p>
-
-        <p>
-            Tel: (212) 727-0883
+          Tel: <a href="tel:442081583200">44 208 158 3200</a>
         </p>
       </div>
 
       <div>
-        <p>New York(HQ)</p>
+        <p>Hong Kong</p>
+
+        <address>
+        Unit 905, 9/F, Kinwick Centre, 32
+        Hollywood Rd
+        Central, Hong Kong
+        </address>
 
         <p>
-          150 West 30th Street, 11th FL
-          New York, NY 10001
-          United States
-          Tel: (212) 727-0883
-        </p>
-
-        <p>
-            Tel: (212) 727-0883
+          Tel: <a href="tel:852 5808 2954">+852 5808 2954</a>
         </p>
       </div>
 
