@@ -61,16 +61,19 @@ html {
   text-align: center;
 }
 #catalog-content {
-  /* padding: 0 10%; */
-  /* background-color: #fff; */
+  max-width: 72rem;
+  margin: 0 auto;
 }
 #courseTitle {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+#courseTitle p {
+  font-size: 1.125rem;
 }
 
 #availableCourses {
-}
-
-#courseTitle p {
+  font-size: 2.25rem;
 }
 
 /* #skilljar-content{} */
