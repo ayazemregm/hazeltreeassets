@@ -134,17 +134,19 @@ function tabs() {
 
        <div id="tabs-content" class="tabs-content ">
         <div class="tab-content active " id="asset-managers">
-
+tab-1
         </div>
         <div class="tab-content" id="hedge-funs">
-          <div id="hedge-content" class=""></div>
+          <div id="hedge-content" class="">
+            tab-2
+          </div>
 
         </div>
         <div class="tab-content " id="financial">
-
+          tab-3
         </div>
         <div class="tab-content " id="pensions">
-
+tab-4
         </div>
       </div>
       </section>
