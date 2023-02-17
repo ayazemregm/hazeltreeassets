@@ -116,6 +116,16 @@ function initializeSwiper() {
 
 // tabs
 function tabs() {
+  let elBtnTemplate = `<button class="tab-nav-item" data-tab=""></button> `;
+
+  let tabContainer = `<div class="tab-contentBG">
+  <div id="tabs-content" class="tabs-content">
+    <div id="tab-container">
+
+    </div>
+  </div>
+</div>`;
+
   let tabsText = `<div class="tabs-top">
   <div class="tabs-text-wrapper">
   <div class="tabs-center">
@@ -128,7 +138,7 @@ function tabs() {
       <section class="tabs">
         <div id="tabs-title" >
         <div class="tabs-nav ">
-          <button class="tab-nav-item active" data-tab="asset-managers">Asset
+          <button  class="tab-nav-item active" data-tab="asset-managers">Asset
             Managers</button>
           <button class="tab-nav-item " data-tab="hedge-funs">Hedge
             Funs</button>
@@ -173,55 +183,30 @@ function tabs() {
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", tabsText);
   console.log(tabsText);
+  let tabsNav = document.querySelector("#tabs-nav");
+  let catalogCourses = document.getElementById("catalog-courses");
 
-  const tabsNav = document.querySelectorAll(".tab-nav-item");
-  tabsNav.forEach((item) => {
-    item.addEventListener("click", () => {
-      const tabId = item.getAttribute("data-tab");
-      const tabsContent = document.querySelectorAll(".tab-content");
-      tabsContent.forEach((tabContent) => {
-        tabContent.classList.remove("active");
-        if (tabContent.getAttribute("id") === tabId) {
-          tabContent.classList.add("active");
-        }
-      });
-      tabsNav.forEach((tabNav) => {
-        tabNav.classList.remove("active");
-      });
-      item.classList.add("active");
-    });
+  let courses = catalogCourses.children;
+  console.log(catalogCourses.children);
+  let filteredCourses = [];
+
+  for (let i = 0; i < courses.length; i++) {
+    if (
+      !catalogCourses.children.item(i).classList.contains("not-found") &&
+      catalogCourses.children.item(i).dataset["type"] == "-x"
+    ) {
+      console.log("loop " + i);
+      filteredCourses.push(courses.item(i));
+    }
+  }
+
+  filteredCourses.forEach((e) => {
+    console.log(e.children.item(2));
   });
-
-  console.log("test");
 
   document
     .getElementById("asset-managers")
     .insertAdjacentHTML("afterbegin", tabTemplate);
-
-  const swiper1 = new Swiper("#swiper1", {
-    loop: false,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    slidesPerView: 3,
-    paginationClickable: false,
-
-    breakpoints: {
-      1280: {
-        slidesPerView: 4,
-      },
-      960: {
-        slidesPerView: 3,
-      },
-      600: {
-        slidesPerView: 2,
-      },
-      400: {
-        slidesPerView: 1,
-      },
-    },
-  });
 }
 // footer
 function footer() {

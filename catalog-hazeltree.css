@@ -129,14 +129,14 @@ body {
   max-width: 72rem;
   margin: 0 auto;
 }
-
+/* 
 .tab-content {
   display: none;
 }
 
 .tab-content.active {
   display: block;
-}
+} */
 .tabs-text-content {
   color: white;
   padding-top: 4rem;
