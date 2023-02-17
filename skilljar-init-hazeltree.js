@@ -1,3 +1,4 @@
+"use strict";
 let end = window.location.pathname;
 let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
 
@@ -121,7 +122,7 @@ function tabs() {
   console.log(tabsText);
 }
 // footer
-/* function footer() {
+function footer() {
   let footer = `
   <footer>
     <p>Footer</p>
@@ -130,6 +131,5 @@ function tabs() {
 
   let skilljarContent = document.getElementById("skilljar-content");
 
-  skilljarContent.insertAdjacentElement("afterend", footer);
+  skilljarContent.insertAdjacentElement("beforeend", footer);
 }
- */
