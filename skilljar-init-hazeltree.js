@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
       addCourseTitle();
       initializeSwiper();
       tabs();
-      footer();
+      // footer();
       break;
     default:
       console.log("Default Fired");
@@ -116,12 +116,12 @@ function tabs() {
       <p>Hazeltree University brings all your creativity together ! </p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
     </div>`;
-  let catalogContent = document.querySelector("#catalog-content");
-  catalogContent.insertAdjacentHTML = ("afterbegin", tabsText);
+  let catalogContent = document.getElementById("catalog-content");
+  catalogContent.insertAdjacentHTML = ("beforeend", tabsText);
   console.log(tabsText);
 }
 // footer
-function footer() {
+/* function footer() {
   let footer = `
   <footer>
     <p>Footer</p>
@@ -132,3 +132,4 @@ function footer() {
 
   skilljarContent.insertAdjacentElement("afterend", footer);
 }
+ */
