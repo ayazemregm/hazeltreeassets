@@ -51,7 +51,7 @@ function addCourseTitle() {
 function initializeSwiper() {
   let swiperTemplate = `  
 <!-- Slider main container -->
-<div class="swiper">
+<div id="swiper0">
   <!-- Additional required wrapper -->
   <div id="course-sliders" class="swiper-wrapper ">
     <!-- Slides --></div>
@@ -85,7 +85,7 @@ function initializeSwiper() {
     swiperSliders.item(i).appendChild(filteredCourses[i]);
   }
 
-  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper("#swiper0", {
     loop: false,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -155,7 +155,7 @@ tab-4
 
   let tabTemplate = `  
 <!-- Slider main container -->
-<div class="swiper1">
+<div  id="swiper1">
   <!-- Additional required wrapper -->
   <div id="tab-sliders" class="swiper-wrapper ">
   <div class="swiper-slide">1</div>
@@ -197,7 +197,7 @@ tab-4
     .getElementById("asset-managers")
     .insertAdjacentHTML("afterbegin", tabTemplate);
 
-  const swiper1 = new Swiper(".swiper1", {
+  const swiper1 = new Swiper("#swiper1", {
     loop: false,
     navigation: {
       nextEl: ".swiper-button-next",
