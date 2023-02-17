@@ -60,9 +60,10 @@ html {
   justify-content: center;
   text-align: center;
 }
+.catalog-center-with {
+  padding: 0;
+}
 #catalog-content {
-  max-width: 72rem;
-  margin: 0 auto;
 }
 #courseTitle {
   max-width: 72rem;
@@ -127,5 +128,12 @@ html {
   .no-catalog-filters .catalog-center-width {
     /* width: 1483px; */
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 926px) {
+  .no-catalog-filters .catalog-center-width {
+    width: 909px;
+    padding: 0 0px;
   }
 }
