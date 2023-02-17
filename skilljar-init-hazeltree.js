@@ -237,6 +237,31 @@ tab-4
   <div class="swiper-button-next"></div>
 
 </div>`;
+
+  const swiper = new Swiper(".swiper1", {
+    loop: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 5,
+    paginationClickable: false,
+
+    breakpoints: {
+      1280: {
+        slidesPerView: 4,
+      },
+      960: {
+        slidesPerView: 3,
+      },
+      600: {
+        slidesPerView: 2,
+      },
+      400: {
+        slidesPerView: 1,
+      },
+    },
+  });
 }
 // footer
 function footer() {
