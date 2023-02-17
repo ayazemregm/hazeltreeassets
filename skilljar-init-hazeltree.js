@@ -116,10 +116,61 @@ function tabs() {
   let tabsText = `<div class="tabs-wrapper">
       <p>Hazeltree University brings all your creativity together ! </p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+    
+      <section class="tabs">
+        <div id="tabs-title" >
+        <div class="tabs-nav ">
+          <button class="tab-nav-item active" data-tab="asset-managers">Asset
+            Managers</button>
+          <button class="tab-nav-item " data-tab="hedge-funs">Hedge
+            Funs</button>
+          <button class="tab-nav-item " data-tab="financial">Financial
+            Institutions & Administrators</button>
+          <button class="tab-nav-item" data-tab="pensions">Pensions
+            &
+            Endowments</button>
+        </div>
+      </div>
+
+       <div id="tabs-content" class="tabs-content ">
+        <div class="tab-content active " id="asset-managers">
+
+        </div>
+        <div class="tab-content" id="hedge-funs">
+          <div id="hedge-content" class=""></div>
+
+        </div>
+        <div class="tab-content " id="financial">
+
+        </div>
+        <div class="tab-content " id="pensions">
+
+        </div>
+      </div>
+      </section>
+    
     </div>`;
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", tabsText);
   console.log(tabsText);
+
+  const tabsNav = document.querySelectorAll(".tab-nav-item");
+  tabsNav.forEach((item) => {
+    item.addEventListener("click", () => {
+      const tabId = item.getAttribute("data-tab");
+      const tabsContent = document.querySelectorAll(".tab-content");
+      tabsContent.forEach((tabContent) => {
+        tabContent.classList.remove("active");
+        if (tabContent.getAttribute("id") === tabId) {
+          tabContent.classList.add("active");
+        }
+      });
+      tabsNav.forEach((tabNav) => {
+        tabNav.classList.remove("active");
+      });
+      item.classList.add("active");
+    });
+  });
 }
 // footer
 function footer() {

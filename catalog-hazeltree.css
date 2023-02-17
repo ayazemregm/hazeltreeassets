@@ -83,6 +83,24 @@ html {
   background-color: white;
 }
 
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
 .top-row {
 }
 
