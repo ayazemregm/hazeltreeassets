@@ -75,6 +75,16 @@ html {
   font-size: 1.125rem;
 }
 
+#catalog-courses {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+#swiper0 {
+  max-width: 72rem;
+  margin: 0 auto;
+  margin-top: 6.25rem;
+  margin-bottom: 3rem;
+}
 #availableCourses {
   font-size: 2.25rem;
 }
