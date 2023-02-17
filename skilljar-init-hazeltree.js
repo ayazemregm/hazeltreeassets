@@ -235,5 +235,5 @@ function footer() {
 
   let skilljarContent = document.getElementById("skilljar-content");
 
-  skilljarContent.insertAdjacentElement("beforeend", footer);
+  skilljarContent.insertAdjacentHTML("beforeend", footer);
 }
