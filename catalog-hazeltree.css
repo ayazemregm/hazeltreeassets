@@ -138,6 +138,9 @@ body {
   max-width: 72rem;
   margin: 0 auto;
 }
+a.coursebox-container {
+  border: 0px;
+}
 /* 
 .tab-content {
   display: none;
