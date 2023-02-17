@@ -134,8 +134,8 @@ function tabs() {
       </div>
     </div>
       <section class="tabs">
-        <div id="tabs-title" >
-        <div class="tabs-nav ">
+        <div id="tabs-title">
+        <div class="tabs-nav">
           <button  class="tab-nav-item active" data-tab="asset-managers">Asset
             Managers</button>
           <button class="tab-nav-item " data-tab="hedge-funs">Hedge
@@ -181,7 +181,7 @@ function tabs() {
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", tabsText);
   console.log(tabsText);
-  let tabsNav = document.querySelector("#tabs-nav");
+  let tabsNav = document.querySelector(".tabs-nav");
 
   let catalogCourses = document.getElementById("catalog-courses");
 
