@@ -82,7 +82,6 @@ html {
 /* #skilljar-content{} */
 .tabs-wrapper {
   background-color: black;
-  font-color: white;
 }
 .tabs-center {
   max-width: 72rem;
@@ -108,7 +107,9 @@ html {
 .tab-content.active {
   display: block;
 }
-
+.tabs-titles {
+  font-color: white;
+}
 .top-row {
 }
 
