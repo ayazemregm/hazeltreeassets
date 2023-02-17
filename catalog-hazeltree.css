@@ -65,14 +65,9 @@ html {
   /* background-color: #fff; */
 }
 #courseTitle {
-  max-width: 72rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 #availableCourses {
-  font-size: 2.25rem;
-  margin-bottom: 5%;
 }
 
 #courseTitle p {
