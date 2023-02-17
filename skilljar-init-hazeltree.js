@@ -235,9 +235,9 @@ function footer() {
      <footer id="footer" class=" ">
       <div class="footer-wrapper">  
         
-      // logo
+     
       <div>
-        <img src="https://hazeltree.com/wp-content/uploads/2020/04/Hazeltree-nav-logo.png" />
+        <img height="17px" width="150px" src="https://hazeltree.com/wp-content/uploads/2020/04/Hazeltree-nav-logo.png" />
       </div>
 
       <div>
@@ -253,7 +253,7 @@ function footer() {
         <p>
             Tel: (212) 727-0883
         </p>
-      <div>
+      </div>
 
       <div>
         <p>New York(HQ)</p>
@@ -268,7 +268,7 @@ function footer() {
         <p>
             Tel: (212) 727-0883
         </p>
-      <div>
+      </div>
 
       <div>
         <p>New York(HQ)</p>
@@ -283,7 +283,7 @@ function footer() {
         <p>
             Tel: (212) 727-0883
         </p>
-      <div>
+      </div>
 
       </div>
   
