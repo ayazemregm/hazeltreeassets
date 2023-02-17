@@ -4,6 +4,11 @@
   /* text-color: white; */
 }
 html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
   font-family: "Montserrat", sans-serif;
 }
 
