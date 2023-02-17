@@ -15,6 +15,7 @@ window.addEventListener("load", () => {
       document.head.insertAdjacentHTML("beforeend", css);
       addCourseTitle();
       initializeSwiper();
+      tabs();
       break;
     default:
       console.log("Default Fired");
@@ -27,6 +28,7 @@ function defaultActions() {
   footer.remove();
 }
 
+// add course
 function addCourseTitle() {
   let courseTitles = `
 <div id="courseTitle">
@@ -43,6 +45,7 @@ function addCourseTitle() {
   catalogContent.insertAdjacentHTML("afterbegin", courseTitles);
 }
 
+// swiper
 function initializeSwiper() {
   let swiperTemplate = `  
 <!-- Slider main container -->
@@ -105,3 +108,14 @@ function initializeSwiper() {
     },
   });
 }
+
+// tabs
+function tabs() {
+  let tabsText = `<div class="tabs-wrapper">
+      <p>Hazeltree University brings all your creativity together ! </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+    </div>`;
+  let catalogContent = document.getElementById("catalog-content");
+  catalogContent.insertAdjacentHTML = ("beforeend", tabsText);
+}
+// footer
