@@ -108,7 +108,7 @@ body {
   margin-bottom: 3rem;
 }
 .tabs-top {
-  background-color: black;
+  background-color: #100f0d;
 }
 .tabs {
   display: flex;
@@ -121,7 +121,16 @@ body {
   max-width: 72rem;
   margin: 0 auto;
 }
-
+.tab-nav-item {
+  margin-bottom: 0px;
+  background-color: #100f0d;
+  color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  paddding: 0 5vw;
+}
 .tab-contentBG {
   background-color: white;
 }
@@ -156,7 +165,7 @@ body {
 }
 
 footer {
-  background-color: black;
+  background-color: #100f0d;
   color: white;
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -165,7 +174,7 @@ footer {
   max-width: 72rem;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /* resets */
