@@ -69,7 +69,10 @@ function initializeSwiper() {
   let filteredCourses = [];
 
   for (let i = 0; i < courses.length; i++) {
-    if (!catalogCourses.children.item(i).classList.contains("not-found")) {
+    if (
+      !catalogCourses.children.item(i).classList.contains("not-found") &&
+      catalogCourses.children.item(i).dataset["type"] == "-c"
+    ) {
       let sliders = document.getElementById("course-sliders");
       console.log("loop " + i);
 
