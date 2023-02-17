@@ -117,6 +117,7 @@ function initializeSwiper() {
 // tabs
 function tabs() {
   let tabsText = `<div class="tabs-wrapper">
+  <div class="tabs-center">
       <p>Hazeltree University brings all your creativity together ! </p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
     
@@ -153,7 +154,7 @@ tab-4
         </div>
       </div>
       </section>
-    
+    </div>
     </div>`;
 
   let tabTemplate = `  

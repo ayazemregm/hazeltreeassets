@@ -81,7 +81,14 @@ html {
 
 /* #skilljar-content{} */
 .tabs-wrapper {
-  background-color: white;
+  background-color: black;
+  font-color: white;
+}
+.tabs-center {
+  max-width: 72rem;
+  margin: 0 auto;
+  margin-top: 6.25rem;
+  margin-bottom: 3rem;
 }
 
 .tabs {
