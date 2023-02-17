@@ -116,8 +116,6 @@ function initializeSwiper() {
 
 // tabs
 function tabs() {
-  let elBtnTemplate = `<button class="tab-nav-item" data-tab=""></button> `;
-
   let tabContainer = `<div class="tab-contentBG">
   <div id="tabs-content" class="tabs-content">
     <div id="tab-container">
@@ -184,6 +182,7 @@ function tabs() {
   catalogContent.insertAdjacentHTML("beforeend", tabsText);
   console.log(tabsText);
   let tabsNav = document.querySelector("#tabs-nav");
+
   let catalogCourses = document.getElementById("catalog-courses");
 
   let courses = catalogCourses.children;
@@ -202,6 +201,10 @@ function tabs() {
 
   filteredCourses.forEach((e) => {
     console.log(e.children.item(2).innerText);
+    let elBtnTemplate = `<button class="tab-nav-item">${
+      e.children.item(2).innerText
+    }</button> `;
+    tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
   });
 
   document
