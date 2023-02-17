@@ -16,6 +16,7 @@ window.addEventListener("load", () => {
       addCourseTitle();
       initializeSwiper();
       tabs();
+      footer();
       break;
     default:
       console.log("Default Fired");
