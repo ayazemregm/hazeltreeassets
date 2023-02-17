@@ -176,12 +176,12 @@ tab-4
 
   document.getElementById("asset-managers").innerHTML = `  
 <!-- Slider main container -->
-<div class=" swiper1">
+<div class="swiper1">
   <p class="mt-12 mb-10 font-bold text-lg md:text-2xl px-4 md:px-0">Assets Managers</p>
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper ">
     <!-- Slides -->
-    // slide -1 
+  
       <div class="swiper-slide md:md:max-w-lg space-y-6 ">
         <div>
           <img class="w-[360px] h-[250px]" src="img/slider1.png" alt="">
@@ -278,7 +278,7 @@ tab-4
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    slidesPerView: 5,
+    slidesPerView: 3,
     paginationClickable: false,
 
     breakpoints: {
