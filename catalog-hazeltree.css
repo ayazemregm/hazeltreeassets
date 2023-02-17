@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
 
 * {
-  background-color: black;
   /* text-color: white; */
 }
 html {
@@ -63,7 +62,7 @@ html {
 }
 #catalog-content {
   /* padding: 0 10%; */
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 #courseTitle {
   max-width: 72rem;
