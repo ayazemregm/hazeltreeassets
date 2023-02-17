@@ -116,14 +116,14 @@ function initializeSwiper() {
 
 // tabs
 function tabs() {
-  let tabsText = `<div class="">
+  let tabsText = `<div class="tabs-top">
   <div class="tabs-text-wrapper">
   <div class="tabs-center">
-    <div class="tabs-text-content">
-      <p>Hazeltree University brings all your creativity together ! </p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      <div class="tabs-text-content">
+        <p>Hazeltree University brings all your creativity together ! </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        </div>
       </div>
-    </div>
     </div>
       <section class="tabs">
         <div id="tabs-title" >
@@ -140,23 +140,16 @@ function tabs() {
         </div>
       </div>
 
-       <div id="tabs-content" class="tabs-content ">
-        <div class="tab-content active " id="asset-managers">
-tab-1
-        </div>
+       <div class="tab-contentBG">
+      <div id="tabs-content" class="tabs-content">
+        <div class="tab-content active" id="asset-managers">tab-1</div>
         <div class="tab-content" id="hedge-funs">
-          <div id="hedge-content" class="">
-            tab-2
-          </div>
-
+          <div id="hedge-content" class="">tab-2</div>
         </div>
-        <div class="tab-content " id="financial">
-          tab-3
-        </div>
-        <div class="tab-content " id="pensions">
-tab-4
-        </div>
+        <div class="tab-content" id="financial">tab-3</div>
+        <div class="tab-content" id="pensions">tab-4</div>
       </div>
+    </div>
       </section>
     </div>
     </div>`;
