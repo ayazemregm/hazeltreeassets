@@ -124,7 +124,7 @@ function tabs() {
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
       </div>
     </div>
-    
+  </div>
       <section class="tabs">
         <div id="tabs-title" >
         <div class="tabs-nav ">
