@@ -1,0 +1,52 @@
+.custom-row {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.custom-black {
+  background-color: black;
+}
+#login-content {
+  border-top: 0px;
+}
+
+#skilljar-content {
+  background-image: url("Header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.custom-tabs {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-left: 250px;
+}
+.login-svg {
+  border: solid 1px #f57f13;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  opacity: 0.4;
+}
+.custom-white-text {
+  color: white;
+}
+label span {
+  color: white;
+}
+#login-tab-left span,
+#login-tab-right span {
+  color: orange;
+  border-right: 0px;
+}
+#button-sign-in {
+  background-color: orange;
+}
+#forgot-password span {
+  color: white;
+}
+#login-content {
+  border-top: 0px;
+}
