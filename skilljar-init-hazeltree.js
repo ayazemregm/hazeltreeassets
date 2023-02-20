@@ -12,12 +12,19 @@ window.addEventListener("load", () => {
       break;
     case "/page/hazeltree-university":
       console.log("testPage");
-      let css = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
-      document.head.insertAdjacentHTML("beforeend", css);
+      let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
+      document.head.insertAdjacentHTML("beforeend", catalogCss);
       addCourseTitle();
       initializeSwiper();
       tabs();
       footer();
+      break;
+    case end.includes("login"):
+      console.log("login");
+      let loginCss = `<link rel="stylesheet" href="${sourceLink}login-hazeltree.css">`;
+      document.head.insertAdjacentHTML("beforeend", loginCss);
+      removeHeader();
+      addClass();
       break;
     default:
       console.log("Default Fired");
@@ -255,4 +262,22 @@ function footer() {
   let skilljarContent = document.getElementById("skilljar-content");
 
   skilljarContent.insertAdjacentHTML("beforeend", footer);
+}
+
+function removeHeader() {
+  let headerLeft = document.getElementById("header-left");
+  headerLeft.remove();
+
+  let socialAccountProviders = document.querySelector(
+    ".socialaccount_providers"
+  );
+  socialAccountProviders.remove();
+}
+
+function addClass() {
+  let loginTabContainer = document.getElementById("login-tab-container");
+  loginTabContainer.classList.add("custom-black");
+
+  let loginTitle = document.querySelector(".loginNote span");
+  loginTitle.classList.add("custom-white-text");
 }
