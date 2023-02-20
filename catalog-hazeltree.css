@@ -197,7 +197,8 @@ footer {
 }
 
 .swiper-slide {
-  width: 20;
+  display: flex;
+  justify-content: center;
 }
 
 .card-image img {
