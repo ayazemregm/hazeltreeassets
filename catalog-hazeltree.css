@@ -191,6 +191,14 @@ footer {
   flex-direction: column;
   max-width: 200px;
 }
+.swiper {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  width: 20;
+}
 
 .card-image img {
   width: 240px;
