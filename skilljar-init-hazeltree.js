@@ -134,7 +134,7 @@ function initializeSwiper() {
       prevEl: ".swiper-button-prev",
     },
     slidesPerView: 4,
-
+    spaceBetween: 30,
     breakpoints: {
       960: {
         slidesPerView: 3,
