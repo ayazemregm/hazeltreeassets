@@ -77,20 +77,6 @@ function initializeSwiper() {
   <div class="swiper-button-next"></div>
 </div>`;
 
-  let courseBoxTemplate = `
- <div class="card">
-      <!-- card image -->
-      <div class="card-image">
-        <img src="https://picsum.photos/seed/picsum/200/300" alt="">
-      </div>
-      <!-- card text -->
-      <div>
-        <p>Lorem Ipsum</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, eveniet?</p>
-      </div>
-    </div>
-`;
-
   let catalogCourses = document.getElementById("catalog-courses");
   let catalogContent = document.getElementById("catalog-content");
 
@@ -116,9 +102,24 @@ function initializeSwiper() {
   let swiperSliders = document.querySelectorAll(".swiper-slide");
 
   for (let i = 0; i < filteredCourses.length; i++) {
+    let courseNode = filteredCourses[i];
+    let courseBoxTemplate = `
+ <div class="card">
+      <!-- card image -->
+      <div class="card-image">
+        <img src="${courseNode.children.item(1)}" alt="">
+      </div>
+      <!-- card text -->
+      <div>
+        <p>Lorem Ipsum</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, eveniet?</p>
+      </div>
+    </div>
+`;
     let element = courseBoxTemplate;
     // swiperSliders.item(i).appendChild(filteredCourses[i]);
     swiperSliders.item(i).insertAdjacentHTML("afterbegin", courseBoxTemplate);
+    courseNode.remove();
   }
 
   const swiper = new Swiper("#swiper0", {
