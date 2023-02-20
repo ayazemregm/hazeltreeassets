@@ -224,8 +224,8 @@ function tabs() {
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>`;
-    console.log(filteredCourses[i].children.item(2).innerText);
-    let tab = filteredCourses[i].children.item(2).innerText;
+    console.log(filteredCourses[i - 1].children.item(2).innerText);
+    let tab = filteredCourses[i - 1].children.item(2).innerText;
     let elBtnTemplate = `<button class="tab-nav-item">${tab}</button> `;
     tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
     document
