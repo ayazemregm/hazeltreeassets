@@ -179,33 +179,12 @@ function tabs() {
 
        <div class="tab-contentBG">
       <div id="tabs-content" class="tabs-content">
-        <div class="tab-content active" id="asset-managers">tab-1</div>
-        <div class="tab-content" id="hedge-funs">
-          <div id="hedge-content" class="">tab-2</div>
-        </div>
-        <div class="tab-content" id="financial">tab-3</div>
-        <div class="tab-content" id="pensions">tab-4</div>
+      
       </div>
     </div>
       </section>
     </div>
     </div>`;
-
-  let tabTemplate = `  
-<!-- Slider main container -->
-<div  id="swiper1">
-  <!-- Additional required wrapper -->
-  <div id="tab-sliders" class="swiper-wrapper ">
-  <div class="swiper-slide">1</div>
-  <div class="swiper-slide">2</div>
-  <div class="swiper-slide">3</div>
-  <div class="swiper-slide">4</div>
-  <div class="swiper-slide">5</div>
-    <!-- Slides --></div>
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-</div>`;
 
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", tabsText);
@@ -229,16 +208,53 @@ function tabs() {
     }
   }
 
-  filteredCourses.forEach((e) => {
-    console.log(e.children.item(2).innerText);
-    let tab = e.children.item(2).innerText;
+  for (let i = 1; i <= filteredCourses.length; i++) {
+    let tabTemplate = `  
+    <!-- Slider main container -->
+    <div  class="swiper${i}">
+      <!-- Additional required wrapper -->
+      <div id="tab-sliders" class="swiper-wrapper ">
+      <div class="swiper-slide">1</div>
+      <div class="swiper-slide">2</div>
+      <div class="swiper-slide">3</div>
+      <div class="swiper-slide">4</div>
+      <div class="swiper-slide">5</div>
+        <!-- Slides --></div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>`;
+    console.log(filteredCourses[i].children.item(2).innerText);
+    let tab = filteredCourses[i].children.item(2).innerText;
     let elBtnTemplate = `<button class="tab-nav-item">${tab}</button> `;
     tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
-  });
+    document
+      .getElementById("tab-content")
+      .insertAdjacentHTML("afterbegin", tabTemplate);
 
-  document
-    .getElementById("asset-managers")
-    .insertAdjacentHTML("afterbegin", tabTemplate);
+    const swiper = new Swiper(`.swiper${i}`, {
+      loop: false,
+      initialSlide: 2,
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      slidesPerView: 5,
+      spaceBetween: 0,
+      breakpoints: {
+        960: {
+          slidesPerView: 3,
+        },
+        600: {
+          slidesPerView: 2,
+        },
+        400: {
+          slidesPerView: 1,
+        },
+      },
+    });
+  }
 }
 // footer
 function footer() {
