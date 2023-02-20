@@ -6,6 +6,7 @@ console.log("loaded");
 
 window.addEventListener("load", () => {
   defaultActions();
+  console.log(end);
   switch (end) {
     case "/":
       console.log("Main Page");
