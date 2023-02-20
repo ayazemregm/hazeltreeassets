@@ -195,7 +195,7 @@ function tabs() {
 
   let courses = catalogCourses.children;
   console.log(catalogCourses.children);
-  let filteredCourses = [];
+  let filteredPaths = [];
 
   for (let i = 0; i < courses.length; i++) {
     if (
@@ -203,30 +203,29 @@ function tabs() {
       catalogCourses.children.item(i).dataset["type"] == "-x"
     ) {
       console.log("loop " + i);
-      filteredCourses.push(courses.item(i));
+      filteredPaths.push(courses.item(i));
       // courses.item(i).remove();
     }
   }
 
-  for (let i = 1; i <= filteredCourses.length; i++) {
+  for (let i = 1; i <= filteredPaths.length; i++) {
     let tabTemplate = `  
     <!-- Slider main container -->
     <div  class="swiper${i}">
       <!-- Additional required wrapper -->
       <div id="tab-sliders" class="swiper-wrapper ">
-      <div class="swiper-slide">1</div>
-      <div class="swiper-slide">2</div>
-      <div class="swiper-slide">3</div>
-      <div class="swiper-slide">4</div>
-      <div class="swiper-slide">5</div>
+     
         <!-- Slides --></div>
       <!-- If we need navigation buttons -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>`;
-    console.log(filteredCourses[i - 1].children.item(2).innerText);
-    let tab = filteredCourses[i - 1].children.item(2).innerText;
+    console.log(filteredPaths[i - 1].children.item(2).innerText);
+    let tab = filteredPaths[i - 1].children.item(2).innerText;
     let elBtnTemplate = `<button class="tab-nav-item">${tab}</button> `;
+    if (i === 1) {
+      elBtnTemplate = `<button class="tab-nav-item tab-nav-item-active">${tab}</button> `;
+    }
     tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
     document
       .getElementById("tabs-content")
@@ -254,6 +253,8 @@ function tabs() {
         },
       },
     });
+
+    let swiperSlide = `<div class="swiper-slide"></div>`;
   }
 }
 // footer

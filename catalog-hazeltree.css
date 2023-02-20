@@ -162,6 +162,10 @@ a.coursebox-container.course .coursebox-image img {
 }
 .top-row {
 }
+.tab-nav-item-active {
+  background-color: white;
+  color: black;
+}
 
 .catalog-center-width {
   margin-left: auto;
