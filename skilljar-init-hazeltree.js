@@ -26,8 +26,15 @@ window.addEventListener("load", () => {
       let loginCss = `<link rel="stylesheet" href="${sourceLink}login-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", loginCss);
       removeHeader();
-      // addClass();
       addLoginText();
+      break;
+    case "/accounts/signup/":
+      console.log("signup");
+      let signUp = `<link rel="stylesheet" href="${sourceLink}login-hazeltree.css">`;
+      document.head.insertAdjacentHTML("beforeend", signUp);
+      removeHeader();
+      addLoginText();
+
       break;
     default:
       console.log("Default Fired");
@@ -291,14 +298,6 @@ function removeHeader() {
     ".socialaccount_providers"
   );
   socialAccountProviders.parentNode.remove();
-}
-
-function addClass() {
-  let loginTabContainer = document.getElementById("login-tab-container");
-  loginTabContainer.classList.add("custom-black");
-
-  let loginTitle = document.querySelector(".loginNote span");
-  loginTitle.classList.add("custom-white-text");
 }
 
 function addLoginText() {
