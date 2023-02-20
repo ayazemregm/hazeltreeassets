@@ -82,7 +82,7 @@ function initializeSwiper() {
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let courses = catalogCourses.children;
-  console.log(catalogCourses.children);
+
   let filteredCourses = [];
 
   for (let i = 0; i < courses.length; i++) {
@@ -91,7 +91,6 @@ function initializeSwiper() {
       catalogCourses.children.item(i).dataset["type"] == "-c"
     ) {
       let sliders = document.getElementById("course-sliders");
-      console.log("loop " + i);
 
       let swiperSlide = `<div class="swiper-slide"></div>`;
       sliders.insertAdjacentHTML("beforeend", swiperSlide);
@@ -103,6 +102,7 @@ function initializeSwiper() {
 
   for (let i = 0; i < filteredCourses.length; i++) {
     let courseNode = filteredCourses[i];
+    console.log(courseNode);
     let courseBoxTemplate = `
  <div class="card">
       <!-- card image -->
