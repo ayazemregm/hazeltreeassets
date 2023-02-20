@@ -290,7 +290,7 @@ function removeHeader() {
   let socialAccountProviders = document.querySelector(
     ".socialaccount_providers"
   );
-  socialAccountProviders.remove();
+  socialAccountProviders.parentNode.remove();
 }
 
 function addClass() {
