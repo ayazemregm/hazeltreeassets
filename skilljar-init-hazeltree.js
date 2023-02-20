@@ -305,7 +305,7 @@ function addLoginText() {
   let template = `
    <div>
         <div>
-          <img src="Hazeltree University_files/header-logo.1676544242.svg" alt="">
+          <img src="https://cc.sj-cdn.net/instructor/1tohle0jm7gj4-hazeltree-university/themes/k9ioygic70ad/header-logo.1676544242.svg" alt="">
               </div>
 
               <div style="color:white;">

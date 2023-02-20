@@ -30,6 +30,10 @@ label span {
 .row {
   display: flex;
 }
+.row .row {
+  display: flex;
+  flex-direction: column;
+}
 .white-bg {
   background-color: transparent;
 }
