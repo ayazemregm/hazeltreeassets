@@ -287,7 +287,9 @@ function removeHeader() {
   let headerLeft = document.getElementById("header-left");
   headerLeft.remove();
 
-  let socialAccountProviders = document.querySelectorAll(".large-6.columns")[1];
+  let socialAccountProviders = document.querySelector(
+    ".socialaccount_providers"
+  );
   socialAccountProviders.remove();
 }
 
@@ -302,8 +304,8 @@ function addClass() {
 function addLoginText() {
   document.querySelectorAll(".row")[2].innerHTML = `
      <div>
-              <div>
-                <img src="Hazeltree University_files/header-logo.1676544242.svg" alt="">
+        <div>
+          <img src="Hazeltree University_files/header-logo.1676544242.svg" alt="">
               </div>
 
               <div style="color:white;">
