@@ -118,7 +118,7 @@ function initializeSwiper() {
   for (let i = 0; i < filteredCourses.length; i++) {
     let element = courseBoxTemplate;
     // swiperSliders.item(i).appendChild(filteredCourses[i]);
-    swiperSliders.item(i).appendChild(courseBoxTemplate);
+    swiperSliders.item(i).insertAdjacentHTML("afterbegin", courseBoxTemplate);
   }
 
   const swiper = new Swiper("#swiper0", {
