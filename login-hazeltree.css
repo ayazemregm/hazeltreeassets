@@ -45,7 +45,7 @@ label span {
 .row .columns.large-6 {
   width: 100%;
 }
-#login-content .row {
+#login-content .row:first-of-type {
   gap: 5rem;
 }
 
