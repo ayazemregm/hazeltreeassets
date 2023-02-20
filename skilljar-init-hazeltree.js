@@ -104,15 +104,15 @@ function initializeSwiper() {
     let courseNode = filteredCourses[i];
 
     console.log(courseNode);
-    let image = courseNode.children.item(1).currentSrc;
-    let title = courseNode.children.item(1).currentSrc;
-    let description = courseNode.children.item(1).currentSrc;
+    let image = courseNode.children.item(1).firstChild.currentSrc;
+    let title = courseNode.children.item(2).innerText;
+    let description = courseNode.children.item(3).innerText;
 
     let courseBoxTemplate = `
  <div class="card">
       <!-- card image -->
       <div class="card-image">
-        <img src="${courseNode.children.item(1).currentSrc}" alt="">
+        <img src="${image}" alt="">
       </div>
       <!-- card text -->
       <div>
