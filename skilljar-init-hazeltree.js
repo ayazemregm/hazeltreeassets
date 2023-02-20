@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
       document.head.insertAdjacentHTML("beforeend", catalogCss);
       addCourseTitle();
       initializeSwiper();
-      // tabs();
+      tabs();
       footer();
       break;
     // /accounts/login/
@@ -225,15 +225,14 @@ function tabs() {
     ) {
       console.log("loop " + i);
       filteredCourses.push(courses.item(i));
-      courses.item(i).remove();
+      // courses.item(i).remove();
     }
   }
 
   filteredCourses.forEach((e) => {
     console.log(e.children.item(2).innerText);
-    let elBtnTemplate = `<button class="tab-nav-item">${
-      e.children.item(2).innerText
-    }</button> `;
+    let tab = e.children.item(2).innerText;
+    let elBtnTemplate = `<button class="tab-nav-item">${tab}</button> `;
     tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
   });
 
