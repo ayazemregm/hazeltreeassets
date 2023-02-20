@@ -68,7 +68,7 @@ function addCourseTitle() {
 function initializeSwiper() {
   let swiperTemplate = `  
 <!-- Slider main container -->
-<div id="swiper0">
+<div class="swiper0">
   <!-- Additional required wrapper -->
   <div id="course-sliders" class="swiper-wrapper ">
     <!-- Slides --></div>
@@ -127,7 +127,7 @@ function initializeSwiper() {
     swiperSliders.item(i).insertAdjacentHTML("afterbegin", courseBoxTemplate);
   }
 
-  const swiper = new Swiper("#swiper0", {
+  const swiper = new Swiper(".swiper0", {
     loop: false,
     navigation: {
       nextEl: ".swiper-button-next",
