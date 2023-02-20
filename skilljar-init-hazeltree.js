@@ -107,7 +107,7 @@ function initializeSwiper() {
  <div class="card">
       <!-- card image -->
       <div class="card-image">
-        <img src="${courseNode.children.item(1)}" alt="">
+        <img src="${courseNode.children.item(1).currentSrc}" alt="">
       </div>
       <!-- card text -->
       <div>
