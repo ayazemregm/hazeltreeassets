@@ -129,7 +129,7 @@ function initializeSwiper() {
 
   const swiper = new Swiper(".swiper", {
     loop: false,
-    // initialSlide: 3,
+    initialSlide: 2,
     centeredSlides: true,
     navigation: {
       nextEl: ".swiper-button-next",
