@@ -50,10 +50,3 @@ label span {
 #login-content {
   border-top: 0px;
 }
-.row,
-#login-tab-container {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-items: flex-end;
-}

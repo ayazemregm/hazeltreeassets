@@ -302,8 +302,8 @@ function addClass() {
 }
 
 function addLoginText() {
-  document.querySelectorAll(".row")[2].innerHTML += `
-     <div>
+  let template = `
+   <div>
         <div>
           <img src="Hazeltree University_files/header-logo.1676544242.svg" alt="">
               </div>
@@ -317,4 +317,7 @@ function addLoginText() {
               </div>
             </div>
   `;
+  document
+    .querySelectorAll(".row")[2]
+    .insertAdjacentHTML("afterbegin", template);
 }
