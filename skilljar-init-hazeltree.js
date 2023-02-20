@@ -302,7 +302,7 @@ function addClass() {
 }
 
 function addLoginText() {
-  document.querySelectorAll(".row")[2].innerHTML = `
+  document.querySelectorAll(".row")[2].innerHTML += `
      <div>
         <div>
           <img src="Hazeltree University_files/header-logo.1676544242.svg" alt="">
