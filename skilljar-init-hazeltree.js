@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
       document.head.insertAdjacentHTML("beforeend", catalogCss);
       addCourseTitle();
       initializeSwiper();
-      tabs();
+      // tabs();
       footer();
       break;
     // /accounts/login/
