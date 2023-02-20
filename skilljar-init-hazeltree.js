@@ -27,6 +27,7 @@ window.addEventListener("load", () => {
       document.head.insertAdjacentHTML("beforeend", loginCss);
       removeHeader();
       // addClass();
+      addLoginText();
       break;
     default:
       console.log("Default Fired");
@@ -286,7 +287,7 @@ function removeHeader() {
   let headerLeft = document.getElementById("header-left");
   headerLeft.remove();
 
-  let socialAccountProviders = document.querySelectorAll(".large-6.columns")[0];
+  let socialAccountProviders = document.querySelectorAll(".large-6.columns")[1];
   socialAccountProviders.remove();
 }
 
