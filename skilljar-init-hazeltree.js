@@ -119,7 +119,6 @@ function initializeSwiper() {
     let element = courseBoxTemplate;
     // swiperSliders.item(i).appendChild(filteredCourses[i]);
     swiperSliders.item(i).insertAdjacentHTML("afterbegin", courseBoxTemplate);
-    courseNode.remove();
   }
 
   const swiper = new Swiper("#swiper0", {
