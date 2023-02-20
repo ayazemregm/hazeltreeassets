@@ -45,6 +45,9 @@ label span {
 .row .columns.large-6 {
   width: 100%;
 }
+#login-content .row {
+  gap: 5rem;
+}
 
 @media only screen and (max-width: 768px) {
   .row {
