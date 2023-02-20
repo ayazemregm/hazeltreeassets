@@ -102,7 +102,12 @@ function initializeSwiper() {
 
   for (let i = 0; i < filteredCourses.length; i++) {
     let courseNode = filteredCourses[i];
+
     console.log(courseNode);
+    let image = courseNode.children.item(1).currentSrc;
+    let title = courseNode.children.item(1).currentSrc;
+    let description = courseNode.children.item(1).currentSrc;
+
     let courseBoxTemplate = `
  <div class="card">
       <!-- card image -->
@@ -111,8 +116,8 @@ function initializeSwiper() {
       </div>
       <!-- card text -->
       <div>
-        <p>Lorem Ipsum</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, eveniet?</p>
+        <p>${title}</p>
+        <p>${description}</p>
       </div>
     </div>
 `;
