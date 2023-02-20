@@ -20,7 +20,8 @@ window.addEventListener("load", () => {
       tabs();
       footer();
       break;
-    case end.includes("login"):
+    // /accounts/login/
+    case "/accounts/login/":
       console.log("login");
       let loginCss = `<link rel="stylesheet" href="${sourceLink}login-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", loginCss);
