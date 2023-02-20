@@ -11,7 +11,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
 }
-
+/* custom styling by greenmusk */
 #header {
   padding-right: 5%;
   padding-left: 5%;
@@ -141,6 +141,12 @@ body {
 a.coursebox-container {
   border: 0px;
 }
+
+a.coursebox-container.course .coursebox-image img {
+  max-height: auto;
+  object-fit: cover;
+  aspect-ratio: 0.7;
+}
 /* 
 .tab-content {
   display: none;
@@ -178,6 +184,18 @@ footer {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+.card-image img {
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
 }
 
 /* resets */
