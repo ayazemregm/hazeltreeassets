@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
       let loginCss = `<link rel="stylesheet" href="${sourceLink}login-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", loginCss);
       removeHeader();
-      addClass();
+      // addClass();
       break;
     default:
       console.log("Default Fired");
