@@ -10,7 +10,7 @@
 }
 
 #skilljar-content {
-  background-image: url("Header.png");
+  background-image: url("https://ayazemregm.github.io/hazeltreeassets/bg-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -49,4 +49,9 @@ label span {
 }
 #login-content {
   border-top: 0px;
+}
+.row,
+#login-tab-container {
+  display: flex;
+  justify-content: flex-end;
 }
