@@ -286,9 +286,7 @@ function removeHeader() {
   let headerLeft = document.getElementById("header-left");
   headerLeft.remove();
 
-  let socialAccountProviders = document.querySelector(
-    ".socialaccount_providers"
-  );
+  let socialAccountProviders = document.querySelectorAll(".large-6.columns")[0];
   socialAccountProviders.remove();
 }
 
@@ -298,4 +296,22 @@ function addClass() {
 
   let loginTitle = document.querySelector(".loginNote span");
   loginTitle.classList.add("custom-white-text");
+}
+
+function addLoginText() {
+  document.querySelectorAll(".row")[2].innerHTML = `
+     <div>
+              <div>
+                <img src="Hazeltree University_files/header-logo.1676544242.svg" alt="">
+              </div>
+
+              <div style="color:white;">
+                <p>Hazeltree's innovative cloud-based treasury solutions deliver enhanced transparency, liquidity,
+                  improved performance and risk mitigation.</p>
+                <div>
+
+                </div>
+              </div>
+            </div>
+  `;
 }
