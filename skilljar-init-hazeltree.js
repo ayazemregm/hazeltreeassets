@@ -116,8 +116,9 @@ function initializeSwiper() {
       </div>
       <!-- card text -->
       <div>
-        <p>${title}</p>
-        <p>${description}</p>
+        <p style="font-weight: 600; margin-bottom: 0.5rem;">${title}</p>
+        <p style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;  
+  overflow: hidden;">${description}</p>
       </div>
     </div>
 `;
