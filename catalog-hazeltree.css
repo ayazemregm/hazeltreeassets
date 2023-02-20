@@ -200,6 +200,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-basis: max-content;
+  margin: 0 5%;
 }
 
 .card-image img {
