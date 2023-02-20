@@ -129,11 +129,12 @@ function initializeSwiper() {
 
   const swiper = new Swiper(".swiper", {
     loop: false,
+    initialSlide: 3,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    slidesPerView: 4,
+    slidesPerView: 5,
     spaceBetween: 0,
     breakpoints: {
       960: {

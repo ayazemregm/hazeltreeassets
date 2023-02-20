@@ -211,6 +211,9 @@ footer {
   margin-bottom: 1rem;
 }
 
+#catalog-courses {
+  display: none;
+}
 /* resets */
 #skilljar-content:after {
   height: 0;
