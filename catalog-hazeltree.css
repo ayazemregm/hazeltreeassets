@@ -11,14 +11,19 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
 }
-button:hover,
-button:not,
+button:hover:disabled,
+.button:hover:disabled,
+button:disabled:focus,
+.button:disabled:focus,
 button:focus,
-button:active,
-.button:hover,
 .button:focus,
-.button:active,
-.button:not {
+button:disabled,
+.button:disabled,
+button:hover,
+.button:hover,
+.button.disabled,
+.button.disabled:focus,
+.button.disabled:hover {
   all: unset;
 }
 /* custom styling by greenmusk */
