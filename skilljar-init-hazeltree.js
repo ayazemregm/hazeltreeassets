@@ -232,30 +232,6 @@ function tabs() {
       .getElementById("tabs-content")
       .insertAdjacentHTML("afterbegin", tabTemplate);
 
-    const swiper = new Swiper(`.swiper${i}`, {
-      loop: false,
-      initialSlide: 2,
-
-      centeredSlides: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      slidesPerView: 5,
-      spaceBetween: 0,
-      breakpoints: {
-        960: {
-          slidesPerView: 3,
-        },
-        600: {
-          slidesPerView: 2,
-        },
-        400: {
-          slidesPerView: 1,
-        },
-      },
-    });
-
     axios
       .get("https://test-hazeltree.skilljar.com/path/getting-started")
       .then((e) => {
@@ -274,7 +250,6 @@ function tabs() {
           let description = courseNode.children.item(3).innerText;
 
           let courseBoxTemplate = `
-
    <div class="card">
       <!-- card image -->
       <div class="card-image">
@@ -293,6 +268,30 @@ function tabs() {
           // swiperSliders.item(i).appendChild(filteredCourses[i]);
           tabSliders.insertAdjacentHTML("afterbegin", swiperSlideElement);
         }
+
+        const swiper = new Swiper(`.swiper${i}`, {
+          loop: false,
+          initialSlide: 3,
+
+          centeredSlides: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          slidesPerView: 5,
+          spaceBetween: 0,
+          breakpoints: {
+            960: {
+              slidesPerView: 3,
+            },
+            600: {
+              slidesPerView: 2,
+            },
+            400: {
+              slidesPerView: 1,
+            },
+          },
+        });
       });
     // axios course
     // onclick tabs
