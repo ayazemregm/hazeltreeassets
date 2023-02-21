@@ -145,6 +145,10 @@ button:hover,
   border-bottom-right-radius: 0;
   paddding: 0 5vw;
 }
+.tab-nav-item:hover {
+  background-color: #100f0d;
+  color: #fff;
+}
 .tab-contentBG {
   background-color: white;
 }
