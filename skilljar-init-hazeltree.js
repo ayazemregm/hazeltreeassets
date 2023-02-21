@@ -220,7 +220,7 @@ function tabs() {
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerText;
-    console.log(filteredPaths[i - 1]);
+    // console.log(filteredPaths[i - 1]);
     console.log(filteredPaths[i - 1].href);
     let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button> `;
 
@@ -233,8 +233,9 @@ function tabs() {
       .getElementById("tabs-content")
       .insertAdjacentHTML("afterbegin", tabTemplate);
 
+    let axiosUrl = `${filteredPaths[i - 1].href}`;
     axios
-      .get("https://test-hazeltree.skilljar.com/path/getting-started")
+      .get(axiosUrl)
       .then((e) => {
         let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
         let pathCourses = parsedDom.getElementById("catalog-courses").children;
