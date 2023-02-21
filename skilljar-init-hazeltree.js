@@ -290,9 +290,7 @@ function tabs() {
           let swiperSlideElement = `<div class="swiper-slide">${courseBoxTemplate}</div>`;
 
           // swiperSliders.item(i).appendChild(filteredCourses[i]);
-          tabSliders
-            .item(k)
-            .insertAdjacentHTML("afterbegin", swiperSlideElement);
+          tabSliders.insertAdjacentHTML("afterbegin", swiperSlideElement);
         }
       });
     // axios course
