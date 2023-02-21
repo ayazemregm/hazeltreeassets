@@ -294,23 +294,28 @@ function tabs() {
         if (i !== 1) {
           document.querySelector(`.swiper${i}`).style = "display: none";
         }
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .finally(function () {
+        document.getElementById(`pathTab${i}`).addEventListener("click", () => {
+          let tabContent = document.getElementById("tabs-content");
+          for (let j = 0; j < tabContent.length; j++) {
+            tabContent.children.item(j).style = "display:none";
+            console.log(tabContent.children.item(j));
+          }
+          let tabNav = document.querySelector(".tabs-nav");
+          for (let z = 0; z < tabNav.children.length; z++) {
+            tabNav.children.item(z).classList.remove("tab-nav-item-active");
+          }
+          document
+            .getElementById(`pathTab${i}`)
+            .classList.add("tab-nav-item-active");
+          document.querySelector(`.swiper${i}`).style = "display: block";
+        });
       });
-
-    document.getElementById(`pathTab${i}`).addEventListener("click", () => {
-      let tabContent = document.getElementById(`tabs-content`);
-      for (let j = 0; j < tabContent.length; j++) {
-        tabContent.children.item(j).style = "display:none";
-        console.log(tabContent.children.item(j));
-      }
-      let tabNav = document.querySelector(".tabs-nav");
-      for (let z = 0; z < tabNav.children.length; z++) {
-        tabNav.children.item(z).classList.remove("tab-nav-item-active");
-      }
-      document
-        .getElementById(`pathTab${i}`)
-        .classList.add("tab-nav-item-active");
-      document.querySelector(`.swiper${i}`).style = "display: block";
-    });
   }
 }
 // footer
