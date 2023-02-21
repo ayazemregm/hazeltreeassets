@@ -303,7 +303,10 @@ function tabs() {
       for (let j = 0; j < tabContent.length; j++) {
         tabContent.children.item(j).style = "display:none";
       }
-
+      let tabNav = document.querySelector(".tabs-nav");
+      for (let z = 0; z < tabNav.children.length; z++) {
+        tabNav.children.item(z).classList.remove("tab-nav-item-active");
+      }
       document.querySelector(`.swiper${i}`).style = "display: block";
     });
   }
