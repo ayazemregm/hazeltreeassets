@@ -228,6 +228,7 @@ button:active,
 .button:hover,
 .button:focus,
 .button:active {
+  all: unset;
 }
 
 @media only screen and (min-width: 801px) {

@@ -302,18 +302,18 @@ function tabs() {
       .finally(function () {
         document.getElementById(`pathTab${i}`).addEventListener("click", () => {
           let tabContent = document.getElementById("tabs-content");
-          let children = Array.from(tabContent.children);
+          /*   let children = Array.from(tabContent.children);
           children.forEach((child) => {
             console.log(child);
             child.style = "display: none";
           });
-          console.log([...tabContent.children]);
+          console.log([...tabContent.children]); */
 
-          /* for (let s = 0; s < tabContent.length; s++) {
+          for (let s = 0; s < tabContent.children.length; s++) {
             console.log("tabContent");
             tabContent.children.item(s).style = "display:none";
             console.log(tabContent.children.item(s));
-          } */
+          }
 
           let tabNav = document.querySelector(".tabs-nav");
           for (let z = 0; z < tabNav.children.length; z++) {
