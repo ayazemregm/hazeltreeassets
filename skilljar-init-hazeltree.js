@@ -225,7 +225,7 @@ function tabs() {
     console.log(filteredPaths[i - 1]);
     filteredPaths[i - 1].children.item(2);
     if (i === 1) {
-      elBtnTemplate = `<button class="tab-nav-item tab-nav-item-active ">${tab}</button> `;
+      elBtnTemplate = `<button  id="pathTab1"  class="tab-nav-item tab-nav-item-active ">${tab}</button> `;
     }
     tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
     document
@@ -298,12 +298,12 @@ function tabs() {
         }
       });
 
-    /*   document.getElementById(`pathTab${i}`).addEventListene("click", () => {
+    document.getElementById(`pathTab${i}`).addEventListene("click", () => {
       document.getElementById(`tabs-content`).children.forEach((element) => {
         element.style = "display:none";
       });
       document.querySelector(`.swiper${i}`).style = "display: block";
-    }); */
+    });
   }
 }
 // footer
