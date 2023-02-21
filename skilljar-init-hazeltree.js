@@ -220,7 +220,7 @@ function tabs() {
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerText;
-    let elBtnTemplate = `<button class="tab-nav-item">${tab}</button> `;
+    let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button> `;
     console.log(filteredPaths);
     console.log(filteredPaths[i - 1]);
     filteredPaths[i - 1].children.item(2);
@@ -297,8 +297,13 @@ function tabs() {
           document.querySelector(`.swiper${i}`).style = "display: none";
         }
       });
-    // axios course
-    // onclick tabs
+
+    document.getElementById(`pathTab${i}`).addEventListener("click", () => {
+      document.getElementById(`tabs-content`).children.forEach((element) => {
+        element.style = "display:none";
+      });
+      document.querySelector(`.swiper${i}`).style = "display: block";
+    });
   }
 }
 // footer
