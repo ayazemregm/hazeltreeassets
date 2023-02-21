@@ -291,7 +291,7 @@ function tabs() {
 
           // swiperSliders.item(i).appendChild(filteredCourses[i]);
           tabSliders
-            .item(i)
+            .item(k)
             .insertAdjacentHTML("afterbegin", swiperSlideElement);
         }
       });
