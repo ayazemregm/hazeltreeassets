@@ -302,10 +302,11 @@ function tabs() {
       .finally(function () {
         document.getElementById(`pathTab${i}`).addEventListener("click", () => {
           let tabContent = document.getElementById("tabs-content");
-          let children = [...tabContent];
+          let children = Array.from(tabContent.children);
           children.forEach((child) => {
             console.log(child);
           });
+          console.log([...tabContent.children]);
 
           /* for (let s = 0; s < tabContent.length; s++) {
             console.log("tabContent");
