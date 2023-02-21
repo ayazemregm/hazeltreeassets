@@ -103,7 +103,6 @@ function initializeSwiper() {
   for (let i = 0; i < filteredCourses.length; i++) {
     let courseNode = filteredCourses[i];
 
-    console.log(courseNode);
     let image = courseNode.children.item(1).firstChild.currentSrc;
     let title = courseNode.children.item(2).innerText;
     let description = courseNode.children.item(3).innerText;
@@ -188,13 +187,13 @@ function tabs() {
 
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", tabsText);
-  console.log(tabsText);
+
   let tabsNav = document.querySelector(".tabs-nav");
 
   let catalogCourses = document.getElementById("catalog-courses");
 
   let courses = catalogCourses.children;
-  console.log(catalogCourses.children);
+
   let filteredPaths = [];
 
   for (let i = 0; i < courses.length; i++) {
@@ -202,7 +201,6 @@ function tabs() {
       !catalogCourses.children.item(i).classList.contains("not-found") &&
       catalogCourses.children.item(i).dataset["type"] == "-x"
     ) {
-      console.log("loop " + i);
       filteredPaths.push(courses.item(i));
       // courses.item(i).remove();
     }
@@ -220,7 +218,6 @@ function tabs() {
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>`;
-    console.log(filteredPaths[i - 1].children.item(2).innerText);
 
     let tab = filteredPaths[i - 1].children.item(2).innerText;
     let elBtnTemplate = `<button class="tab-nav-item">${tab}</button> `;
