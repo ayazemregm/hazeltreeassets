@@ -262,7 +262,7 @@ function tabs() {
       .get("https://test-hazeltree.skilljar.com/path/getting-started")
       .then((e) => {
         parsedDom = new DOMParser().parseFromString(e.data, "text/html");
-        parsedDom.getElementById("catalog-courses").children;
+        pathCourses = parsedDom.getElementById("catalog-courses").children;
       });
 
     for (let k = 0; k < pathCourses.length; k++) {
