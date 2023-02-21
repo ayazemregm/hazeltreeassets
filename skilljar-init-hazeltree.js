@@ -305,6 +305,7 @@ function tabs() {
           let children = Array.from(tabContent.children);
           children.forEach((child) => {
             console.log(child);
+            child.style = "display: none";
           });
           console.log([...tabContent.children]);
 
