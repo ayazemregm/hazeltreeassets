@@ -294,7 +294,7 @@ function tabs() {
         });
 
         if (i !== 1) {
-          document.getElementById(`swiper${i}`).style = "display: none";
+          document.querySelector(`.swiper${i}`).style = "display: none";
         }
       });
     // axios course
