@@ -11,7 +11,18 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
 }
+button:hover,
+button:not,
+button:focus,
+button:active,
+.button:hover,
+.button:focus,
+.button:active,
+.button:not {
+  all: unset;
+}
 /* custom styling by greenmusk */
+
 #header {
   padding-right: 5%;
   padding-left: 5%;
@@ -220,15 +231,6 @@ footer {
 /* resets */
 #skilljar-content:after {
   height: 0;
-}
-
-button:hover,
-button:focus,
-button:active,
-.button:hover,
-.button:focus,
-.button:active {
-  all: unset;
 }
 
 @media only screen and (min-width: 801px) {
