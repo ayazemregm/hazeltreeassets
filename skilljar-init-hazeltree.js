@@ -298,7 +298,7 @@ function tabs() {
         }
       });
 
-    document.getElementById(`pathTab${i}`).addEventListene("click", () => {
+    document.getElementById(`pathTab${i}`).addEventListener("click", () => {
       document.getElementById(`tabs-content`).children.forEach((element) => {
         element.style = "display:none";
       });
