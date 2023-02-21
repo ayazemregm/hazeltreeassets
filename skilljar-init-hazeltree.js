@@ -221,8 +221,11 @@ function tabs() {
 
     let tab = filteredPaths[i - 1].children.item(2).innerText;
     let elBtnTemplate = `<button class="tab-nav-item">${tab}</button> `;
+    console.log(filteredPaths);
+    console.log(filteredPaths[i - 1]);
+    filteredPaths[i - 1].children.item(2);
     if (i === 1) {
-      elBtnTemplate = `<button class="tab-nav-item tab-nav-item-active">${tab}</button> `;
+      elBtnTemplate = `<button class="tab-nav-item tab-nav-item-active ">${tab}</button> `;
     }
     tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
     document
