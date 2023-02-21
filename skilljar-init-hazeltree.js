@@ -257,13 +257,13 @@ function tabs() {
     });
 
     let parsedDom;
+    let pathCourses;
     axios
       .get("https://test-hazeltree.skilljar.com/path/getting-started")
       .then((e) => {
         parsedDom = new DOMParser().parseFromString(e.data, "text/html");
+        parsedDom.getElementById("catalog-courses").children;
       });
-
-    let pathCourses = parsedDom.getElementById("catalog-courses").children;
 
     for (let k = 0; k < pathCourses.length; k++) {
       let tabSliders = document.getElementById(`tab-sliders${i}`);
