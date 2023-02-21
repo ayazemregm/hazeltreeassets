@@ -11,19 +11,8 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
 }
-button:hover:disabled,
-.button:hover:disabled,
-button:disabled:focus,
-.button:disabled:focus,
-button:focus,
-.button:focus,
-button:disabled,
-.button:disabled,
-button:hover,
-.button:hover,
-.button.disabled,
-.button.disabled:focus,
-.button.disabled:hover {
+button,
+.button {
   all: unset;
 }
 /* custom styling by greenmusk */
@@ -145,10 +134,7 @@ button:hover,
   border-bottom-right-radius: 0;
   paddding: 0 5vw;
 }
-.tab-nav-item:hover {
-  background-color: #100f0d;
-  color: #fff;
-}
+
 .tab-contentBG {
   background-color: white;
 }
