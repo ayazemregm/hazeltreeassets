@@ -299,9 +299,11 @@ function tabs() {
       });
 
     document.getElementById(`pathTab${i}`).addEventListener("click", () => {
-      document.getElementById(`tabs-content`).children.forEach((element) => {
-        element.style = "display:none";
-      });
+      let tabContent = document.getElementById(`tabs-content`);
+      for (let j = 0; j < tabContent.length; j++) {
+        tabContent.children.item(j).style = "display:none";
+      }
+
       document.querySelector(`.swiper${i}`).style = "display: block";
     });
   }

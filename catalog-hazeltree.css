@@ -98,9 +98,7 @@ body {
 .tabs-wrapper {
   background-color: black;
 }
-.tabs-text-wrapper {
-  background-color: black;
-}
+
 .tabs-center {
   max-width: 72rem;
   margin: 0 auto;
@@ -137,6 +135,7 @@ body {
 #tabs-content {
   max-width: 72rem;
   margin: 0 auto;
+  margin-top: 5%;
 }
 a.coursebox-container {
   border: 0px;
