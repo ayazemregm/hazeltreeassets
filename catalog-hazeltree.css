@@ -11,10 +11,10 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
 }
-button,
+/* button,
 .button {
   all: unset;
-}
+} */
 /* custom styling by greenmusk */
 
 #header {
