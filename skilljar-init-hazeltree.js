@@ -213,7 +213,7 @@ function tabs() {
     <!-- Slider main container -->
     <div  class="swiper${i}">
       <!-- Additional required wrapper -->
-      <div id="tab-sliders" class="swiper-wrapper ">
+      <div id="tab-sliders${i}" class="swiper-wrapper">
      
         <!-- Slides --></div>
       <!-- If we need navigation buttons -->
@@ -221,6 +221,7 @@ function tabs() {
       <div class="swiper-button-next"></div>
     </div>`;
     console.log(filteredPaths[i - 1].children.item(2).innerText);
+
     let tab = filteredPaths[i - 1].children.item(2).innerText;
     let elBtnTemplate = `<button class="tab-nav-item">${tab}</button> `;
     if (i === 1) {
@@ -234,6 +235,7 @@ function tabs() {
     const swiper = new Swiper(`.swiper${i}`, {
       loop: false,
       initialSlide: 2,
+
       centeredSlides: true,
       navigation: {
         nextEl: ".swiper-button-next",
@@ -254,7 +256,48 @@ function tabs() {
       },
     });
 
-    let swiperSlide = `<div class="swiper-slide"></div>`;
+    let parsedDom;
+    axios
+      .get("https://test-hazeltree.skilljar.com/path/getting-started")
+      .then((e) => {
+        parsedDom = new DOMParser().parseFromString(e.data, "text/html");
+      });
+
+    let pathCourses = parsedDom.getElementById("catalog-courses").children;
+
+    for (let k = 0; k < pathCourses.length; k++) {
+      let tabSliders = document.getElementById(`tab-sliders${i}`);
+
+      let courseNode = pathCourses[k];
+
+      console.log(courseNode);
+      let image = courseNode.children.item(1).firstChild.currentSrc;
+      let title = courseNode.children.item(2).innerText;
+      let description = courseNode.children.item(3).innerText;
+
+      let courseBoxTemplate = `
+
+   <div class="card">
+      <!-- card image -->
+      <div class="card-image">
+        <img src="${image}" alt="">
+      </div>
+      <!-- card text -->
+      <div>
+        <p style="font-weight: 600; margin-bottom: 0.5rem;">${title}</p>
+        <p style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;  
+  overflow: hidden;">${description}</p>
+      </div>
+    </div>
+`;
+      let swiperSlideElement = `<div class="swiper-slide">${courseBoxTemplate}</div>`;
+
+      // swiperSliders.item(i).appendChild(filteredCourses[i]);
+      tabSliders.item(i).insertAdjacentHTML("afterbegin", swiperSlideElement);
+    }
+
+    // axios course
+    // onclick tabs
   }
 }
 // footer
