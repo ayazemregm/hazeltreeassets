@@ -265,7 +265,8 @@ function tabs() {
           let courseNode = pathCourses[k];
 
           console.log(courseNode);
-          let image = courseNode.children.item(1).firstChild.currentSrc;
+          let image =
+            courseNode.childNodes[3].childNodes[1].attributes[1].textContent;
           let title = courseNode.children.item(2).innerText;
           let description = courseNode.children.item(3).innerText;
 
