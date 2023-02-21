@@ -256,26 +256,23 @@ function tabs() {
       },
     });
 
-    let parsedDom;
-    let pathCourses;
     axios
       .get("https://test-hazeltree.skilljar.com/path/getting-started")
       .then((e) => {
-        parsedDom = new DOMParser().parseFromString(e.data, "text/html");
-        pathCourses = parsedDom.getElementById("catalog-courses").children;
-      });
+        let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
+        let pathCourses = parsedDom.getElementById("catalog-courses").children;
 
-    for (let k = 0; k < pathCourses.length; k++) {
-      let tabSliders = document.getElementById(`tab-sliders${i}`);
+        for (let k = 0; k < pathCourses.length; k++) {
+          let tabSliders = document.getElementById(`tab-sliders${i}`);
 
-      let courseNode = pathCourses[k];
+          let courseNode = pathCourses[k];
 
-      console.log(courseNode);
-      let image = courseNode.children.item(1).firstChild.currentSrc;
-      let title = courseNode.children.item(2).innerText;
-      let description = courseNode.children.item(3).innerText;
+          console.log(courseNode);
+          let image = courseNode.children.item(1).firstChild.currentSrc;
+          let title = courseNode.children.item(2).innerText;
+          let description = courseNode.children.item(3).innerText;
 
-      let courseBoxTemplate = `
+          let courseBoxTemplate = `
 
    <div class="card">
       <!-- card image -->
@@ -290,12 +287,14 @@ function tabs() {
       </div>
     </div>
 `;
-      let swiperSlideElement = `<div class="swiper-slide">${courseBoxTemplate}</div>`;
+          let swiperSlideElement = `<div class="swiper-slide">${courseBoxTemplate}</div>`;
 
-      // swiperSliders.item(i).appendChild(filteredCourses[i]);
-      tabSliders.item(i).insertAdjacentHTML("afterbegin", swiperSlideElement);
-    }
-
+          // swiperSliders.item(i).appendChild(filteredCourses[i]);
+          tabSliders
+            .item(i)
+            .insertAdjacentHTML("afterbegin", swiperSlideElement);
+        }
+      });
     // axios course
     // onclick tabs
   }
