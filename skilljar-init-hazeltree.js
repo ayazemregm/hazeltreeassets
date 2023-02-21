@@ -303,6 +303,7 @@ function tabs() {
         document.getElementById(`pathTab${i}`).addEventListener("click", () => {
           let tabContent = document.getElementById("tabs-content");
           for (let j = 0; j < tabContent.length; j++) {
+            console.log("tabContent");
             tabContent.children.item(j).style = "display:none";
             console.log(tabContent.children.item(j));
           }
