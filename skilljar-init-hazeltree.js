@@ -302,11 +302,17 @@ function tabs() {
       .finally(function () {
         document.getElementById(`pathTab${i}`).addEventListener("click", () => {
           let tabContent = document.getElementById("tabs-content");
-          for (let s = 0; s < tabContent.length; s++) {
+          let children = [...tabContent];
+          children.forEach((child) => {
+            console.log(child);
+          });
+
+          /* for (let s = 0; s < tabContent.length; s++) {
             console.log("tabContent");
             tabContent.children.item(s).style = "display:none";
             console.log(tabContent.children.item(s));
-          }
+          } */
+
           let tabNav = document.querySelector(".tabs-nav");
           for (let z = 0; z < tabNav.children.length; z++) {
             console.log("tabnav");
