@@ -221,8 +221,7 @@ function tabs() {
 
     let tab = filteredPaths[i - 1].children.item(2).innerText;
     let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button> `;
-    console.log(filteredPaths);
-    console.log(filteredPaths[i - 1]);
+
     filteredPaths[i - 1].children.item(2);
     if (i === 1) {
       elBtnTemplate = `<button  id="pathTab1"  class="tab-nav-item tab-nav-item-active ">${tab}</button> `;
@@ -302,11 +301,15 @@ function tabs() {
       let tabContent = document.getElementById(`tabs-content`);
       for (let j = 0; j < tabContent.length; j++) {
         tabContent.children.item(j).style = "display:none";
+        console.log(tabContent.children.item(j));
       }
       let tabNav = document.querySelector(".tabs-nav");
       for (let z = 0; z < tabNav.children.length; z++) {
         tabNav.children.item(z).classList.remove("tab-nav-item-active");
       }
+      document
+        .getElementById(`pathTab${i}`)
+        .classList.add("tab-nav-item-active");
       document.querySelector(`.swiper${i}`).style = "display: block";
     });
   }
