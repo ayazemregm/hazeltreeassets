@@ -11,9 +11,9 @@ html {
 button:not(.focus-after-v2):focus::before {
   opacity: 0;
 }
-.tab-nav-item button:focus,
-.tab-nav-item button:active,
-.tab-nav-item button:hover {
+.tabs-nav button:focus,
+.tabs-nav button:active,
+.tabs-nav button:hover {
   background: #fff;
 }
 
