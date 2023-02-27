@@ -11,6 +11,11 @@ html {
 button:not(.focus-after-v2):focus::before {
   opacity: 0;
 }
+.tab-nav-item button:focus,
+.tab-nav-item button:active,
+.tab-nav-item button:hover {
+  background: #fff;
+}
 
 body {
   font-family: "Montserrat", sans-serif;
