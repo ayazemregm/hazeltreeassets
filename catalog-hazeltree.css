@@ -8,6 +8,9 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+button:not(.focus-after-v2):focus::before {
+  opacity: 0;
+}
 
 body {
   font-family: "Montserrat", sans-serif;
