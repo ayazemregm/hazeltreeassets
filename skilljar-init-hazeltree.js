@@ -100,28 +100,7 @@ function initializeSwiper() {
   for (let i = 0; i < filteredCourses.length; i++) {
     let courseNode = filteredCourses[i];
 
-    let image = courseNode.children.item(1).firstChild.currentSrc;
-    // courseNode.childNodes[3].childNodes[1].attributes[1].textContent;
-    let title = courseNode.children.item(2).innerText;
-    let description = courseNode.children.item(3).innerText;
-
-    let courseBoxTemplate = `
- <div class="card">
-      <!-- card image -->
-      <div class="card-image">
-        <img src="${image}" alt="">
-      </div>
-      <!-- card text -->
-      <div>
-        <p style="font-weight: 600; margin-bottom: 0.5rem;">${title}</p>
-        <p style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;  
-  overflow: hidden;">${description}</p>
-      </div>
-    </div>
-`;
-    let element = courseBoxTemplate;
-    // swiperSliders.item(i).appendChild(filteredCourses[i]);
-    swiperSliders.item(i).insertAdjacentHTML("afterbegin", courseBoxTemplate);
+    swiperSliders.item(i).appendChild(courseNode);
   }
 
   const swiper = new Swiper(".swiper", {
