@@ -150,9 +150,9 @@ a.coursebox-container {
 }
 
 a.coursebox-container.course .coursebox-image img {
-  max-height: auto;
+  /*  max-height: auto;
   object-fit: cover;
-  aspect-ratio: 0.7;
+  aspect-ratio: 0.7; */
 }
 /* 
 .tab-content {
