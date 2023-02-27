@@ -6,6 +6,7 @@ console.log("loaded");
 
 window.addEventListener("load", () => {
   defaultActions();
+  footer();
   console.log(end);
   switch (end) {
     case "/":
@@ -15,7 +16,6 @@ window.addEventListener("load", () => {
       addCourseTitle();
       initializeSwiper();
       tabs();
-      footer();
       break;
     // /accounts/login/
     case "/accounts/login/":
@@ -228,26 +228,7 @@ function tabs() {
 
           let courseNode = pathCourses[k];
 
-          let image =
-            courseNode.childNodes[3].childNodes[1].attributes[1].textContent;
-          let title = courseNode.children.item(2).innerText;
-          let description = courseNode.children.item(3).innerText;
-
-          let courseBoxTemplate = `
-   <div class="card">
-      <!-- card image -->
-      <div class="card-image">
-        <img src="${image}" alt="">
-      </div>
-      <!-- card text -->
-      <div>
-        <p style="font-weight: 600; margin-bottom: 0.5rem;">${title}</p>
-        <p style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;  
-  overflow: hidden;">${description}</p>
-      </div>
-    </div>
-`;
-          let swiperSlideElement = `<div class="swiper-slide">${courseBoxTemplate}</div>`;
+          let swiperSlideElement = `<div class="swiper-slide">${courseNode}</div>`;
 
           // swiperSliders.item(i).appendChild(filteredCourses[i]);
           tabSliders.insertAdjacentHTML("afterbegin", swiperSlideElement);
