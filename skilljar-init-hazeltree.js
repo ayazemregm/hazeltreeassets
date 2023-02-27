@@ -59,6 +59,11 @@ function addCourseTitle() {
  </div>`;
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("afterbegin", courseTitles);
+
+  document.getElementById("getStartedBtn").onclick = function () {
+    let catalogContent = document.getElementById("catalog-content");
+    catalogContent.scrollIntoView();
+  };
 }
 
 // swiper
