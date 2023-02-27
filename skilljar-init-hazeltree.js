@@ -232,7 +232,8 @@ function tabs() {
             courseNode.childNodes[3].childNodes[1].attributes[1].textContent;
           let title = courseNode.children.item(2).innerText;
           let description = courseNode.children.item(3).innerText;
-
+          console.log(`parseDom ${parsedDom}`);
+          console.log(`pathCourses ${pathCourses}`);
           let courseBoxTemplate = `
    <div class="card">
       <!-- card image -->
