@@ -41,7 +41,7 @@ window.addEventListener("load", () => {
   console.log(dpSummary);
   if (dpSummary !== null) {
     let skilljarContent = document.getElementById("skilljar-content");
-    console.log(skilljarContent);
+    skilljarContent.children[0].style = "background-color:#000";
   }
 });
 
