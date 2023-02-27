@@ -40,8 +40,8 @@ window.addEventListener("load", () => {
   let dpSummary = document.querySelector(".dp-summary-wrapper");
   console.log(dpSummary);
   if (dpSummary !== null) {
-    let skilljarContent = document.getElementById("skilljar-content");
-    skilljarContent.children[0].style = "background-color:#000";
+    let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
+    document.head.insertAdjacentHTML("beforeend", catalogCss);
   }
 });
 
