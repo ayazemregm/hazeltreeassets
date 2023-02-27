@@ -40,8 +40,8 @@ window.addEventListener("load", () => {
   let dpSummary = document.querySelector(".dp-summary-wrapper");
   console.log(dpSummary);
   if (dpSummary !== null) {
-    let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
-    document.head.insertAdjacentHTML("beforeend", catalogCss);
+    let course_detail = `<link rel="stylesheet" href="${sourceLink}course-detail.css">`;
+    document.head.insertAdjacentHTML("beforeend", course_detail);
   }
 });
 
