@@ -9,9 +9,6 @@ window.addEventListener("load", () => {
   console.log(end);
   switch (end) {
     case "/":
-      console.log("Main Page");
-      break;
-    case "/page/hazeltree-university":
       console.log("testPage");
       let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", catalogCss);
@@ -104,6 +101,7 @@ function initializeSwiper() {
     let courseNode = filteredCourses[i];
 
     let image = courseNode.children.item(1).firstChild.currentSrc;
+    // courseNode.childNodes[3].childNodes[1].attributes[1].textContent;
     let title = courseNode.children.item(2).innerText;
     let description = courseNode.children.item(3).innerText;
 
