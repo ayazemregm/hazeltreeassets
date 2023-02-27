@@ -14,7 +14,8 @@ button:not(.focus-after-v2):focus::before {
 .tabs-nav button:focus,
 .tabs-nav button:active,
 .tabs-nav button:hover {
-  background-color: unset;
+  background-color: #fff;
+  color: #000;
 }
 
 body {
