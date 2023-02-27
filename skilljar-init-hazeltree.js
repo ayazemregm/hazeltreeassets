@@ -37,6 +37,12 @@ window.addEventListener("load", () => {
       console.log("Default Fired");
       break;
   }
+  let dpSummary = document.querySelector(".dp-summary-wrapper");
+  console.log(dpSummary);
+  if (dpSummary !== null) {
+    let skilljarContent = document.getElementById("skilljar-content");
+    console.log(skilljarContent);
+  }
 });
 
 function defaultActions() {
