@@ -110,7 +110,8 @@ function initializeSwiper() {
 
   const swiper = new Swiper(".swiper", {
     loop: false,
-    initialSlide: 2,
+    initialSlide: filteredCourses.length / 2,
+
     centeredSlides: true,
     navigation: {
       nextEl: ".swiper-button-next",
