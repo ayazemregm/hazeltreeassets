@@ -227,12 +227,14 @@ function tabs() {
       .insertAdjacentHTML("afterbegin", tabTemplate);
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
-
+    console.log(filteredPaths);
     axios
       .get(axiosUrl)
       .then((e) => {
         let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
         let pathCourses = parsedDom.getElementById("catalog-courses");
+        console.log("pathcourses");
+        console.log(pathCourses);
         if (pathCourses.children.length !== null) {
           for (let k = 0; k < pathCourses.children.length; k++) {
             let tabSliders = document.getElementById(`tab-sliders${i}`);
@@ -253,8 +255,6 @@ function tabs() {
             });
 
             courseNodeEl.appendChild(dataCourse[0]);
-            console.log(dataCourse);
-
             /*   document.querySelector(
               `[data-course='${courseNode.dataset.course}']`
               ); */
