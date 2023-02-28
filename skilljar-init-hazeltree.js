@@ -230,7 +230,7 @@ function tabs() {
       .then((e) => {
         let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
         let pathCourses = parsedDom.getElementById("catalog-courses");
-        if (pathCourses.children.length) {
+        if (pathCourses.children.length !== null) {
           for (let k = 0; k < pathCourses.children.length; k++) {
             let tabSliders = document.getElementById(`tab-sliders${i}`);
 
