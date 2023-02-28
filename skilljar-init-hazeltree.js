@@ -253,10 +253,10 @@ function tabs() {
                 return e;
               }
             });
-
+            console.log(dataCourse[0]);
             let cloneNode = dataCourse[0].cloneNode(true);
             // cloneNode.item(1).data - src;
-            console.log(cloneNode.item(1));
+            // console.log(cloneNode.item(1));
             courseNodeEl.appendChild(cloneNode);
             /*   document.querySelector(
               `[data-course='${courseNode.dataset.course}']`
