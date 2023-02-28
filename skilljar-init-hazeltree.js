@@ -40,10 +40,13 @@ window.addEventListener("load", () => {
       break;
   }
   let dpSummary = document.querySelector(".dp-summary-wrapper");
-  console.log(dpSummary);
+
   if (dpSummary !== null) {
     let course_detail = `<link rel="stylesheet" href="${sourceLink}course-detail.css">`;
     document.head.insertAdjacentHTML("beforeend", course_detail);
+  }
+  console.log(window.location.pathname);
+  if (window.location.pathname) {
   }
 });
 
@@ -240,11 +243,23 @@ function tabs() {
             console.log(courseNode);
             let courseNodeEl = document.createElement("div");
             courseNodeEl.classList.add("swiper-slide");
-            let dataCourse = document.querySelector(
-              `[data-course='${courseNode.dataset.course}']`
-            );
+
+            let dataCourse = allCourses.filter((e) => {
+              if (
+                !e.classList.contains("not-found") &&
+                e.dataset["type"] == "-c" &&
+                e.dataset.course == courseNode.dataset.course
+              ) {
+                return e;
+              }
+            });
             console.log(dataCourse);
-            courseNodeEl.appendChild(dataCourse.cloneNode());
+
+            /*   document.querySelector(
+              `[data-course='${courseNode.dataset.course}']`
+            ); */
+
+            // courseNodeEl.appendChild(dataCourse.cloneNode());
             // let swiperSlideElement = `<div class="swiper-slide">${courseNode}</div>`;
             // swiperSliders.item(i).appendChild(filteredCourses[i]);
             // tabSliders.insertAdjacentHTML("afterbegin", swiperSlideElement);
