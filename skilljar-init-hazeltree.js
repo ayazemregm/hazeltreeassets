@@ -3,6 +3,7 @@ let end = window.location.pathname;
 let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
 
 console.log("loaded");
+let allCourses = [];
 
 window.addEventListener("load", () => {
   defaultActions();
@@ -102,6 +103,7 @@ function initializeSwiper() {
       let swiperSlide = `<div class="swiper-slide"></div>`;
       sliders.insertAdjacentHTML("beforeend", swiperSlide);
       filteredCourses.push(courses.item(i));
+      filteredCourses.push(allCourses.item(i));
     }
   }
 
@@ -113,9 +115,6 @@ function initializeSwiper() {
     swiperSliders.item(i).appendChild(courseNode);
   }
 
-  console.log(courses);
-  console.log("filtered");
-  console.log(filteredCourses);
   const swiper = new Swiper(".swiper", {
     loop: false,
     initialSlide: filteredCourses.length / 2,
@@ -225,6 +224,7 @@ function tabs() {
       .insertAdjacentHTML("afterbegin", tabTemplate);
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
+    console.log(allCourses);
     axios
       .get(axiosUrl)
       .then((e) => {
