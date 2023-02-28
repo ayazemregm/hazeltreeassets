@@ -240,9 +240,9 @@ function tabs() {
             let courseNodeEl = document.createElement("div");
             courseNodeEl.classList.add("swiper-slide");
             let dataCourse = document.querySelector(
-              "[data-course='transaction-manager']"
+              `[data-course='${courseNode.dataset.course}']`
             );
-
+            console.log(dataCourse);
             courseNodeEl.appendChild(courseNode);
             // let swiperSlideElement = `<div class="swiper-slide">${courseNode}</div>`;
             // swiperSliders.item(i).appendChild(filteredCourses[i]);
