@@ -237,9 +237,13 @@ function tabs() {
           let courseNode = pathCourses[k];
 
           console.log(courseNode);
-          let swiperSlideElement = `<div class="swiper-slide">${courseNode}</div>`;
+          let courseNodeEl = document.createElement("div");
+          courseNodeEl.classList.add("swiper-slide");
+          courseNodeEl.appendChild(courseNode);
+          // let swiperSlideElement = `<div class="swiper-slide">${courseNode}</div>`;
           // swiperSliders.item(i).appendChild(filteredCourses[i]);
-          tabSliders.insertAdjacentHTML("afterbegin", swiperSlideElement);
+          // tabSliders.insertAdjacentHTML("afterbegin", swiperSlideElement);
+          tabSliders.insertAdjacentElement("afterbegin", courseNodeEl);
         }
 
         const swiper = new Swiper(`.swiper${i}`, {
