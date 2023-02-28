@@ -7,6 +7,8 @@ let allCourses = [];
 window.addEventListener("load", () => {
   defaultActions();
   footer();
+  let footerCss = `<link rel="stylesheet" href="${sourceLink}footer.css">`;
+  document.head.insertAdjacentHTML("beforeend", footerCss);
   console.log(end);
   switch (end) {
     case "/":
@@ -242,7 +244,7 @@ function tabs() {
               `[data-course='${courseNode.dataset.course}']`
             );
             console.log(dataCourse);
-            courseNodeEl.appendChild(courseNode);
+            courseNodeEl.appendChild(dataCourse.cloneNode());
             // let swiperSlideElement = `<div class="swiper-slide">${courseNode}</div>`;
             // swiperSliders.item(i).appendChild(filteredCourses[i]);
             // tabSliders.insertAdjacentHTML("afterbegin", swiperSlideElement);
