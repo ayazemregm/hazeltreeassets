@@ -289,10 +289,10 @@ function tabs() {
               },
             },
           });
+        }
 
-          if (i !== 1) {
-            document.querySelector(`.swiper${i}`).style = "display: none";
-          }
+        if (i !== 1) {
+          document.querySelector(`.swiper${i}`).style = "display: none";
         }
       })
       .catch(function (error) {
