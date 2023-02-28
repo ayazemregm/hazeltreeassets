@@ -1,4 +1,3 @@
-"use strict";
 let end = window.location.pathname;
 let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
 
@@ -224,7 +223,7 @@ function tabs() {
       .insertAdjacentHTML("afterbegin", tabTemplate);
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
-    console.log(allCourses);
+
     axios
       .get(axiosUrl)
       .then((e) => {
@@ -273,9 +272,10 @@ function tabs() {
               },
             },
           });
-        }
-        if (i !== 1) {
-          document.querySelector(`.swiper${i}`).style = "display: none";
+
+          if (i !== 1) {
+            document.querySelector(`.swiper${i}`).style = "display: none";
+          }
         }
       })
       .catch(function (error) {
