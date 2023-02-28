@@ -254,7 +254,10 @@ function tabs() {
               }
             });
 
-            courseNodeEl.appendChild(dataCourse[0].cloneNode(true));
+            let cloneNode = dataCourse[0].cloneNode(true);
+            // cloneNode.item(1).
+            console.log(cloneNode);
+            courseNodeEl.appendChild(cloneNode);
             /*   document.querySelector(
               `[data-course='${courseNode.dataset.course}']`
               ); */
@@ -289,10 +292,10 @@ function tabs() {
               },
             },
           });
-        }
 
-        if (i !== 1) {
-          document.querySelector(`.swiper${i}`).style = "display: none";
+          if (i !== 1) {
+            document.querySelector(`.swiper${i}`).style = "display: none";
+          }
         }
       })
       .catch(function (error) {
