@@ -90,7 +90,6 @@ function initializeSwiper() {
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let courses = catalogCourses.children;
-  console.log(courses);
   let filteredCourses = [];
 
   for (let i = 0; i < courses.length; i++) {
@@ -114,6 +113,9 @@ function initializeSwiper() {
     swiperSliders.item(i).appendChild(courseNode);
   }
 
+  console.log(courses);
+  console.log("filtered");
+  console.log(filteredCourses);
   const swiper = new Swiper(".swiper", {
     loop: false,
     initialSlide: filteredCourses.length / 2,
