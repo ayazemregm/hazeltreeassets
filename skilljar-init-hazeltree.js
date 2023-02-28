@@ -252,7 +252,7 @@ function tabs() {
               }
             });
 
-            courseNodeEl.appendChild(dataCourse[0].cloneNode(true));
+            courseNodeEl.appendChild(dataCourse[0]);
 
             /*   document.querySelector(
               `[data-course='${courseNode.dataset.course}']`
