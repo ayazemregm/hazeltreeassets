@@ -253,6 +253,7 @@ function tabs() {
             });
 
             courseNodeEl.appendChild(dataCourse[0]);
+            console.log(dataCourse);
 
             /*   document.querySelector(
               `[data-course='${courseNode.dataset.course}']`
