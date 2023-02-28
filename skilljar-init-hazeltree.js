@@ -90,7 +90,7 @@ function initializeSwiper() {
 
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let courses = catalogCourses.children;
-
+  console.log(courses);
   let filteredCourses = [];
 
   for (let i = 0; i < courses.length; i++) {
@@ -182,8 +182,7 @@ function tabs() {
   let catalogCourses = document.getElementById("catalog-courses");
 
   let courses = catalogCourses.children;
-  console.log("children");
-  console.log(catalogCourses.children);
+
   let filteredPaths = [];
 
   for (let i = 0; i < courses.length; i++) {
@@ -195,8 +194,7 @@ function tabs() {
       // courses.item(i).remove();
     }
   }
-  console.log("filtered");
-  console.log(filteredPaths);
+
   for (let i = 1; i <= filteredPaths.length; i++) {
     let tabTemplate = `  
     <!-- Slider main container -->
@@ -239,6 +237,10 @@ function tabs() {
           console.log(courseNode);
           let courseNodeEl = document.createElement("div");
           courseNodeEl.classList.add("swiper-slide");
+          let dataCourse = document.querySelector(
+            "[data-course='transaction-manager']"
+          );
+
           courseNodeEl.appendChild(courseNode);
           // let swiperSlideElement = `<div class="swiper-slide">${courseNode}</div>`;
           // swiperSliders.item(i).appendChild(filteredCourses[i]);
