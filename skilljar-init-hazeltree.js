@@ -194,7 +194,7 @@ function tabs() {
       // courses.item(i).remove();
     }
   }
-
+  console.log(filteredPaths);
   for (let i = 1; i <= filteredPaths.length; i++) {
     let tabTemplate = `  
     <!-- Slider main container -->
@@ -234,8 +234,8 @@ function tabs() {
 
           let courseNode = pathCourses[k];
 
+          console.log(courseNode);
           let swiperSlideElement = `<div class="swiper-slide">${courseNode}</div>`;
-
           // swiperSliders.item(i).appendChild(filteredCourses[i]);
           tabSliders.insertAdjacentHTML("afterbegin", swiperSlideElement);
         }
