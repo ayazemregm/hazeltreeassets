@@ -229,12 +229,12 @@ function tabs() {
       .get(axiosUrl)
       .then((e) => {
         let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
-        let pathCourses = parsedDom.getElementById("catalog-courses").children;
-        if (pathCourses.length) {
-          for (let k = 0; k < pathCourses.length; k++) {
+        let pathCourses = parsedDom.getElementById("catalog-courses");
+        if (pathCourses.children.length) {
+          for (let k = 0; k < pathCourses.children.length; k++) {
             let tabSliders = document.getElementById(`tab-sliders${i}`);
 
-            let courseNode = pathCourses[k];
+            let courseNode = pathCourses.children[k];
 
             console.log(courseNode);
             let courseNodeEl = document.createElement("div");
