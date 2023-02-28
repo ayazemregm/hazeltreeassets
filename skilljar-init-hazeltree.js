@@ -233,7 +233,7 @@ function tabs() {
       .then((e) => {
         let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
         let pathCourses = parsedDom.getElementById("catalog-courses");
-        console.log("pathcourses");
+        console.log("pathCoursess");
         console.log(pathCourses);
         if (pathCourses.children.length !== null) {
           for (let k = 0; k < pathCourses.children.length; k++) {
