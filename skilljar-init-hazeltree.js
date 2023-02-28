@@ -214,8 +214,7 @@ function tabs() {
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerText;
-    // console.log(filteredPaths[i - 1]);
-    console.log(filteredPaths[i - 1].href);
+
     let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button> `;
 
     filteredPaths[i - 1].children.item(2);
@@ -240,7 +239,6 @@ function tabs() {
 
             let courseNode = pathCourses.children[k];
 
-            console.log(courseNode);
             let courseNodeEl = document.createElement("div");
             courseNodeEl.classList.add("swiper-slide");
 
@@ -253,11 +251,12 @@ function tabs() {
                 return e;
               }
             });
-            console.log(dataCourse);
+
+            courseNodeEl.appendChild(dataCourse[0].cloneNode());
 
             /*   document.querySelector(
               `[data-course='${courseNode.dataset.course}']`
-            ); */
+              ); */
 
             // courseNodeEl.appendChild(dataCourse.cloneNode());
             // let swiperSlideElement = `<div class="swiper-slide">${courseNode}</div>`;
