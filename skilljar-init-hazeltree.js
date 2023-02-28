@@ -103,7 +103,7 @@ function initializeSwiper() {
       let swiperSlide = `<div class="swiper-slide"></div>`;
       sliders.insertAdjacentHTML("beforeend", swiperSlide);
       filteredCourses.push(courses.item(i));
-      filteredCourses.push(allCourses.item(i));
+      allCourses.push(courses.item(i));
     }
   }
 
@@ -230,50 +230,50 @@ function tabs() {
       .then((e) => {
         let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
         let pathCourses = parsedDom.getElementById("catalog-courses").children;
+        if (pathCourses.length) {
+          for (let k = 0; k < pathCourses.length; k++) {
+            let tabSliders = document.getElementById(`tab-sliders${i}`);
 
-        for (let k = 0; k < pathCourses.length; k++) {
-          let tabSliders = document.getElementById(`tab-sliders${i}`);
+            let courseNode = pathCourses[k];
 
-          let courseNode = pathCourses[k];
+            console.log(courseNode);
+            let courseNodeEl = document.createElement("div");
+            courseNodeEl.classList.add("swiper-slide");
+            let dataCourse = document.querySelector(
+              "[data-course='transaction-manager']"
+            );
 
-          console.log(courseNode);
-          let courseNodeEl = document.createElement("div");
-          courseNodeEl.classList.add("swiper-slide");
-          let dataCourse = document.querySelector(
-            "[data-course='transaction-manager']"
-          );
+            courseNodeEl.appendChild(courseNode);
+            // let swiperSlideElement = `<div class="swiper-slide">${courseNode}</div>`;
+            // swiperSliders.item(i).appendChild(filteredCourses[i]);
+            // tabSliders.insertAdjacentHTML("afterbegin", swiperSlideElement);
+            tabSliders.insertAdjacentElement("afterbegin", courseNodeEl);
+          }
 
-          courseNodeEl.appendChild(courseNode);
-          // let swiperSlideElement = `<div class="swiper-slide">${courseNode}</div>`;
-          // swiperSliders.item(i).appendChild(filteredCourses[i]);
-          // tabSliders.insertAdjacentHTML("afterbegin", swiperSlideElement);
-          tabSliders.insertAdjacentElement("afterbegin", courseNodeEl);
+          const swiper = new Swiper(`.swiper${i}`, {
+            loop: false,
+            initialSlide: 3,
+
+            centeredSlides: true,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: 5,
+            spaceBetween: 0,
+            breakpoints: {
+              960: {
+                slidesPerView: 3,
+              },
+              600: {
+                slidesPerView: 2,
+              },
+              400: {
+                slidesPerView: 1,
+              },
+            },
+          });
         }
-
-        const swiper = new Swiper(`.swiper${i}`, {
-          loop: false,
-          initialSlide: 3,
-
-          centeredSlides: true,
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          slidesPerView: 5,
-          spaceBetween: 0,
-          breakpoints: {
-            960: {
-              slidesPerView: 3,
-            },
-            600: {
-              slidesPerView: 2,
-            },
-            400: {
-              slidesPerView: 1,
-            },
-          },
-        });
-
         if (i !== 1) {
           document.querySelector(`.swiper${i}`).style = "display: none";
         }
