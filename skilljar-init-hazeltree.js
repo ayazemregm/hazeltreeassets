@@ -15,9 +15,9 @@ window.addEventListener("load", () => {
       console.log("testPage");
       let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", catalogCss);
+      tabs();
       addCourseTitle();
       initializeSwiper();
-      tabs();
       break;
     // /accounts/login/
     case "/accounts/login/":
