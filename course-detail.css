@@ -15,11 +15,13 @@
 .break-word,
 .sj-course-info-wrapper h2,
 .sj-text-available-as-part-of,
-.focus-link-v2,
-.inline-collapsible-section__label__icons {
+.focus-link-v2 {
   color: #fff;
 }
-
+.inline-collapsible-section__label__icons__expand,
+.inline-collapsible-section__label__icons__collapse {
+  background-color: #fff;
+}
 .social-media-wrapper {
   display: none;
 }
