@@ -69,7 +69,7 @@ function addCourseTitle() {
    </p>
  </div>`;
   let catalogContent = document.getElementById("catalog-content");
-  catalogContent.insertAdjacentHTML("afterbegin", courseTitles);
+  catalogContent.insertAdjacentHTML("beforeend", courseTitles);
 
   document.getElementById("getStartedBtn").onclick = function () {
     let catalogContent = document.getElementById("catalog-content");
