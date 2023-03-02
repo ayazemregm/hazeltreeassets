@@ -129,14 +129,21 @@ function initializeSwiper() {
     slidesPerView: 5,
     spaceBetween: 0,
     breakpoints: {
-      960: {
-        slidesPerView: 3,
-      },
-      600: {
-        slidesPerView: 2,
-      },
-      400: {
+      "@0.00": {
         slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      "@0.75": {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      "@1.00": {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      "@1.50": {
+        slidesPerView: 4,
+        spaceBetween: 30,
       },
     },
   });
