@@ -155,7 +155,11 @@ function tabs() {
 </div>`;
 
   let tabsText = `<div class="tabs-top">
-
+  <div class="tabs-text-wrapper">
+  <div class="tabs-center">
+    // text content
+      </div>
+    </div>
       <section class="tabs">
         <div id="tabs-title">
         <div class="tabs-nav">
