@@ -121,8 +121,9 @@ body {
 .tabs-center {
   max-width: 72rem;
   margin: 0 auto;
-
+  color: #fff;
   margin-bottom: 3rem;
+  paddding-top: 1%;
 }
 .tabs-top {
   background-color: #100f0d;
@@ -175,7 +176,6 @@ a.coursebox-container.course .coursebox-image img {
   display: block;
 } */
 .tabs-text-content {
-  color: #fff;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
