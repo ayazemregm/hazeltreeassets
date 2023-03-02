@@ -15,7 +15,8 @@
 .break-word,
 .sj-course-info-wrapper h2,
 .sj-text-available-as-part-of,
-.focus-link-v2 {
+.focus-link-v2,
+.inline-collapsible-section__label__icons {
   color: #fff;
 }
 
