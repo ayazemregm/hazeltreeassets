@@ -157,7 +157,8 @@ function tabs() {
   let tabsText = `<div class="tabs-top">
   <div class="tabs-text-wrapper">
   <div class="tabs-center">
-    // text content
+   <h1>Available Learning Paths</h1>
+        <p>You can enroll to a learning path from the paths available for you.</p>
       </div>
     </div>
       <section class="tabs">
