@@ -75,7 +75,7 @@ body {
   height: 90vh;
   width: 100%;
   max-width: 72rem;
-  padding: 1.5rem 3rem;
+  /* padding: 1.5rem 3rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
