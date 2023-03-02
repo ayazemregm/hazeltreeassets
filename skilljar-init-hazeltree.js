@@ -119,9 +119,9 @@ function initializeSwiper() {
 
   const swiper = new Swiper(".swiper", {
     loop: false,
-    initialSlide: filteredCourses.length / 2,
+    // initialSlide: filteredCourses.length / 2,
 
-    centeredSlides: true,
+    // centeredSlides: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -278,9 +278,9 @@ function tabs() {
 
           const swiper = new Swiper(`.swiper${i}`, {
             loop: false,
-            initialSlide: 3,
+            // initialSlide: 3,
 
-            centeredSlides: true,
+            // centeredSlides: true,
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
