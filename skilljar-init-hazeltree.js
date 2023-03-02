@@ -63,9 +63,7 @@ function addCourseTitle() {
      Available Courses
    </h2>
    <p>
-     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-     libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
-     sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    You can view all of to course available for you below. 
    </p>
  </div>`;
   let catalogContent = document.getElementById("catalog-content");
