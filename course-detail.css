@@ -3,8 +3,19 @@
   background-color: #000;
 }
 
+#skilljar-content:after {
+  height: unset;
+}
+
+.purchase-button {
+  color: #fff;
+  background-color: #f57f13;
+}
+
 .break-word,
-.sj-course-info-wrapper h2 {
+.sj-course-info-wrapper h2,
+.sj-text-available-as-part-of,
+.focus-link-v2 {
   color: #fff;
 }
 
