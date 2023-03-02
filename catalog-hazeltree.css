@@ -91,7 +91,7 @@ body {
   margin-top: 6.25rem;
   margin-bottom: 3rem;
   width: 100vw;
-  padding: 5% 15;
+  padding: 5% 15%;
   color: #fff;
   background-color: #000;
 }
@@ -175,7 +175,7 @@ a.coursebox-container.course .coursebox-image img {
   display: block;
 } */
 .tabs-text-content {
-  color: white;
+  color: #fff;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }

@@ -59,7 +59,7 @@ function defaultActions() {
 function addCourseTitle() {
   let courseTitles = `
 <div id="courseTitle">
-   <h2 id="availableCourses">
+   <h2 style="color:#fff" id="availableCourses">
      Available Courses
    </h2>
    <p>
@@ -155,7 +155,7 @@ function tabs() {
   let tabsText = `<div class="tabs-top">
   <div class="tabs-text-wrapper">
   <div class="tabs-center">
-   <h1>Available Learning Paths</h1>
+   <h1 style="color:#fff">Available Learning Paths</h1>
         <p>You can enroll to a learning path from the paths available for you.</p>
       </div>
     </div>
