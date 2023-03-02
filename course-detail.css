@@ -1,3 +1,13 @@
+#skilljar-content .row-v2 {
+  max-width: unset;
+  background-color: #000;
+}
+
+.break-word,
+.sj-course-info-wrapper h2 {
+  color: #fff;
+}
+
 .social-media-wrapper {
   display: none;
 }
