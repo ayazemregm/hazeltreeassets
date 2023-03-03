@@ -214,8 +214,8 @@ function tabs() {
         <!-- Slides --></div>
       <!-- If we need navigation buttons -->
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev${i}"></div>
+      <div class="swiper-button-next${i}"></div>
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerText;
@@ -271,8 +271,8 @@ function tabs() {
 
             centerInsufficientSlides: true,
             navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+              nextEl: `.swiper-button-next${i}`,
+              prevEl: `.swiper-button-prev${i}`,
             },
             slidesPerView: 5,
             spaceBetween: 0,
