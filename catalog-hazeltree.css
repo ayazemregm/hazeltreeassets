@@ -91,7 +91,7 @@ body {
   margin-top: 6.25rem;
   margin-bottom: 3rem;
   width: 100vw;
-  padding: 5% 15%;
+  padding: 2% 15%;
   color: #fff;
   background-color: #000;
 }
@@ -223,14 +223,6 @@ footer {
 }
 
 .swiper-slide {
-  width: 360px;
-  padding-right: 50px;
-  padding-left: 50px;
-
-  /* display: flex;
-  justify-content: center; */
-  /* flex-basis: max-content; */
-  /* margin: 0 5%; */
 }
 
 .card-image img {
