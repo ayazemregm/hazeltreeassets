@@ -78,7 +78,7 @@ function addCourseTitle() {
 function initializeSwiper() {
   let swiperTemplate = `  
 <!-- Slider main container -->
-<div>
+<div class="swiper-container">
   <div class="swiper">
     <!-- Additional required wrapper -->
     <div id="course-sliders" class="swiper-wrapper ">
