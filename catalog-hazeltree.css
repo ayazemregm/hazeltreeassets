@@ -241,7 +241,7 @@ footer {
 }
 
 .swiper-button-next {
-  transform: ttranslateX(75px) scale(0.8);
+  transform: translateX(75px) scale(0.8);
   color: #f57f13;
 }
 .swiper-slide {
