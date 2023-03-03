@@ -269,7 +269,7 @@ function tabs() {
 
           const swiper = new Swiper(`.swiper${i}`, {
             initialSlide: 0,
-            loop: true,
+            loop: false,
             navigation: {
               nextEl: `.swiper-button-next${i}`,
               prevEl: `.swiper-button-prev${i}`,
