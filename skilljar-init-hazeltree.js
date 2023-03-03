@@ -268,9 +268,8 @@ function tabs() {
           }
 
           const swiper = new Swiper(`.swiper${i}`, {
-            loop: false,
-
-            centerInsufficientSlides: true,
+            initialSlide: 0,
+            loop: true,
             navigation: {
               nextEl: `.swiper-button-next${i}`,
               prevEl: `.swiper-button-prev${i}`,
@@ -280,11 +279,11 @@ function tabs() {
             breakpoints: {
               "@0.00": {
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 20,
               },
               "@0.75": {
                 slidesPerView: 2,
-                spaceBetween: 20,
+                spaceBetween: 30,
               },
               "@1.00": {
                 slidesPerView: 3,
