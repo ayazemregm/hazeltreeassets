@@ -344,9 +344,8 @@ function tabs() {
             .getElementById(`pathTab${i}`)
             .classList.add("tab-nav-item-active");
           document.querySelector(`.swiper${i}`).style = "display: block";
-
-          document.body.style = "display:block";
         });
+        document.body.style = "display:block";
       });
   }
 }
