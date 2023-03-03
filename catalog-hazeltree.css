@@ -223,8 +223,12 @@ footer {
 }
 
 .swiper-slide {
-  display: flex;
-  justify-content: center;
+  width: 360px;
+  padding-right: 50px;
+  padding-left: 50px;
+
+  /* display: flex;
+  justify-content: center; */
   /* flex-basis: max-content; */
   /* margin: 0 5%; */
 }
