@@ -15,11 +15,10 @@ window.addEventListener("load", () => {
       console.log("testPage");
       let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", catalogCss);
-      tabs();
       addCourseTitle();
+      tabs();
       initializeSwiper();
       break;
-    // /accounts/login/
     case "/accounts/login/":
       console.log("login");
       let loginCss = `<link rel="stylesheet" href="${sourceLink}login-hazeltree.css">`;
@@ -48,8 +47,6 @@ window.addEventListener("load", () => {
   console.log(window.location.pathname);
   if (window.location.pathname) {
   }
-
-  // document.body.style = "display:block";
 });
 
 function defaultActions() {
@@ -347,6 +344,8 @@ function tabs() {
             .getElementById(`pathTab${i}`)
             .classList.add("tab-nav-item-active");
           document.querySelector(`.swiper${i}`).style = "display: block";
+
+          document.body.style = "display:block";
         });
       });
   }
