@@ -268,6 +268,7 @@ function tabs() {
           }
 
           const swiper = new Swiper(`.swiper${i}`, {
+            centerInsufficientSlides: true,
             initialSlide: 0,
             loop: false,
             navigation: {
