@@ -231,7 +231,7 @@ footer {
   /* overflow: visible; */
 }
 .swiper-wrapper {
-  /* overflow: hidden; */
+  justify-content: center;
 }
 
 .swiper-button-prev {
