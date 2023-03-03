@@ -214,14 +214,23 @@ footer {
   flex-direction: column;
   max-width: 200px;
 }
+
 .swiper {
   max-width: 72rem;
   margin: 0 auto;
+  overflow: visible;
 }
 .swiper-wrapper {
-  align-items: center;
+  overflow: hidden;
 }
 
+.swiper-button-prev {
+  transform: translateX(-75px);
+}
+
+.swiper-button-next {
+  transform: translateX(75px);
+}
 .swiper-slide {
 }
 
