@@ -126,7 +126,7 @@ function initializeSwiper() {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    slidesPerView: 5,
+    slidesPerView: 3,
     spaceBetween: 0,
     breakpoints: {
       "@0.00": {
@@ -142,7 +142,7 @@ function initializeSwiper() {
         spaceBetween: 40,
       },
       "@1.50": {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 50,
       },
     },
