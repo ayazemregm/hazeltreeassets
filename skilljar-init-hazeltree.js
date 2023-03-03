@@ -207,7 +207,7 @@ function tabs() {
   for (let i = 1; i <= filteredPaths.length; i++) {
     let tabTemplate = `  
     <!-- Slider main container -->
-    <div class="swiper-container">
+    <div class="swiper-container${i}">
     <div  class="swiper swiper${i}">
       <!-- Additional required wrapper -->
       <div id="tab-sliders${i}" class="swiper-wrapper">
@@ -259,30 +259,11 @@ function tabs() {
                 return e;
               }
             });
-            console.log(dataCourse);
-            console.log(dataCourse[0].children.item(1));
-            console.log(dataCourse[0].children.item(1).firstChild);
-            console.log(
-              dataCourse[0].children.item(1).firstChild.attributes[0].nodeValue
-            );
-            console.log(
-              dataCourse[0].children.item(1).firstChild.attributes[1].nodeValue
-            );
+
             dataCourse[0].children.item(1).firstChild.attributes[0].nodeValue =
               dataCourse[0].children.item(1).firstChild.attributes[1].nodeValue;
             let cloneNode = dataCourse[0].cloneNode(true);
 
-            // cloneNode.item(1).data - src;
-            // console.log(cloneNode.item(1));
-            courseNodeEl.appendChild(cloneNode);
-            /*   document.querySelector(
-              `[data-course='${courseNode.dataset.course}']`
-              ); */
-
-            // courseNodeEl.appendChild(dataCourse.cloneNode());
-            // let swiperSlideElement = `<div class="swiper-slide">${courseNode}</div>`;
-            // swiperSliders.item(i).appendChild(filteredCourses[i]);
-            // tabSliders.insertAdjacentHTML("afterbegin", swiperSlideElement);
             tabSliders.insertAdjacentElement("afterbegin", courseNodeEl);
           }
 
@@ -318,7 +299,8 @@ function tabs() {
           });
 
           if (i !== 1) {
-            document.querySelector(`.swiper${i}`).style = "display: none";
+            document.querySelector(`.swiper-container${i}`).style =
+              "display: none";
           }
         }
       })
@@ -347,7 +329,8 @@ function tabs() {
           document
             .getElementById(`pathTab${i}`)
             .classList.add("tab-nav-item-active");
-          document.querySelector(`.swiper${i}`).style = "display: block";
+          document.querySelector(`.swiper-container${i}`).style =
+            "display: block";
         });
         document.body.style = "display:block";
       });
