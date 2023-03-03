@@ -120,9 +120,9 @@ function initializeSwiper() {
 
   const swiper = new Swiper(".swiper", {
     loop: false,
-    // initialSlide: filteredCourses.length / 2,
+    initialSlide: filteredCourses.length / 2,
 
-    // centeredSlides: true,
+    centeredSlides: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -132,7 +132,7 @@ function initializeSwiper() {
     breakpoints: {
       "@0.00": {
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 20,
       },
       "@0.75": {
         slidesPerView: 2,
@@ -140,11 +140,11 @@ function initializeSwiper() {
       },
       "@1.00": {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 40,
       },
       "@1.50": {
         slidesPerView: 4,
-        spaceBetween: 30,
+        spaceBetween: 50,
       },
     },
   });
@@ -269,9 +269,9 @@ function tabs() {
 
           const swiper = new Swiper(`.swiper${i}`, {
             loop: false,
-            // initialSlide: 3,
+            initialSlide: pathCourses.children.length / 2,
 
-            // centeredSlides: true,
+            centeredSlides: true,
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
@@ -281,19 +281,19 @@ function tabs() {
             breakpoints: {
               "@0.00": {
                 slidesPerView: 1,
-                spaceBetween: 30,
+                spaceBetween: 10,
               },
               "@0.75": {
                 slidesPerView: 2,
-                spaceBetween: 30,
+                spaceBetween: 20,
               },
               "@1.00": {
                 slidesPerView: 3,
-                spaceBetween: 30,
+                spaceBetween: 40,
               },
               "@1.50": {
                 slidesPerView: 4,
-                spaceBetween: 30,
+                spaceBetween: 50,
               },
             },
           });
