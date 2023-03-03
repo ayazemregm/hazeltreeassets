@@ -179,6 +179,7 @@ a.coursebox-container.course .coursebox-image img {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
 .top-row {
 }
 .tab-nav-item-active {
@@ -216,6 +217,11 @@ footer {
 }
 /* ---- */
 .swiper-container {
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+}
+#tabs-content div {
   width: 80%;
   position: relative;
   margin: 0 auto;
