@@ -49,7 +49,7 @@ window.addEventListener("load", () => {
   if (window.location.pathname) {
   }
 
-  document.body.style = "display:block";
+  // document.body.style = "display:block";
 });
 
 function defaultActions() {
