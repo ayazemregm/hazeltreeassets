@@ -85,8 +85,9 @@ function initializeSwiper() {
       <!-- Slides --></div>
     <!-- If we need navigation buttons -->
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+         <div class="swiper-pagination"></div>
+    // <div class="swiper-button-prev"></div>
+    // <div class="swiper-button-next"></div>
 </div>`;
 
   let catalogCourses = document.getElementById("catalog-courses");
@@ -126,6 +127,9 @@ function initializeSwiper() {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
     },
     slidesPerView: 5,
     spaceBetween: 0,
@@ -215,8 +219,9 @@ function tabs() {
         <!-- Slides --></div>
       <!-- If we need navigation buttons -->
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      // <div class="swiper-button-prev"></div>
+      // <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerText;
@@ -275,6 +280,9 @@ function tabs() {
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+              el: ".swiper-pagination",
             },
             slidesPerView: 5,
             spaceBetween: 0,
