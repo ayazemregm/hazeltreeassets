@@ -354,7 +354,7 @@ function tabs() {
 // footer
 function footer() {
   let footer = `
-     <footer id="footer" class=" ">
+     <footer id="hz-footer">
       <div class="footer-wrapper">  
       <div>
         <img height="17px" width="150px" src="https://hazeltree.com/wp-content/uploads/2020/04/Hazeltree-nav-logo.png" />
@@ -402,6 +402,7 @@ function footer() {
   let skilljarContent = document.getElementById("skilljar-content");
 
   skilljarContent.insertAdjacentHTML("beforeend", footer);
+  document.getElementById("hz-footer").style = "width:100vw;";
 }
 
 function removeHeader() {
