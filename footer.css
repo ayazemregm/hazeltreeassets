@@ -12,7 +12,7 @@ footer {
 }
 
 /* /* Small devices such as large phones (640px and up) */
-@media only screen and (min-width: 40em) {
+@media only screen and (max-width: 40em) {
 }
 
 /* Medium devices such as tablets (768px and up) */

@@ -85,10 +85,10 @@ function initializeSwiper() {
       <!-- Slides --></div>
     <!-- If we need navigation buttons -->
     </div>
-         <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 </div>`;
-  // <div class="swiper-button-prev"></div>
-  // <div class="swiper-button-next"></div>
+
   let catalogCourses = document.getElementById("catalog-courses");
   let catalogContent = document.getElementById("catalog-content");
 
@@ -126,9 +126,6 @@ function initializeSwiper() {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
     },
     slidesPerView: 5,
     spaceBetween: 0,
@@ -218,11 +215,10 @@ function tabs() {
         <!-- Slides --></div>
       <!-- If we need navigation buttons -->
       </div>
-          <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>`;
 
-    // <div class="swiper-button-prev"></div>
-    // <div class="swiper-button-next"></div>
     let tab = filteredPaths[i - 1].children.item(2).innerText;
 
     let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button> `;
@@ -279,9 +275,6 @@ function tabs() {
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-              el: ".swiper-pagination",
             },
             slidesPerView: 5,
             spaceBetween: 0,
