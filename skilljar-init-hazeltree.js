@@ -78,13 +78,15 @@ function addCourseTitle() {
 function initializeSwiper() {
   let swiperTemplate = `  
 <!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div id="course-sliders" class="swiper-wrapper ">
-    <!-- Slides --></div>
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+<div>
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div id="course-sliders" class="swiper-wrapper ">
+      <!-- Slides --></div>
+    <!-- If we need navigation buttons -->
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 </div>`;
 
   let catalogCourses = document.getElementById("catalog-courses");
