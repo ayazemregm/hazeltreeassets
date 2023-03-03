@@ -236,12 +236,12 @@ footer {
 }
 
 .swiper-button-prev {
-  transform: translateX(-75px);
+  transform: translateX(-75px) scale(0.8);
   color: #f57f13;
 }
 
 .swiper-button-next {
-  transform: translateX(75px);
+  transform: translateX(-75px) scale(0.8);
   color: #f57f13;
 }
 .swiper-slide {
