@@ -221,7 +221,7 @@ footer {
   position: relative;
   margin: 0 auto;
 }
-#tabs-content div {
+#tabs-content > div {
   width: 80%;
   position: relative;
   margin: 0 auto;
