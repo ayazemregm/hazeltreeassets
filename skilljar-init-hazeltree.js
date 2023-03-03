@@ -120,13 +120,13 @@ function initializeSwiper() {
 
   const swiper = new Swiper(".swiper", {
     loop: false,
-    centerInsufficientSlides: true,
+    // centerInsufficientSlides: true,
 
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    slidesPerView: 3,
+    slidesPerView: 5,
     spaceBetween: 0,
     breakpoints: {
       "@0.00": {
@@ -142,7 +142,7 @@ function initializeSwiper() {
         spaceBetween: 40,
       },
       "@1.50": {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 50,
       },
     },
