@@ -214,7 +214,16 @@ footer {
   flex-direction: column;
   max-width: 200px;
 }
+/* ---- */
 .swiper-container {
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+}
+/* ---- */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
 }
 .swiper {
   max-width: 72rem;
