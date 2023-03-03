@@ -223,15 +223,15 @@ footer {
 /* ---- */
 .swiper-slide {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
 }
 .swiper {
   max-width: 72rem;
   margin: 0 auto;
-  overflow: visible;
+  /* overflow: visible; */
 }
 .swiper-wrapper {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .swiper-button-prev {
