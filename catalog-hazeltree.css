@@ -234,9 +234,6 @@ footer {
   margin: 0 auto;
   /* overflow: visible; */
 }
-.swiper-wrapper {
-  justify-content: center;
-}
 
 .swiper-button-prev {
   transform: translateX(-75px);

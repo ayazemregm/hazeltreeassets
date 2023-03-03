@@ -119,7 +119,8 @@ function initializeSwiper() {
   }
 
   const swiper = new Swiper(".swiper", {
-    loop: false,
+    loop: true,
+    initialSlide: 0,
     // centerInsufficientSlides: true,
 
     navigation: {
