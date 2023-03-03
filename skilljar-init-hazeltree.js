@@ -215,8 +215,8 @@ function tabs() {
         <!-- Slides --></div>
       <!-- If we need navigation buttons -->
       </div>
-      <div class="swiper-button-prev${i}"></div>
-      <div class="swiper-button-next${i}"></div>
+      <div class="swiper-button-prev swiper-button-prev${i}"></div>
+      <div class="swiper-button-next swiper-button-next${i}"></div>
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerText;
