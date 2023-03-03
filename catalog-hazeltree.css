@@ -237,10 +237,12 @@ footer {
 
 .swiper-button-prev {
   transform: translateX(-75px);
+  color: #f57f13;
 }
 
 .swiper-button-next {
   transform: translateX(75px);
+  color: #f57f13;
 }
 .swiper-slide {
 }
