@@ -67,7 +67,7 @@ function addCourseTitle() {
   let courseTitles = `
 <div id="courseTitle">
    <h2 style="color:#fff" id="availableCourses">
-      Courses
+     Available Courses
    </h2>
    <p>
    You can view all of the courses available to you below.
@@ -171,7 +171,7 @@ function tabs() {
   let tabsText = `<div class="tabs-top">
   <div class="tabs-text-wrapper">
   <div class="tabs-center">
-   <h1 style="color:#fff">Paths</h1>
+   <h1 style="color:#fff">Learning Paths</h1>
         <p>Find courses grouped by product type and user role in these tailored Learning Paths.</p>
       </div>
     </div>
@@ -391,9 +391,9 @@ function footer() {
     </footer>
   `;
 
-  let mainContainer = document.getElementById("main-container");
+  let skilljarContent = document.getElementById("skilljar-content");
 
-  mainContainer.insertAdjacentHTML("beforeend", footer);
+  skilljarContent.insertAdjacentHTML("beforeend", footer);
   document.getElementById("hz-footer").style = "width:100vw;";
 }
 
