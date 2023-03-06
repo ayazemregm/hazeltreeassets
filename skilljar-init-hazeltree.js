@@ -25,6 +25,7 @@ window.addEventListener("load", () => {
       document.head.insertAdjacentHTML("beforeend", loginCss);
       removeHeader();
       addLoginText();
+      document.body.style = "display:block";
       break;
     case "/accounts/signup/":
       console.log("signup");
@@ -32,7 +33,7 @@ window.addEventListener("load", () => {
       document.head.insertAdjacentHTML("beforeend", signUp);
       removeHeader();
       addLoginText();
-
+      document.body.style = "display:block";
       break;
     default:
       console.log("Default Fired");
@@ -43,6 +44,7 @@ window.addEventListener("load", () => {
   if (dpSummary !== null) {
     let course_detail = `<link rel="stylesheet" href="${sourceLink}course-detail.css">`;
     document.head.insertAdjacentHTML("beforeend", course_detail);
+    document.body.style = "display:block";
   }
   console.log(window.location.pathname);
   if (window.location.pathname) {
