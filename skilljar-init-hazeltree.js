@@ -392,8 +392,14 @@ function footer() {
   `;
 
   let skilljarContent = document.getElementById("skilljar-content");
+  let lpFooter = document.getElementById("lp-footer");
 
-  skilljarContent.insertAdjacentHTML("beforeend", footer);
+  if (skilljarContent !== null && skilljarContent !== undefined) {
+    skilljarContent.insertAdjacentHTML("beforeend", footer);
+  }
+  if (lpFooter !== null && lpFooter !== undefined) {
+    lpFooter.innerHTML = footer;
+  }
   document.getElementById("hz-footer").style = "width:100vw;";
 }
 
