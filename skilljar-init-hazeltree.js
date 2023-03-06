@@ -348,7 +348,7 @@ function footer() {
           <a href="mailto:webmaster@example.com">info@hazeltree.com</a>
         </div>
       </div>
-      <div>
+      <div >
         <p>New York(HQ)</p>
         <p>
           150 West 30th Street, 11th FL<br>

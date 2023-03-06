@@ -262,6 +262,10 @@ footer {
 #skilljar-content:after {
   height: 0;
 }
+
+.footer-wrapper p {
+  font-size: 0.75em;
+}
 @media only screen and (max-width: 40em) {
   .swiper-button-next,
   .swiper-button-prev {
