@@ -59,10 +59,10 @@ function addCourseTitle() {
   let courseTitles = `
 <div id="courseTitle">
    <h2 style="color:#fff" id="availableCourses">
-     Available Courses
+      Courses
    </h2>
    <p>
-    You can view all of to course available for you below. 
+   You can view all of the courses available to you below.
    </p>
  </div>`;
   let catalogContent = document.getElementById("catalog-content");
@@ -163,8 +163,8 @@ function tabs() {
   let tabsText = `<div class="tabs-top">
   <div class="tabs-text-wrapper">
   <div class="tabs-center">
-   <h1 style="color:#fff">Available Learning Paths</h1>
-        <p>You can enroll to a learning path from the paths available for you.</p>
+   <h1 style="color:#fff">Paths</h1>
+        <p>Find courses grouped by product type and user role in these tailored Learning Paths.</p>
       </div>
     </div>
       <section class="tabs">
@@ -348,33 +348,33 @@ function footer() {
       </div>
       <div>
         <p>New York(HQ)</p>
-        <address>
+        <p>
           150 West 30th Street, 11th FL<br>
           New York, NY 10001<br>
          United States<br>
-        </address>
+        </p>
         <p>
          Tel: <a href="tel:2127270883">(212) 727-0883</a>
         </p>
       </div>
       <div>
         <p>London</p>
-        <address>
+        <p>
           20 North Audley Street,<br>
           London, W1K 6WE<br>
           United Kingdom<br>
-        </address>
+        </p>
         <p>
           Tel: <a href="tel:442081583200">44 208 158 3200</a>
         </p>
       </div>
       <div>
         <p>Hong Kong</p>
-        <address>
+        <p>
         Unit 905, 9/F, Kinwick Centre, 32<br>
         Hollywood Rd<br>
         Central, Hong Kong<br>
-        </address>
+        </p>
         <p>
           Tel: <a href="tel:852 5808 2954">+852 5808 2954</a>
         </p>
