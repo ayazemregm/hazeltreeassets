@@ -392,13 +392,13 @@ function footer() {
   `;
 
   let skilljarContent = document.getElementById("skilljar-content");
-  let lpFooter = document.getElementById("lp-footer");
+  let mainContainer = document.getElementById("main-container");
 
   if (skilljarContent !== null && skilljarContent !== undefined) {
     skilljarContent.insertAdjacentHTML("beforeend", footer);
   }
-  if (lpFooter !== null && lpFooter !== undefined) {
-    lpFooter.innerHTML = footer;
+  if (mainContainer !== null && mainContainer !== undefined) {
+    mainContainer.insertAdjacentHTML("beforeend", footer);
   }
   document.getElementById("hz-footer").style = "width:100vw;";
 }

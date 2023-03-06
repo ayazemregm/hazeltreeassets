@@ -11,6 +11,9 @@ footer {
   justify-content: space-between;
 }
 
+.footer-wrapper p {
+  font-size: 0.75em;
+}
 /* /* Small devices such as large phones (640px and up) */
 @media only screen and (max-width: 40em) {
 }
