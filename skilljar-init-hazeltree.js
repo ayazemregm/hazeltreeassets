@@ -53,7 +53,9 @@ window.addEventListener("load", () => {
 
 function defaultActions() {
   let footer = document.getElementById("ep-footer");
-  footer.remove();
+  if (footer !== null && footer !== undefined) {
+    footer.remove();
+  }
 }
 
 // add course
