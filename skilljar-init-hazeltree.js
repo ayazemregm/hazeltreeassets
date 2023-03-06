@@ -52,9 +52,13 @@ window.addEventListener("load", () => {
 });
 
 function defaultActions() {
-  let footer = document.getElementById("ep-footer");
-  if (footer !== null && footer !== undefined) {
-    footer.remove();
+  let ep_footer = document.getElementById("ep-footer");
+  let lp_footer = document.getElementById("lp-footer");
+  if (ep_footer !== null && ep_footer !== undefined) {
+    ep_footer.remove();
+  }
+  if (lp_footer !== null && lp_footer !== undefined) {
+    lp_footer.remove();
   }
 }
 
@@ -387,9 +391,9 @@ function footer() {
     </footer>
   `;
 
-  let skilljarContent = document.getElementById("skilljar-content");
+  let mainContainer = document.getElementById("main-container");
 
-  skilljarContent.insertAdjacentHTML("beforeend", footer);
+  mainContainer.insertAdjacentHTML("beforeend", footer);
   document.getElementById("hz-footer").style = "width:100vw;";
 }
 
