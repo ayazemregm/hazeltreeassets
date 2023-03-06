@@ -66,9 +66,9 @@ function defaultActions() {
 function addCourseTitle() {
   let courseTitles = `
 <div id="courseTitle">
-   <h2 style="color:#fff" id="availableCourses">
+   <h1 style="color:#fff" id="availableCourses">
      Available Courses
-   </h2>
+   </h1>
    <p>
    You can view all of the courses available to you below.
    </p>
@@ -396,8 +396,7 @@ function footer() {
 
   if (skilljarContent !== null && skilljarContent !== undefined) {
     skilljarContent.insertAdjacentHTML("beforeend", footer);
-  }
-  if (mainContainer !== null && mainContainer !== undefined) {
+  } else if (mainContainer !== null && mainContainer !== undefined) {
     mainContainer.insertAdjacentHTML("beforeend", footer);
   }
   document.getElementById("hz-footer").style = "width:100vw;";
