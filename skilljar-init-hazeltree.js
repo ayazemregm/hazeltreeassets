@@ -37,6 +37,7 @@ window.addEventListener("load", () => {
       break;
     default:
       console.log("Default Fired");
+      document.body.style = "display:block";
       break;
   }
   let dpSummary = document.querySelector(".dp-summary-wrapper");
@@ -249,7 +250,8 @@ function tabs() {
         let pathCourses = parsedDom.getElementById("catalog-courses");
         // console.log("pathCoursess");
         // console.log(pathCourses);
-        if (pathCourses.children.length !== null) {
+
+        if (pathCourses.children.length > 0) {
           for (let k = 0; k < pathCourses.children.length; k++) {
             let tabSliders = document.getElementById(`tab-sliders${i}`);
 
