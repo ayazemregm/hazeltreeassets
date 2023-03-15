@@ -347,7 +347,7 @@ function tabs() {
           document.querySelector(`.swiper-container${i}`).style =
             "display: block";
         });
-        document.body.style = "display:block";
+        document.body.style = "visibility:visible";
       });
   }
 }
