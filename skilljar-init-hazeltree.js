@@ -236,6 +236,8 @@ function tabs() {
 
     console.log(filteredPaths);
     console.log(filteredPaths[i - 1].children.attributes);
+    console.log("item2");
+    console.log(filteredPaths[i - 1].children.item(2));
     let tab = filteredPaths[i - 1].children.attributes.item(1).value;
     let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button> `;
 
