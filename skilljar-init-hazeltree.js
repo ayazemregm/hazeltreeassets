@@ -25,7 +25,7 @@ window.addEventListener("load", () => {
       document.head.insertAdjacentHTML("beforeend", loginCss);
       removeHeader();
       addLoginText();
-      document.body.style = "display:block";
+      document.body.style = "visibility:visible";
       break;
     case "/accounts/signup/":
       console.log("signup");
@@ -33,11 +33,11 @@ window.addEventListener("load", () => {
       document.head.insertAdjacentHTML("beforeend", signUp);
       removeHeader();
       addLoginText();
-      document.body.style = "display:block";
+      document.body.style = "visibility:visible";
       break;
     default:
       console.log("Default Fired");
-      document.body.style = "display:block";
+      document.body.style = "visibility:visible";
       break;
   }
   let sjPageDetail = document.querySelector(".sj-page-detail-course");
@@ -46,16 +46,16 @@ window.addEventListener("load", () => {
   if (sjPageDetail !== null || sjPageCurriculum !== null) {
     let course_detail = `<link rel="stylesheet" href="${sourceLink}course-detail.css">`;
     document.head.insertAdjacentHTML("beforeend", course_detail);
-    document.body.style = "display:block";
+    document.body.style = "visibility:visible";
   }
   console.log(window.location.pathname);
   if (window.location.pathname) {
   }
 
-  let videoContent = document.querySelector(".course-fixed-content-video");
+  /*  let videoContent = document.querySelector(".course-fixed-content-video");
   if (videoContent) {
     window.dispatchEvent(new Event("resize"));
-  }
+  } */
 });
 
 function defaultActions() {
@@ -347,7 +347,7 @@ function tabs() {
           document.querySelector(`.swiper-container${i}`).style =
             "display: block";
         });
-        document.body.style = "display:block";
+        document.body.style = "visibility:visible";
       });
   }
 }
