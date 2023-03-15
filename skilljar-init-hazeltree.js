@@ -398,8 +398,8 @@ function footer() {
 
   if (skilljarContent !== null && skilljarContent !== undefined) {
     skilljarContent.insertAdjacentHTML("beforeend", footer);
+    document.getElementById("hz-footer").style = "width:100vw;";
   }
-  document.getElementById("hz-footer").style = "width:100vw;";
 }
 
 function removeHeader() {
