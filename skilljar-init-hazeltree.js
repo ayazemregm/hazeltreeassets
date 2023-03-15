@@ -234,11 +234,10 @@ function tabs() {
       <div class="swiper-button-next swiper-button-next${i}"></div>
     </div>`;
 
-    console.log(filteredPaths);
-    console.log(filteredPaths[i - 1].children.attributes);
+    console.log(filteredPaths[i - 1].children);
     console.log("item2");
-    console.log(filteredPaths[i - 1].children.item(2));
-    let tab = filteredPaths[i - 1].children.attributes.item(1).value;
+    console.log(filteredPaths[i - 1].children.item(2).innerText);
+    let tab = filteredPaths[i - 1].children.item(2).innerText;
     let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button> `;
 
     if (i === 1) {
