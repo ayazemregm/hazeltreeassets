@@ -234,12 +234,6 @@ function tabs() {
       <div class="swiper-button-next swiper-button-next${i}"></div>
     </div>`;
 
-    console.log(filteredPaths[i - 1].children);
-    console.log("item2");
-    console.log(filteredPaths[i - 1].children.item(2).innerHTML);
-    let title = filteredPaths[i - 1].children.item(2);
-    console.log("title");
-    console.log(title);
     let tab = filteredPaths[i - 1].children.item(2).innerHTML;
     let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button> `;
 
@@ -259,7 +253,7 @@ function tabs() {
         let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
         let pathCourses = parsedDom.getElementById("catalog-courses");
 
-        if (pathCourses.children.length > 0) {
+        if (pathCourses.children !== null && pathCourses.children.length > 0) {
           for (let k = 0; k < pathCourses.children.length; k++) {
             let tabSliders = document.getElementById(`tab-sliders${i}`);
 
