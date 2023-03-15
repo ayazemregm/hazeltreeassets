@@ -234,13 +234,13 @@ function tabs() {
       <div class="swiper-button-next swiper-button-next${i}"></div>
     </div>`;
 
+    console.log(filteredPaths);
     let tab = filteredPaths[i - 1].children.item(2).innerText;
-
     let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button> `;
 
     filteredPaths[i - 1].children.item(2);
     if (i === 1) {
-      elBtnTemplate = `<button  id="pathTab1"  class="tab-nav-item tab-nav-item-active ">${tab}</button> `;
+      elBtnTemplate = `<button  id="pathTab1"  class="tab-nav-item tab-nav-item-active">${tab}</button> `;
     }
     tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
     document
@@ -254,8 +254,8 @@ function tabs() {
       .then((e) => {
         let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
         let pathCourses = parsedDom.getElementById("catalog-courses");
-        console.log("pathCoursess");
-        console.log(pathCourses);
+
+        console.log(pathCourses.children);
 
         if (pathCourses.children.length > 0) {
           for (let k = 0; k < pathCourses.children.length; k++) {
