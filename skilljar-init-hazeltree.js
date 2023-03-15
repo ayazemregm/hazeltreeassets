@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
 
   let videoContent = document.querySelector(".course-fixed-content-video");
   if (videoContent) {
-    videoContent.style = "width:auto;";
+    window.dispatchEvent(new Event("resize"));
   }
 });
 
