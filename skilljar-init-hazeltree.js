@@ -66,8 +66,8 @@ function defaultActions() {
 // add course
 function addCourseTitle() {
   let courseTitles = `
-<div id="courseTitle">
-   <h1 style="color:#fff" class="pageTitle">
+<div class="courseTitle">
+   <h1 style="color:#fff" >
      Available Courses
    </h1>
    <p>
@@ -171,8 +171,8 @@ function tabs() {
 
   let tabsText = `<div class="tabs-top">
   <div class="tabs-text-wrapper">
-  <div class="tabs-center">
-   <h1 class="pageTitle"  style="color:#fff;">Learning Paths</h1>
+  <div class="tabs-center courseTitle">
+   <h1   style="color:#fff;">Learning Paths</h1>
         <p>Find courses grouped by product type and user role in these tailored Learning Paths.</p>
       </div>
     </div>
