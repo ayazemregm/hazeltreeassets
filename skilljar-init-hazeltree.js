@@ -223,15 +223,15 @@ function tabs() {
     let tabTemplate = `  
     <!-- Slider main container -->
     <div class="swiper-container${i}">
-    <div  class="swiper swiper${i}">
+    <div  class=" swiper${i}">
       <!-- Additional required wrapper -->
-      <div id="tab-sliders${i}" class="swiper-wrapper">
+      <div id="tab-sliders${i}" class=" swiper-wrapper${i}">
      
         <!-- Slides --></div>
       <!-- If we need navigation buttons -->
       </div>
       <div class="swiper-button-prev${i}"></div>
-      <div class="swiper-button-next${i}"></div>
+      <div class=" swiper-button-next${i}"></div>
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerHTML;
