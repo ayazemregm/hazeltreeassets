@@ -10,7 +10,7 @@
 .sj-page-curriculum {
 }
 
-.sj-text-x-of-y-lessons-completed {
+.sj-text-x-of-y-lessons-completed span {
   text-color: #fff;
 }
 #resume-button a {
@@ -23,7 +23,7 @@
 }
 
 .button-border-color {
-  background-color: #f57f13;
+  border-color: #f57f13;
 }
 
 .break-word,
