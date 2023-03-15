@@ -235,10 +235,11 @@ function tabs() {
     </div>`;
 
     console.log(filteredPaths);
-    let tab = filteredPaths[i - 1].children.attributes.title.value;
+    let tab = filteredPaths[i - 1].children.attributes.item(1).value;
     let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button> `;
 
     filteredPaths[i - 1].children.item(2);
+
     if (i === 1) {
       elBtnTemplate = `<button  id="pathTab1"  class="tab-nav-item tab-nav-item-active">${tab}</button> `;
     }
