@@ -394,13 +394,9 @@ function footer() {
   `;
 
   let skilljarContent = document.getElementById("skilljar-content");
-  let mainContainer = document.getElementById("main-container");
 
   if (skilljarContent !== null && skilljarContent !== undefined) {
     skilljarContent.insertAdjacentHTML("beforeend", footer);
-  } else if (mainContainer !== null && mainContainer !== undefined) {
-    mainContainer.insertAdjacentHTML("beforeend", footer);
-    document.body.style = "display:block";
   }
   document.getElementById("hz-footer").style = "width:100vw;";
 }
