@@ -86,7 +86,7 @@ body {
 }
 #catalog-content {
 }
-.courseTitle {
+#courseTitle {
   margin: 0 auto;
   margin-top: 6.25rem;
   margin-bottom: 3rem;
@@ -95,7 +95,7 @@ body {
   color: #fff;
   background-color: #000;
 }
-.courseTitle p {
+#courseTitle p {
   font-size: 1.125rem;
 }
 
