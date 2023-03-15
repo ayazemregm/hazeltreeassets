@@ -11,7 +11,7 @@
 }
 
 .sj-text-x-of-y-lessons-completed {
-  text-color: #000;
+  text-color: #fff;
 }
 #resume-button a {
   color: #fff;
@@ -19,6 +19,10 @@
 }
 .purchase-button {
   color: #fff;
+  background-color: #f57f13;
+}
+
+.button-border-color {
   background-color: #f57f13;
 }
 
