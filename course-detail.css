@@ -4,7 +4,7 @@
 }
 
 #skilljar-content:after {
-  height: unset;
+  height: 0;
 }
 
 .purchase-button {
