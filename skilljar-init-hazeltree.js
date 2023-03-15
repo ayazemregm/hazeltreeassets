@@ -235,7 +235,7 @@ function tabs() {
     </div>`;
 
     console.log(filteredPaths);
-    let tab = filteredPaths[i - 1].children.item(2).innerText;
+    let tab = filteredPaths[i - 1].children.attributes.title.value;
     let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button> `;
 
     filteredPaths[i - 1].children.item(2);
@@ -254,8 +254,6 @@ function tabs() {
       .then((e) => {
         let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
         let pathCourses = parsedDom.getElementById("catalog-courses");
-
-        console.log(pathCourses.children);
 
         if (pathCourses.children.length > 0) {
           for (let k = 0; k < pathCourses.children.length; k++) {
