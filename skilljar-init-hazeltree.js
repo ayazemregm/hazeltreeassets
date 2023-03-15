@@ -51,6 +51,11 @@ window.addEventListener("load", () => {
   console.log(window.location.pathname);
   if (window.location.pathname) {
   }
+
+  let videoContent = document.querySelector(".course-fixed-content-video");
+  if (videoContent) {
+    videoContent.style = "width:auto;";
+  }
 });
 
 function defaultActions() {
