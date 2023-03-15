@@ -40,9 +40,10 @@ window.addEventListener("load", () => {
       document.body.style = "display:block";
       break;
   }
-  let dpSummary = document.querySelector(".dp-summary-wrapper");
+  let sjPageDetail = document.querySelector(".sj-page-detail-course");
+  let sjPageCurriculum = document.querySelector(".sj-page-curriculum");
 
-  if (dpSummary !== null) {
+  if (sjPageDetail !== null || sjPageCurriculum !== null) {
     let course_detail = `<link rel="stylesheet" href="${sourceLink}course-detail.css">`;
     document.head.insertAdjacentHTML("beforeend", course_detail);
     document.body.style = "display:block";
