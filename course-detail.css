@@ -10,6 +10,11 @@
 .sj-page-curriculum {
 }
 
+.dp-summary-wrapper,
+.cp-summary-wrapper {
+  border: unset;
+}
+
 .sj-text-x-of-y-lessons-completed span {
   color: #fff;
 }
