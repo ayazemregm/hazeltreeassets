@@ -67,7 +67,7 @@ function defaultActions() {
 function addCourseTitle() {
   let courseTitles = `
 <div id="courseTitle">
-   <h1 style="color:#fff" id="availableCourses">
+   <h1 style="color:#fff" class="pageTitle">
      Available Courses
    </h1>
    <p>
@@ -172,7 +172,7 @@ function tabs() {
   let tabsText = `<div class="tabs-top">
   <div class="tabs-text-wrapper">
   <div class="tabs-center">
-   <h1 style="color:#fff">Learning Paths</h1>
+   <h1 class="pageTitle"  style="color:#fff;">Learning Paths</h1>
         <p>Find courses grouped by product type and user role in these tailored Learning Paths.</p>
       </div>
     </div>
@@ -248,8 +248,8 @@ function tabs() {
       .then((e) => {
         let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
         let pathCourses = parsedDom.getElementById("catalog-courses");
-        // console.log("pathCoursess");
-        // console.log(pathCourses);
+        console.log("pathCoursess");
+        console.log(pathCourses);
 
         if (pathCourses.children.length > 0) {
           for (let k = 0; k < pathCourses.children.length; k++) {
