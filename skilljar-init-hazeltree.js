@@ -5,7 +5,7 @@ console.log("loaded");
 let allCourses = [];
 
 
-window.addEventListener('hashchange', function () {
+window.addEventListener('locationchange', function () {
   console.log('location changed!');
 });
 
