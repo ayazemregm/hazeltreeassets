@@ -4,6 +4,11 @@ let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
 console.log("loaded");
 let allCourses = [];
 
+
+window.addEventListener('locationchange', function () {
+  console.log('location changed!');
+});
+
 window.addEventListener("load", () => {
   defaultActions();
   footer();
