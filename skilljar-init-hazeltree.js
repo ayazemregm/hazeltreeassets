@@ -86,7 +86,6 @@ window.addEventListener("load", () => {
     searchRes.innerHTML = "";
 
     allCourses.forEach((e) => {
-      console.log(e);
       if (!e.classList.contains("not-found")) {
         let node = e.cloneNode(true);
         searchRes.appendChild(node);
