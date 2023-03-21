@@ -16,7 +16,9 @@ window.addEventListener("load", () => {
       console.log("testPage");
       let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", catalogCss);
-      tabs();
+      if (!window.location.href.includes("?q=")) {
+        tabs();
+      }
       addCourseTitle();
       initializeSwiper();
       break;
