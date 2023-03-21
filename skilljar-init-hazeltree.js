@@ -116,7 +116,7 @@ window.addEventListener("load", () => {
       </h1>
     </div>
     <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%; padding: 50px;"></div>`;
-      if (!document.getElementById(searchRes)) {
+      if (!document.getElementById("searchRes")) {
         skilljarContent.insertAdjacentHTML("afterbegin", searchResHeader);
       }
       let searchRes = document.getElementById("searchresflex");
