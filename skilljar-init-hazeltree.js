@@ -62,7 +62,7 @@ window.addEventListener("load", () => {
   console.log(searchBox);
   if (searchBox) {
     console.log("event listener added");
-    searchBox.addEventListener("onchange", () => {
+    searchBox.addEventListener("oninput", () => {
       console.log("search working");
     });
   }
