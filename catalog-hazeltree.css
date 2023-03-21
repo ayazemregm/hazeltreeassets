@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
 
-* {
-  /* text-color: white; */
-}
 
 html {
   width: 100vw;
@@ -292,6 +289,10 @@ footer {
 
 .footer-wrapper p {
   font-size: 0.75em;
+}
+
+.filter-option-type {
+  color: #f57f13;
 }
 
 @media only screen and (max-width: 40em) {
