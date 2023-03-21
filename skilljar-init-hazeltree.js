@@ -85,18 +85,27 @@ window.addEventListener("load", () => {
       let skilljarContent = document.getElementById("skilljar-content");
       let searchInfo = document.getElementById("catalog-search-info");
       let catalogContent = document.getElementById("catalog-content");
-      let slideritems = document.getElementById("course-sliders");
-      let paths = document.querySelector(".tabs-top");
+
+
       skilljarContent.style = "visibility: hidden;"
       if (searchInfo) {
         searchInfo.remove();
       }
-      catalogContent.style = "max-width: unset;"
-      if (paths) {
-        paths.style = "display: none;";
+      if (catalogContent) {
+        catalogContent.style = "max-width: unset;"
+        catalogContent.style = "display: none;";
       }
       console.log(allCourses);
-
+      let searchResHeader = `<div id="searchRes">
+      <h1 style="color:#fff">
+        Search Results
+      </h1>
+      <p>
+      You can view all of the courses available to you below.
+      </p>
+    </div>
+    <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%"></div>`;
+      catalogContent.insertAdjacentHTML("beforeend", template);
       skilljarContent.style = "visibility: visible;"
 
       console.log(event);
