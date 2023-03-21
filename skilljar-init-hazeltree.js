@@ -21,7 +21,6 @@ window.addEventListener("load", () => {
       }
       addCourseTitle();
       initializeSwiper();
-      document.body.style = "visibility: visible;";
       break;
     case "/accounts/login/":
       console.log("login");
@@ -29,7 +28,6 @@ window.addEventListener("load", () => {
       document.head.insertAdjacentHTML("beforeend", loginCss);
       removeHeader();
       addLoginText();
-      document.body.style = "visibility: visible;";
       break;
     case "/accounts/signup/":
       console.log("signup");
@@ -78,6 +76,7 @@ window.addEventListener("load", () => {
       paths.style = "display: none;";
     }
     skilljarContent.style = "visibility: visible;"
+    document.body.style = "visibility: visible;";
 
   }
   if (searchBox) {
@@ -110,8 +109,10 @@ window.addEventListener("load", () => {
       skilljarContent.style = "visibility: visible;"
 
       console.log(event);
+      document.body.style = "visibility: visible;";
     });
   }
+
 });
 
 function defaultActions() {
