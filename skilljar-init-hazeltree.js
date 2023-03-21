@@ -96,10 +96,14 @@ window.addEventListener("load", () => {
       if (paths) {
         paths.style = "display: none;";
       }
-      slideritems.children.array.forEach(element => {
-        console.log(element);
-
+      Array.from(slideritems.children).forEach((e) => {
+        if (e.children.item(0).classList.contains("not-found")) {
+          e.children.item(0).parentNode.style = "display: none;";
+        } else {
+          e.children.item(0).parentNode.style = "display: block;";
+        }
       });
+
       skilljarContent.style = "visibility: visible;"
 
       console.log(event);
