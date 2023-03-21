@@ -77,6 +77,7 @@ window.addEventListener("load", () => {
         paths.style = "display: none;";
       }
       skilljarContent.style = "visibility: visible;"
+      allcourseswiper.disable();
       console.log(event);
     });
   }
