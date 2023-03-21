@@ -92,7 +92,9 @@ function addCourseTitle() {
 
   document.getElementById("getStartedBtn").onclick = function () {
     let catalogContent = document.getElementById("catalog-content");
-    catalogContent.scrollIntoView();
+    let offset = catalogContent.getBoundingClientRect().top;
+    window.scrollTo({ top: offset - 50 });
+
   };
 }
 
