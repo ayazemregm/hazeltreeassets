@@ -102,12 +102,6 @@ window.addEventListener("load", () => {
       let searchInfo = document.getElementById("catalog-search-info");
       let catalogContent = document.getElementById("catalog-content");
 
-      if (event.data === null) {
-
-        catalogContent.style = "display: block;";
-        return;
-      }
-
       skilljarContent.style = "visibility: hidden;"
       if (searchInfo) {
         searchInfo.remove();
@@ -116,10 +110,13 @@ window.addEventListener("load", () => {
         catalogContent.style = "max-width: unset;"
         catalogContent.style = "display: none;";
       }
-      let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 30px 10px;">
+      let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 30px 10px; display: flex;">
       <h1 style="color:#fff">
         Search Results
       </h1>
+      <button type="button">
+      <p>Back</p>
+      </button>
     </div>
     <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%; min-height: 50vh; padding: 5rem; gap: 1rem;"></div>`;
       if (!document.getElementById("searchRes")) {
