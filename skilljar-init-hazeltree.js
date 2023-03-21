@@ -98,7 +98,7 @@ window.addEventListener("load", () => {
   }
   if (searchBox) {
     searchBox.addEventListener("input", (event) => {
-      if (event.data === "") {
+      if (event.data === null) {
         document.getElementById("searchRes").remove();
         document.getElementById("searchresflex").remove()
         return;
