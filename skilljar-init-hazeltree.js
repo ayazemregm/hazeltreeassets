@@ -97,6 +97,8 @@ window.addEventListener("load", () => {
         paths.style = "display: none;";
       }
       Array.from(slideritems.children).forEach((e) => {
+        console.log(e.children.item(0));
+        console.log(e.children.item(0).classList.contains("not-found"));
         if (e.children.item(0).classList.contains("not-found")) {
           e.children.item(0).parentNode.style = "display: none;";
           console.log(e.children.item(0));
