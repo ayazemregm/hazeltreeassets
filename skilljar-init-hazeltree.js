@@ -1,5 +1,6 @@
 let end = window.location.pathname;
 let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
+let allcourseswiper;
 
 console.log("loaded");
 let allCourses = [];
@@ -190,6 +191,8 @@ function initializeSwiper() {
       },
     },
   });
+
+  allcourseswiper = swiper;
 }
 
 // tabs
