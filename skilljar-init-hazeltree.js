@@ -100,15 +100,15 @@ window.addEventListener("load", () => {
       console.log(event);
       let skilljarContent = document.getElementById("skilljar-content");
       let searchInfo = document.getElementById("catalog-search-info");
-      let catalogContent = document.getElementById("catalog-content");
+      let mainContent = document.querySelector("top-row");
 
       skilljarContent.style = "visibility: hidden;"
       if (searchInfo) {
         searchInfo.remove();
       }
-      if (catalogContent) {
-        catalogContent.style = "max-width: unset;"
-        catalogContent.style = "display: none;";
+      if (mainContent) {
+        mainContent.style = "max-width: unset;"
+        mainContent.style = "display: none;";
       }
       let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 30px 10px; display: flex;">
       <h1 style="color:#fff">
@@ -117,8 +117,8 @@ window.addEventListener("load", () => {
       <button type="button">
       <p>Back</p>
       </button>
-    </div>
-    <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%; min-height: 50vh; padding: 5rem; gap: 1rem;"></div>`;
+      </div>
+      <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%; min-height: 50vh; padding: 5rem; gap: 1rem;"></div>`;
       if (!document.getElementById("searchRes")) {
         skilljarContent.insertAdjacentHTML("afterbegin", searchResHeader);
       }
@@ -126,7 +126,6 @@ window.addEventListener("load", () => {
       searchRes.innerHTML = "";
 
       allCourses.forEach((e) => {
-        console.log(e);
         if (!e.classList.contains("not-found")) {
           let node = e.cloneNode(true);
           searchRes.appendChild(node);
