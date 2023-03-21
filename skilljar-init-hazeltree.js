@@ -61,12 +61,30 @@ window.addEventListener("load", () => {
   // Search Event Listener
   let searchBox = document.getElementById("catalogSearchInput");
   console.log(searchBox);
+  if (window.location.href.includes("?q=")) {
+    let skilljarContent = document.getElementById("skilljar-content");
+    let searchInfo = document.getElementById("catalog-search-info");
+    let catalogContent = document.getElementById("catalog-content");
+    let paths = document.querySelector(".tabs-top");
+    skilljarContent.style = "visibility: hidden;"
+    if (searchInfo) {
+      searchInfo.remove();
+    }
+    catalogContent.style = "max-width: unset;"
+    if (paths) {
+      paths.style = "display: none;";
+    }
+    skilljarContent.style = "visibility: visible;"
+
+
+  }
   if (searchBox) {
     console.log("event listener added");
     searchBox.addEventListener("input", (event) => {
       let skilljarContent = document.getElementById("skilljar-content");
       let searchInfo = document.getElementById("catalog-search-info");
       let catalogContent = document.getElementById("catalog-content");
+      let slideritems = document.getElementById("course-sliders");
       let paths = document.querySelector(".tabs-top");
       skilljarContent.style = "visibility: hidden;"
       if (searchInfo) {
@@ -76,8 +94,12 @@ window.addEventListener("load", () => {
       if (paths) {
         paths.style = "display: none;";
       }
+      slideritems.children.array.forEach(element => {
+        console.log(element);
+
+      });
       skilljarContent.style = "visibility: visible;"
-      allcourseswiper.disable();
+
       console.log(event);
     });
   }
