@@ -110,7 +110,7 @@ window.addEventListener("load", () => {
         mainContent.style = "max-width: unset;"
         mainContent.style = "display: none;";
       }
-      let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 20px 50px; display: flex; justify-content: space-between;">
+      let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center;">
       <h1 style="color:#fff">
         Search Results
       </h1>
@@ -124,13 +124,16 @@ window.addEventListener("load", () => {
       searchRes.innerHTML = "";
 
       allCourses.forEach((e) => {
-        if (!e.classList.contains("not-found")) {
+        if (event.data === null) {
+          let node = e.cloneNode(true);
+          searchRes.appendChild(node);
+        } else if (!e.classList.contains("not-found")) {
           let node = e.cloneNode(true);
           searchRes.appendChild(node);
         }
       });
       document.body.style = "visibility: visible;";
-      skilljarContent.style = "visibility: visible;"
+      skilljarContent.style = "visibility: visible;";
 
     });
   }
