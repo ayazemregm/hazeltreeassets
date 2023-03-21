@@ -63,7 +63,16 @@ window.addEventListener("load", () => {
   if (searchBox) {
     console.log("event listener added");
     searchBox.addEventListener("input", () => {
-      console.log("search working");
+      let skilljarContent = document.getElementById("skilljar-content");
+      let searchInfo = document.getElementById("catalog-search-info");
+      let catalogContent = document.getElementById("catalog-content");
+      let paths = document.querySelector("tabs-top");
+      skilljarContent.style = "visibility: hidden;"
+      searchInfo.remove();
+      catalogContent.style = "max-width: unset;"
+      paths.remove();
+      skilljarContent.style = "visibility: visible;"
+
     });
   }
 });
