@@ -64,17 +64,36 @@ window.addEventListener("load", () => {
     let skilljarContent = document.getElementById("skilljar-content");
     let searchInfo = document.getElementById("catalog-search-info");
     let catalogContent = document.getElementById("catalog-content");
-    let paths = document.querySelector(".tabs-top");
+
     skilljarContent.style = "visibility: hidden;"
     if (searchInfo) {
       searchInfo.remove();
     }
-    catalogContent.style = "max-width: unset;"
-    if (paths) {
-      paths.style = "display: none;";
+    if (catalogContent) {
+      catalogContent.style = "max-width: unset;"
+      catalogContent.style = "display: none;";
     }
-    skilljarContent.style = "visibility: visible;"
+    let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 50px; margin-top: 30px;">
+      <h1 style="color:#fff">
+        Search Results
+      </h1>
+    </div>
+    <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%; padding: 50px;"></div>`;
+    if (!document.getElementById(searchRes)) {
+      skilljarContent.insertAdjacentHTML("afterbegin", searchResHeader);
+    }
+    let searchRes = document.getElementById("searchresflex");
+    searchRes.innerHTML = "";
+
+    allCourses.forEach((e) => {
+      console.log(e);
+      if (!e.classList.contains("not-found")) {
+        let node = e.cloneNode(true);
+        searchRes.appendChild(node);
+      }
+    });
     document.body.style = "visibility: visible;";
+    skilljarContent.style = "visibility: visible;"
 
   }
   if (searchBox) {
@@ -82,7 +101,6 @@ window.addEventListener("load", () => {
       let skilljarContent = document.getElementById("skilljar-content");
       let searchInfo = document.getElementById("catalog-search-info");
       let catalogContent = document.getElementById("catalog-content");
-
 
       skilljarContent.style = "visibility: hidden;"
       if (searchInfo) {
@@ -98,7 +116,9 @@ window.addEventListener("load", () => {
       </h1>
     </div>
     <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%; padding: 50px;"></div>`;
-      skilljarContent.insertAdjacentHTML("afterbegin", searchResHeader);
+      if (!document.getElementById(searchRes)) {
+        skilljarContent.insertAdjacentHTML("afterbegin", searchResHeader);
+      }
       let searchRes = document.getElementById("searchresflex");
       searchRes.innerHTML = "";
 
@@ -109,10 +129,9 @@ window.addEventListener("load", () => {
           searchRes.appendChild(node);
         }
       });
-      skilljarContent.style = "visibility: visible;"
-
-      console.log(event);
       document.body.style = "visibility: visible;";
+      skilljarContent.style = "visibility: visible;"
+      console.log(event);
     });
   }
 
