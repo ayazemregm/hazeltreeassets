@@ -79,7 +79,7 @@ window.addEventListener("load", () => {
       </h1>
     </div>
     <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%; padding: 50px;"></div>`;
-    if (!document.getElementById(searchRes)) {
+    if (!document.getElementById("searchRes")) {
       skilljarContent.insertAdjacentHTML("afterbegin", searchResHeader);
     }
     let searchRes = document.getElementById("searchresflex");
@@ -98,7 +98,7 @@ window.addEventListener("load", () => {
   }
   if (searchBox) {
     searchBox.addEventListener("input", (event) => {
-
+      console.log(event);
       let skilljarContent = document.getElementById("skilljar-content");
       let searchInfo = document.getElementById("catalog-search-info");
       let catalogContent = document.getElementById("catalog-content");
@@ -138,7 +138,7 @@ window.addEventListener("load", () => {
       });
       document.body.style = "visibility: visible;";
       skilljarContent.style = "visibility: visible;"
-      console.log(event);
+
     });
   }
 
