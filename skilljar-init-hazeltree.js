@@ -2,7 +2,6 @@ let end = window.location.pathname;
 let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
 let allcourseswiper;
 
-console.log("loaded");
 let allCourses = [];
 
 window.addEventListener("load", () => {
@@ -10,10 +9,9 @@ window.addEventListener("load", () => {
   footer();
   let footerCss = `<link rel="stylesheet" href="${sourceLink}footer.css">`;
   document.head.insertAdjacentHTML("beforeend", footerCss);
-  console.log(end);
   switch (end) {
     case "/":
-      console.log("testPage");
+      console.log("landingpage");
       let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", catalogCss);
       if (!window.location.href.includes("?q=")) {
@@ -95,17 +93,22 @@ window.addEventListener("load", () => {
         catalogContent.style = "max-width: unset;"
         catalogContent.style = "display: none;";
       }
-      console.log(allCourses);
-      let searchResHeader = `<div id="searchRes" style="background-color: black">
+      let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 50px; margin-top: 30px;">
       <h1 style="color:#fff">
         Search Results
       </h1>
-      <p>
-      You can view all of the courses available to you below.
-      </p>
     </div>
     <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%"></div>`;
-      catalogContent.insertAdjacentHTML("beforeend", searchResHeader);
+      skilljarContent.insertAdjacentHTML("beforeend", searchResHeader);
+      Array.from(allCourses).forEach((e) => {
+        console.log(e);
+        let searchRes = document.getElementById("searchresflex");
+        if (e.classList.includes("not-found")) {
+
+          let node = e.cloneNode();
+        }
+
+      });
       skilljarContent.style = "visibility: visible;"
 
       console.log(event);
