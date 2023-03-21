@@ -5,7 +5,7 @@ console.log("loaded");
 let allCourses = [];
 
 
-window.addEventListener('locationchange', function () {
+window.addEventListener('popstate', function () {
   console.log('location changed!');
 });
 
