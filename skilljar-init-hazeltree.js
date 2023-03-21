@@ -104,8 +104,7 @@ window.addEventListener("load", () => {
       let catalogContent = document.getElementById("catalog-content");
 
       if (event.data === null) {
-        document.getElementById("searchRes").remove();
-        document.getElementById("searchresflex").remove();
+
         catalogContent.style = "display: block;";
         return;
       }
@@ -118,12 +117,12 @@ window.addEventListener("load", () => {
         catalogContent.style = "max-width: unset;"
         catalogContent.style = "display: none;";
       }
-      let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 30px 10px; margin-top: 30px;">
+      let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 30px 10px;">
       <h1 style="color:#fff">
         Search Results
       </h1>
     </div>
-    <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%; min-height: 100vh; padding: 50px;"></div>`;
+    <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%; min-height: 50vh; padding: 5rem; gap: 1rem;"></div>`;
       if (!document.getElementById("searchRes")) {
         skilljarContent.insertAdjacentHTML("afterbegin", searchResHeader);
       }
