@@ -98,15 +98,17 @@ window.addEventListener("load", () => {
   }
   if (searchBox) {
     searchBox.addEventListener("input", (event) => {
-      if (event.data === null) {
-        document.getElementById("searchRes").remove();
-        document.getElementById("searchresflex").remove()
-        return;
-      }
 
       let skilljarContent = document.getElementById("skilljar-content");
       let searchInfo = document.getElementById("catalog-search-info");
       let catalogContent = document.getElementById("catalog-content");
+
+      if (event.data === null) {
+        document.getElementById("searchRes").remove();
+        document.getElementById("searchresflex").remove();
+        catalogContent.style = "display: block;";
+        return;
+      }
 
       skilljarContent.style = "visibility: hidden;"
       if (searchInfo) {
