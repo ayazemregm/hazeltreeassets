@@ -104,7 +104,7 @@ window.addEventListener("load", () => {
         console.log(e);
         let searchRes = document.getElementById("searchresflex");
         if (!e.classList.contains("not-found")) {
-          let node = e.cloneNode();
+          let node = e.cloneNode(true);
           searchRes.appendChild(node);
         }
       });
