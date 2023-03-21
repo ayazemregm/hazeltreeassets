@@ -244,6 +244,7 @@ footer {
 .swiper-slide {
   display: flex;
   justify-content: center;
+  flex-shrink: inherit;
 }
 
 .swiper {
@@ -262,9 +263,7 @@ footer {
   color: #f57f13;
 }
 
-.swiper-slide {
-  flex-shrink: inherit;
-}
+
 
 .card-image img {
   width: 240px;
