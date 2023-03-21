@@ -62,7 +62,7 @@ window.addEventListener("load", () => {
   console.log(searchBox);
   if (searchBox) {
     console.log("event listener added");
-    searchBox.addEventListener("input", () => {
+    searchBox.addEventListener("input", (event) => {
       let skilljarContent = document.getElementById("skilljar-content");
       let searchInfo = document.getElementById("catalog-search-info");
       let catalogContent = document.getElementById("catalog-content");
@@ -73,10 +73,10 @@ window.addEventListener("load", () => {
       }
       catalogContent.style = "max-width: unset;"
       if (paths) {
-        paths.remove();
+        paths.style = "display: none;";
       }
       skilljarContent.style = "visibility: visible;"
-      console.log("endeded");
+      console.log(event);
     });
   }
 });
