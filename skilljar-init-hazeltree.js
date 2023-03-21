@@ -78,7 +78,6 @@ window.addEventListener("load", () => {
 
   }
   if (searchBox) {
-    console.log("event listener added");
     searchBox.addEventListener("input", (event) => {
       let skilljarContent = document.getElementById("skilljar-content");
       let searchInfo = document.getElementById("catalog-search-info");
@@ -100,14 +99,14 @@ window.addEventListener("load", () => {
     </div>
     <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%"></div>`;
       skilljarContent.insertAdjacentHTML("beforeend", searchResHeader);
-      Array.from(allCourses).forEach((e) => {
+
+      allCourses.forEach((e) => {
         console.log(e);
         let searchRes = document.getElementById("searchresflex");
-        if (e.classList.includes("not-found")) {
-
+        if (!e.classList.contains("not-found")) {
           let node = e.cloneNode();
+          searchRes.appendChild(node);
         }
-
       });
       skilljarContent.style = "visibility: visible;"
 
