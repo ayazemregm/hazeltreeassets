@@ -66,7 +66,8 @@ window.addEventListener("load", () => {
 function defaultActions() {
   let ep_footer = document.getElementById("ep-footer");
   let lp_footer = document.getElementById("lp-footer");
-  let lessonbody = document.getElementById(".sj-page-lesson");
+  let lessonbody = document.querySelector(".sj-page-lesson");
+  console.log(lessonbody);
   if (ep_footer !== null && ep_footer !== undefined) {
     ep_footer.remove();
   }
