@@ -66,7 +66,7 @@ window.addEventListener("load", () => {
       let skilljarContent = document.getElementById("skilljar-content");
       let searchInfo = document.getElementById("catalog-search-info");
       let catalogContent = document.getElementById("catalog-content");
-      let paths = document.querySelector("tabs-top");
+      let paths = document.querySelector(".tabs-top");
       skilljarContent.style = "visibility: hidden;"
       if (searchInfo) {
         searchInfo.remove();

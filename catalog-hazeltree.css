@@ -92,7 +92,7 @@ body {
   padding: 0;
 }
 
-#catalog-content {}
+
 
 #courseTitle {
   margin: 0 auto;
@@ -161,7 +161,7 @@ body {
   border-top-right-radius: 12px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  paddding: 0 5vw;
+
 }
 
 .tab-contentBG {
@@ -178,11 +178,7 @@ a.coursebox-container {
   border: 0px;
 }
 
-a.coursebox-container.course .coursebox-image img {
-  /*  max-height: auto;
-  object-fit: cover;
-  aspect-ratio: 0.7; */
-}
+
 
 /* 
 .tab-content {
@@ -196,8 +192,6 @@ a.coursebox-container.course .coursebox-image img {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-
-.top-row {}
 
 .tab-nav-item-active {
   background-color: white;
@@ -268,7 +262,9 @@ footer {
   color: #f57f13;
 }
 
-.swiper-slide {}
+.swiper-slide {
+  flex-shrink: inherit;
+}
 
 .card-image img {
   width: 240px;
