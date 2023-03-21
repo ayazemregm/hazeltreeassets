@@ -126,6 +126,7 @@ window.addEventListener("load", () => {
       allCourses.forEach((e) => {
         if (event.data === null) {
           let node = e.cloneNode(true);
+          node.classList.remove("not-found");
           searchRes.appendChild(node);
         } else if (!e.classList.contains("not-found")) {
           let node = e.cloneNode(true);
