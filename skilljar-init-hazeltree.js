@@ -96,7 +96,7 @@ window.addEventListener("load", () => {
         catalogContent.style = "display: none;";
       }
       console.log(allCourses);
-      let searchResHeader = `<div id="searchRes">
+      let searchResHeader = `<div id="searchRes" style="background-color: black">
       <h1 style="color:#fff">
         Search Results
       </h1>
