@@ -59,9 +59,12 @@ window.addEventListener("load", () => {
 
   // Search Event Listener
   let searchBox = document.getElementById("catalogSearchInput");
+  console.log(searchBox);
   if (searchBox) {
-    searchBox.addEventListener("onchange", () => { console.log("search working"); });
-
+    console.log("event listener added");
+    searchBox.addEventListener("onchange", () => {
+      console.log("search working");
+    });
   }
 });
 
