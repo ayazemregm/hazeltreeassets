@@ -68,11 +68,15 @@ window.addEventListener("load", () => {
       let catalogContent = document.getElementById("catalog-content");
       let paths = document.querySelector("tabs-top");
       skilljarContent.style = "visibility: hidden;"
-      searchInfo.remove();
+      if (searchInfo) {
+        searchInfo.remove();
+      }
       catalogContent.style = "max-width: unset;"
-      paths.remove();
+      if (paths) {
+        paths.remove();
+      }
       skilljarContent.style = "visibility: visible;"
-
+      console.log("endeded");
     });
   }
 });
