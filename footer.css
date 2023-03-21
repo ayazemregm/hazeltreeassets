@@ -1,9 +1,11 @@
 footer {
+  margin-top: 20vh;
   background-color: #100f0d;
   color: white;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
 .footer-wrapper {
   max-width: 72rem;
   margin: 0 auto;
@@ -14,18 +16,15 @@ footer {
 .footer-wrapper p {
   font-size: 0.75em;
 }
+
 /* /* Small devices such as large phones (640px and up) */
-@media only screen and (max-width: 40em) {
-}
+@media only screen and (max-width: 40em) {}
 
 /* Medium devices such as tablets (768px and up) */
-@media only screen and (min-width: 48em) {
-}
+@media only screen and (min-width: 48em) {}
 
 /* Large devices such as laptops (1024px and up) */
-@media only screen and (min-width: 64em) {
-}
+@media only screen and (min-width: 64em) {}
 
 /* Largest devices such as desktops (1280px and up) */
-@media only screen and (min-width: 80em) {
-}
+@media only screen and (min-width: 80em) {}
