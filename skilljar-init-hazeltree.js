@@ -100,7 +100,7 @@ window.addEventListener("load", () => {
       console.log(event);
       let skilljarContent = document.getElementById("skilljar-content");
       let searchInfo = document.getElementById("catalog-search-info");
-      let mainContent = document.querySelector("top-row");
+      let mainContent = document.querySelector(".top-row");
 
       skilljarContent.style = "visibility: hidden;"
       if (searchInfo) {
