@@ -97,12 +97,13 @@ window.addEventListener("load", () => {
         Search Results
       </h1>
     </div>
-    <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%"></div>`;
-      skilljarContent.insertAdjacentHTML("beforeend", searchResHeader);
+    <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%; padding: 50px;"></div>`;
+      skilljarContent.insertAdjacentHTML("afterbegin", searchResHeader);
+      let searchRes = document.getElementById("searchresflex");
+      searchRes.innerHTML = "";
 
       allCourses.forEach((e) => {
         console.log(e);
-        let searchRes = document.getElementById("searchresflex");
         if (!e.classList.contains("not-found")) {
           let node = e.cloneNode(true);
           searchRes.appendChild(node);
