@@ -105,7 +105,7 @@ window.addEventListener("load", () => {
       </p>
     </div>
     <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%"></div>`;
-      catalogContent.insertAdjacentHTML("beforeend", template);
+      catalogContent.insertAdjacentHTML("beforeend", searchResHeader);
       skilljarContent.style = "visibility: visible;"
 
       console.log(event);
