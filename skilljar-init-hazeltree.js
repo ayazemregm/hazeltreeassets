@@ -66,10 +66,11 @@ window.addEventListener("load", () => {
 function defaultActions() {
   let ep_footer = document.getElementById("ep-footer");
   let lp_footer = document.getElementById("lp-footer");
+  let lessonbody = document.getElementById(".sj-page-lesson");
   if (ep_footer !== null && ep_footer !== undefined) {
     ep_footer.remove();
   }
-  if (lp_footer !== null && lp_footer !== undefined) {
+  if (lp_footer !== null && lp_footer !== undefined && !lessonbody) {
     lp_footer.remove();
   }
 }
