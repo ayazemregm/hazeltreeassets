@@ -21,6 +21,7 @@ window.addEventListener("load", () => {
       }
       addCourseTitle();
       initializeSwiper();
+      document.body.style = "visibility: visible;";
       break;
     case "/accounts/login/":
       console.log("login");
@@ -28,7 +29,7 @@ window.addEventListener("load", () => {
       document.head.insertAdjacentHTML("beforeend", loginCss);
       removeHeader();
       addLoginText();
-      document.body.style = "visibility:visible";
+      document.body.style = "visibility: visible;";
       break;
     case "/accounts/signup/":
       console.log("signup");
@@ -36,11 +37,11 @@ window.addEventListener("load", () => {
       document.head.insertAdjacentHTML("beforeend", signUp);
       removeHeader();
       addLoginText();
-      document.body.style = "visibility:visible";
+      document.body.style = "visibility: visible;";
       break;
     default:
       console.log("Default Fired");
-      document.body.style = "visibility:visible";
+      document.body.style = "visibility: visible;";
       break;
   }
   let sjPageDetail = document.querySelector(".sj-page-detail-course");
@@ -49,7 +50,7 @@ window.addEventListener("load", () => {
   if (sjPageDetail !== null || sjPageCurriculum !== null) {
     let course_detail = `<link rel="stylesheet" href="${sourceLink}course-detail.css">`;
     document.head.insertAdjacentHTML("beforeend", course_detail);
-    document.body.style = "visibility:visible";
+    document.body.style = "visibility: visible;";
   }
   console.log(window.location.pathname);
   if (window.location.pathname) {
@@ -77,7 +78,6 @@ window.addEventListener("load", () => {
       paths.style = "display: none;";
     }
     skilljarContent.style = "visibility: visible;"
-
 
   }
   if (searchBox) {
