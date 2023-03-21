@@ -4,11 +4,6 @@ let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
 console.log("loaded");
 let allCourses = [];
 
-
-window.addEventListener('hashchange', function () {
-  console.log('location changed!');
-});
-
 window.addEventListener("load", () => {
   defaultActions();
   footer();
@@ -61,6 +56,13 @@ window.addEventListener("load", () => {
   if (videoContent) {
     window.dispatchEvent(new Event("resize"));
   } */
+
+  // Search Event Listener
+  let searchBox = document.getElementById("catalogSearchInput");
+  if (searchBox) {
+    searchBox.addEventListener("onchange", () => { console.log("search working"); });
+
+  }
 });
 
 function defaultActions() {
