@@ -291,8 +291,8 @@ footer {
   font-size: 0.75em;
 }
 
-.filter-option-type {
-  color: #f57f13;
+#catalog-search-info {
+  display: none;
 }
 
 @media only screen and (max-width: 40em) {
