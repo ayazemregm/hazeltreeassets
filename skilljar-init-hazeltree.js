@@ -110,13 +110,11 @@ window.addEventListener("load", () => {
         mainContent.style = "max-width: unset;"
         mainContent.style = "display: none;";
       }
-      let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 30px 10px; display: flex;">
+      let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 20px 50px; display: flex; justify-content: space-between;">
       <h1 style="color:#fff">
         Search Results
       </h1>
-      <button type="button">
-      <p>Back</p>
-      </button>
+      <a href="/"><button type="button">Back</button></a>
       </div>
       <div id="searchresflex" style="display: flex; flex-wrap: wrap; width: 100%; min-height: 50vh; padding: 5rem; gap: 1rem;"></div>`;
       if (!document.getElementById("searchRes")) {
