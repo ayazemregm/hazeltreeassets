@@ -401,6 +401,7 @@ function tabs() {
             document.querySelector(`.swiper-container${i}`).style =
               "display: none";
           }
+          allcourseswiper.push(swiper);
         }
       })
       .catch(function (error) {

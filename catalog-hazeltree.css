@@ -250,7 +250,6 @@ footer {
 .swiper-container {
   max-width: 72rem;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .swiper-button-prev-all {
