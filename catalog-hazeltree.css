@@ -253,13 +253,13 @@ footer {
   /* overflow: visible; */
 }
 
-.swiper-button-prev {
+.swiper-button-prev-all {
   transform: translateX(-75px) scale(0.8);
   color: #f57f13;
   z-index: 1;
 }
 
-.swiper-button-next {
+.swiper-button-next-all {
   transform: translateX(75px) scale(0.8);
   color: #f57f13;
   z-index: 1;

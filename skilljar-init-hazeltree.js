@@ -1,6 +1,6 @@
 let end = window.location.pathname;
 let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
-let allcourseswiper;
+let allcourseswiper = [];
 
 let allCourses = [];
 
@@ -187,8 +187,8 @@ function initializeSwiper() {
       <!-- Slides --></div>
     <!-- If we need navigation buttons -->
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev-all swiper-button-prev"></div>
+    <div class="swiper-button-next-all swiper-button-next"></div>
 </div>`;
 
   let catalogCourses = document.getElementById("catalog-courses");
@@ -251,7 +251,7 @@ function initializeSwiper() {
     },
   });
 
-  allcourseswiper = swiper;
+  allcourseswiper.push(swiper);
 }
 
 // tabs
@@ -318,8 +318,8 @@ function tabs() {
       </div>
       <!-- If we need navigation buttons -->
       </div>
-      <div class="swiper-button-prev${i}"></div>
-      <div class="swiper-button-next${i}"></div>
+      <div class="swiper-button-prev-all swiper-button-prev${i}"></div>
+      <div class="swiper-button-next-all swiper-button-next${i}"></div>
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerHTML;
