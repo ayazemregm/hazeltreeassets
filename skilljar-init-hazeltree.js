@@ -311,16 +311,16 @@ function tabs() {
   for (let i = 1; i <= filteredPaths.length; i++) {
     let tabTemplate = `  
     <!-- Slider main container -->
-    <div class="swiper-container">
-    <div  class="swiper${i}">
+    <div class="swiper-container${i}">
+    <div  class="swiper swiper${i}">
       <!-- Additional required wrapper -->
-      <div id="tab-sliders${i}" class="swiper-wrapper${i}">
+      <div id="tab-sliders${i}" class="swiper-wrapper swiper-wrapper${i}">
      
         <!-- Slides --></div>
       <!-- If we need navigation buttons -->
       </div>
-      <div class="swiper-button-prev${i}"></div>
-      <div class="swiper-button-next${i}"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerHTML;
