@@ -521,4 +521,5 @@ function addLoginText() {
   document
     .querySelectorAll(".row")[2]
     .insertAdjacentHTML("afterbegin", template);
+  document.body.style = "visibility: visible;";
 }
