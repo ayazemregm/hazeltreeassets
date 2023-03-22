@@ -183,7 +183,7 @@ function initializeSwiper() {
 <div class="swiper-container">
   <div class="swiper">
     <!-- Additional required wrapper -->
-    <div id="course-sliders" class="swiper-wrapper ">
+    <div id="course-sliders" class="swiper-wrapper">
       <!-- Slides --></div>
     <!-- If we need navigation buttons -->
     </div>
