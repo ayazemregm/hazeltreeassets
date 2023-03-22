@@ -246,7 +246,7 @@ footer {
   justify-content: center;
 }
 
-.swiper,
+.swiper-all,
 .swiper-container {
   max-width: 72rem;
   margin: 0 auto;
