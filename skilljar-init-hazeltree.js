@@ -187,8 +187,8 @@ function initializeSwiper() {
       <!-- Slides --></div>
     <!-- If we need navigation buttons -->
     </div>
-    <div class="swiper-button-prev0 swiper-button-prev-all"></div>
-    <div class="swiper-button-next0 swiper-button-next-all"></div>
+    <div class="swiper-button-prev0 swiper-button-prev swiper-button-prev-all"></div>
+    <div class="swiper-button-next0 swiper-button-next swiper-button-next-all"></div>
 </div>`;
 
   let catalogCourses = document.getElementById("catalog-courses");
