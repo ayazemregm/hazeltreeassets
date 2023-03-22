@@ -314,7 +314,7 @@ function tabs() {
     <div class="swiper-container swiper-container${i}">
     <div class="swiper${i}">
       <!-- Additional required wrapper -->
-      <div id="tab-sliders${i}" class="swiper-wrapper${i}">
+      <div id="tab-sliders${i}" class="swiper-wrapper">
       </div>
       <!-- If we need navigation buttons -->
       </div>
