@@ -316,8 +316,8 @@ function tabs() {
         <div id="tab-sliders${i}" class="swiper-wrapper">
         </div>
       </div>
-      <div class="swiper-button-prev${i} swiper-button-prev-all"></div>
-      <div class="swiper-button-next${i} swiper-button-next-all"></div>
+      <div class="swiper-button-prev${i} swiper-button-prev swiper-button-prev-all"></div>
+      <div class="swiper-button-next${i} swiper-button-next swiper-button-next-all"></div>
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerHTML;
