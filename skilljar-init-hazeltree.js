@@ -339,7 +339,7 @@ function tabs() {
         let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
         let pathCourses = parsedDom.getElementById("catalog-courses");
 
-        if (pathCourses.children !== null && pathCourses.children.length > 0) {
+        if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
           for (let k = 0; k < pathCourses.children.length; k++) {
             let tabSliders = document.getElementById(`tab-sliders${i}`);
 
