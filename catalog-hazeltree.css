@@ -252,6 +252,10 @@ footer {
   margin: 0 auto;
 }
 
+.swiper-all {
+  overflow: hidden;
+}
+
 .swiper-button-prev-all {
   transform: translateX(-75px) scale(0.8);
   color: #f57f13;
