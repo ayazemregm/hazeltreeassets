@@ -357,9 +357,11 @@ function tabs() {
                 return e;
               }
             });
+            if (dataCourse[0]) {
 
-            dataCourse[0].children.item(1).firstChild.attributes[0].nodeValue =
-              dataCourse[0].children.item(1).firstChild.attributes[1].nodeValue;
+              dataCourse[0].children.item(1).firstChild.attributes[0].nodeValue =
+                dataCourse[0].children.item(1).firstChild.attributes[1].nodeValue;
+            }
             let cloneNode = dataCourse[0].cloneNode(true);
             courseNodeEl.appendChild(cloneNode);
             tabSliders.insertAdjacentElement("afterbegin", courseNodeEl);
