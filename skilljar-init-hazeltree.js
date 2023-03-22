@@ -187,8 +187,8 @@ function initializeSwiper() {
       <!-- Slides --></div>
     <!-- If we need navigation buttons -->
     </div>
-    <div class="swiper-button-prev-all swiper-button-prev"></div>
-    <div class="swiper-button-next-all swiper-button-next"></div>
+    <div class="swiper-button-prev swiper-button-prev-all"></div>
+    <div class="swiper-button-next swiper-button-next-all"></div>
 </div>`;
 
   let catalogCourses = document.getElementById("catalog-courses");
@@ -312,14 +312,12 @@ function tabs() {
     let tabTemplate = `  
     <!-- Slider main container -->
     <div class="swiper-container swiper-container${i}">
-    <div class="swiper${i} swiper-all">
-      <!-- Additional required wrapper -->
-      <div id="tab-sliders${i}" class="swiper-wrapper">
+      <div class="swiper${i} swiper-all">
+        <div id="tab-sliders${i}" class="swiper-wrapper">
+        </div>
       </div>
-      <!-- If we need navigation buttons -->
-      </div>
-      <div class="swiper-button-prev-all swiper-button-prev${i}"></div>
-      <div class="swiper-button-next-all swiper-button-next${i}"></div>
+      <div class="swiper-button-prev${i} swiper-button-prev-all"></div>
+      <div class="swiper-button-next${i} swiper-button-next-all"></div>
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerHTML;
