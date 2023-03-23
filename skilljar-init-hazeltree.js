@@ -56,13 +56,13 @@ window.addEventListener("load", () => {
   console.log(searchBox);
   if (window.location.href.includes("?q=")) {
     let skilljarContent = document.getElementById("skilljar-content");
-    let catalogContent = document.getElementById("catalog-content");
-
     skilljarContent.style = "visibility: hidden;"
-    if (catalogContent) {
-      catalogContent.style = "max-width: unset;"
-      catalogContent.style = "display: none;";
-    }
+
+    document.querySelector(".tabs-top").style = "display: none;"
+    document.querySelector(".all-courses-swiper").style = "display: none;"
+    document.getElementById("courseTitle").style = "display: none;"
+    document.getElementById("catalog-courses").style = "display: block;"
+
     let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 50px; margin-top: 30px;">
       <h1 style="color:#fff">
         Search Results
@@ -80,7 +80,6 @@ window.addEventListener("load", () => {
     searchBox.addEventListener("input", (event) => {
       console.log(event);
       let skilljarContent = document.getElementById("skilljar-content");
-      let catalogContent = document.getElementById("catalog-content");
       skilljarContent.style = "visibility: hidden;"
 
       document.querySelector(".tabs-top").style = "display: none;"
@@ -98,7 +97,7 @@ window.addEventListener("load", () => {
       if (!document.getElementById("searchRes")) {
         skilljarContent.insertAdjacentHTML("afterbegin", searchResHeader);
       }
-
+      document.querySelector(".show-all-courses-wrapper").style = "display: none;";
       document.body.style = "visibility: visible;";
       skilljarContent.style = "visibility: visible;";
 
