@@ -378,6 +378,7 @@ function tabs() {
           let tabContent = document.getElementById("tabs-content");
           for (let s = 0; s < tabContent.children.length; s++) {
             tabContent.children.item(s).style = "display:none";
+            document.getElementById(`pathTab${s + 1}`).classList.remove("tab-nav-item-active");
           }
           document
             .getElementById(`pathTab${i}`)
