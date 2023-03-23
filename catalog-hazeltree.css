@@ -281,6 +281,10 @@ footer {
   top: 80%;
 }
 
+.swiper-tabs-container {
+  width: 100%;
+}
+
 
 
 .card-image img {

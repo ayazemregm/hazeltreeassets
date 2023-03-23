@@ -79,6 +79,7 @@ window.addEventListener("load", () => {
     searchBox.addEventListener("input", (event) => {
       console.log(event);
       let skilljarContent = document.getElementById("skilljar-content");
+      let catalogContent = document.getElementById("catalog-content");
       skilljarContent.style = "visibility: hidden;"
       if (catalogContent) {
         catalogContent.style = "max-width: unset;"
@@ -231,7 +232,7 @@ function tabs() {
     <section class="tabs">
       <div id="tabs-title">
         <div class="tabs-nav">
-         <div class="swiper-container">
+         <div class="swiper-container swiper-tabs-container">
            <div class="swiper-tabs swiper-all">
              <div id="paths-sliders" class="swiper-wrapper" style="align-items: end;"></div>
            </div>
