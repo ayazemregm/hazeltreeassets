@@ -296,7 +296,7 @@ function tabs() {
 
   const swiper = new Swiper(".swiper-tabs", {
     loop: true,
-    initialSlide: 0,
+    initialSlide: 3,
     // centerInsufficientSlides: true,
 
     navigation: {
