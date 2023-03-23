@@ -369,7 +369,7 @@ function tabs() {
     }
     tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
     document
-      .getElementById("paths-sliders")
+      .getElementById("tabs-content")
       .insertAdjacentHTML("afterbegin", tabTemplate);
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
