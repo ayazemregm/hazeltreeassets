@@ -271,29 +271,28 @@ function tabs() {
   let tabsText = `
   <div class="tabs-top">
     <div class="tabs-text-wrapper">
-    <div class="tabs-center">
-      <h1 style="color:#fff;">Learning Paths</h1>
-      <p style="font-size:1.125rem;">Find courses grouped by product type and user role in these tailored Learning Paths.</p>
-    </div>
-  </div>
-  <section class="tabs">
-    <div id="tabs-title">
-      <div class="tabs-nav">
-        <div class="swiper-container">
-          <div class="swiper-tabs swiper-all">
-            <div id="paths-sliders" class="swiper-wrapper"></div>
-          </div>
-        <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
-        <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
+      <div class="tabs-center">
+        <h1 style="color:#fff;">Learning Paths</h1>
+        <p style="font-size:1.125rem;">Find courses grouped by product type and user role in these tailored Learning Paths.</p>
       </div>
     </div>
-  </div>
-  <div class="tab-contentBG">
-    <div id="tabs-content" class="tabs-content"></div>
-    </div>
-  </section>
-    </div>
-    </div>`;
+    <section class="tabs">
+      <div id="tabs-title">
+        <div class="tabs-nav">
+         <div class="swiper-container">
+           <div class="swiper-tabs swiper-all">
+             <div id="paths-sliders" class="swiper-wrapper"></div>
+           </div>
+           <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
+            <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
+         </div>
+        </div>
+      </div>
+     <div class="tab-contentBG">
+        <div id="tabs-content" class="tabs-content"></div>
+      </div>
+    </section>
+  </div>`;
 
   const swiper = new Swiper(".swiper-tabs", {
     loop: true,
@@ -362,6 +361,7 @@ function tabs() {
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerHTML;
+    console.log(tab);
     let elBtnTemplate = `<div class="swiper-slide"><button id="pathTab${i}" class="tab-nav-item">${tab}</button></div>`;
 
     if (i === 1) {
