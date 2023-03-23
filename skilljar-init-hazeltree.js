@@ -305,7 +305,7 @@ function tabs() {
       // courses.item(i).remove();
     }
   }
-
+  console.log(document.getElementById("paths-sliders"));
   for (let i = 1; i <= filteredPaths.length; i++) {
     let tabTemplate = `  
     <!-- Slider main container -->
