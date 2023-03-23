@@ -330,7 +330,7 @@ function tabs() {
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", tabsText);
 
-  let tabsNav = document.querySelector(".paths-sliders");
+  let tabsNav = document.getElementById("paths-sliders");
 
   let catalogCourses = document.getElementById("catalog-courses");
 
