@@ -262,28 +262,64 @@ function tabs() {
   </div>
 </div>`;
 
-  let tabsText = `<div class="tabs-top">
-  <div class="tabs-text-wrapper">
-  <div class="tabs-center">
-    <h1 style="color:#fff;">Learning Paths</h1>
-    <p style="font-size:1.125rem;">Find courses grouped by product type and user role in these tailored Learning Paths.</p>
+  let tabsText = `
+  <div class="tabs-top">
+    <div class="tabs-text-wrapper">
+    <div class="tabs-center">
+      <h1 style="color:#fff;">Learning Paths</h1>
+      <p style="font-size:1.125rem;">Find courses grouped by product type and user role in these tailored Learning Paths.</p>
     </div>
-    </div>
-      <section class="tabs">
-        <div id="tabs-title">
-        <div class="tabs-nav">
-       
-        </div>
+  </div>
+  <section class="tabs">
+    <div id="tabs-title">
+      <div class="tabs-nav">
+        <div class="swiper-container">
+          <div class="swiper-tabs swiper-all">
+            <div id="paths-sliders" class="swiper-wrapper"></div>
+          </div>
+        <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
+        <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
       </div>
-
-       <div class="tab-contentBG">
-      <div id="tabs-content" class="tabs-content">
-      
-      </div>
     </div>
-      </section>
+  </div>
+  <div class="tab-contentBG">
+    <div id="tabs-content" class="tabs-content"></div>
+    </div>
+  </section>
     </div>
     </div>`;
+
+  const swiper = new Swiper(".swiper-tabs", {
+    loop: true,
+    initialSlide: 0,
+    // centerInsufficientSlides: true,
+
+    navigation: {
+      nextEl: ".swiper-button-next-paths",
+      prevEl: ".swiper-button-prev-paths",
+    },
+    slidesPerView: 7,
+    spaceBetween: 0,
+    breakpoints: {
+      "@0.00": {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      "@0.75": {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      "@1.00": {
+        slidesPerView: 5,
+        spaceBetween: 40,
+      },
+      "@1.50": {
+        slidesPerView: 6,
+        spaceBetween: 50,
+      },
+    },
+  });
+
 
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", tabsText);
@@ -301,7 +337,8 @@ function tabs() {
       !catalogCourses.children.item(i).classList.contains("not-found") &&
       catalogCourses.children.item(i).dataset["type"] == "-x"
     ) {
-      filteredPaths.push(courses.item(i));
+      let clonedItem = courses.item(i).cloneNode(true);
+      filteredPaths.push(clonedItem);
       // courses.item(i).remove();
     }
   }
@@ -322,11 +359,11 @@ function tabs() {
     let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button>`;
 
     if (i === 1) {
-      elBtnTemplate = `<button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button>`;
+      elBtnTemplate = `<div class="swiper-slide"><button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button></div>`;
     }
     tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
     document
-      .getElementById("tabs-content")
+      .getElementById("paths-sliders")
       .insertAdjacentHTML("afterbegin", tabTemplate);
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
