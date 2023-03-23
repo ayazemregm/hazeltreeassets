@@ -174,7 +174,7 @@ function initializeSwiper() {
   let swiperSliders = document.querySelectorAll(".all-courses-slide");
 
   for (let i = 0; i < filteredCourses.length; i++) {
-    let courseNode = filteredCourses[i];
+    let courseNode = filteredCourses[i].cloneNode(true);
 
     swiperSliders.item(i).appendChild(courseNode);
   }
