@@ -79,10 +79,10 @@ window.addEventListener("load", () => {
   if (searchBox) {
     searchBox.addEventListener("input", (event) => {
       console.log(event);
-      skilljarContent.style = "visibility: hidden;"
-
       let skilljarContent = document.getElementById("skilljar-content");
       let catalogContent = document.getElementById("catalog-content");
+      skilljarContent.style = "visibility: hidden;"
+
       document.querySelector(".tabs-top").style = "display: none;"
       document.querySelector(".all-courses-swiper").style = "display: none;"
       document.getElementById("courseTitle").style = "display: none;"
