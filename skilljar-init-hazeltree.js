@@ -362,7 +362,7 @@ function tabs() {
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerHTML;
-    let elBtnTemplate = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button>`;
+    let elBtnTemplate = `<div class="swiper-slide"><button id="pathTab${i}" class="tab-nav-item">${tab}</button></div>`;
 
     if (i === 1) {
       elBtnTemplate = `<div class="swiper-slide"><button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button></div>`;
