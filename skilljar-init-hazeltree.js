@@ -233,7 +233,7 @@ function tabs() {
         <div class="tabs-nav">
          <div class="swiper-container">
            <div class="swiper-tabs swiper-all">
-             <div id="paths-sliders" class="swiper-wrapper"></div>
+             <div id="paths-sliders" class="swiper-wrapper" style="align-items: end;"></div>
            </div>
            <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
             <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
@@ -267,7 +267,6 @@ function tabs() {
       // courses.item(i).remove();
     }
   }
-  console.log(document.getElementById("paths-sliders"));
   for (let i = 1; i <= filteredPaths.length; i++) {
     let tabTemplate = `  
     <!-- Slider main container -->
@@ -281,8 +280,6 @@ function tabs() {
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerHTML;
-    console.log(filteredPaths);
-    console.log(tab);
     let tabSwiperEl = document.createElement("div");
     tabSwiperEl.classList.add("swiper-slide");
     let elBtnTemplate = `
@@ -297,7 +294,7 @@ function tabs() {
     document
       .getElementById("tabs-content")
       .insertAdjacentHTML("afterbegin", tabTemplate);
-    console.log(document.getElementById("paths-sliders"));
+
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
     axios
@@ -379,20 +376,8 @@ function tabs() {
       .finally(function () {
         document.getElementById(`pathTab${i}`).addEventListener("click", () => {
           let tabContent = document.getElementById("tabs-content");
-          /*   let children = Array.from(tabContent.children);
-          children.forEach((child) => {
-            console.log(child);
-            child.style = "display: none";
-          });
-          console.log([...tabContent.children]); */
-
           for (let s = 0; s < tabContent.children.length; s++) {
             tabContent.children.item(s).style = "display:none";
-          }
-
-          let tabNav = document.querySelector(".tabs-nav");
-          for (let z = 0; z < tabNav.children.length; z++) {
-            tabNav.children.item(z).classList.remove("tab-nav-item-active");
           }
           document
             .getElementById(`pathTab${i}`)
@@ -402,9 +387,7 @@ function tabs() {
         });
 
         const swiper = new Swiper(".swiper-tabs", {
-          loop: true,
-          initialSlide: 3,
-          // centerInsufficientSlides: true,
+          centerInsufficientSlides: true,
 
           navigation: {
             nextEl: ".swiper-button-next-paths",
