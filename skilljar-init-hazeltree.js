@@ -252,38 +252,6 @@ function tabs() {
     </section>
   </div>`;
 
-  const swiper = new Swiper(".swiper-tabs", {
-    loop: true,
-    initialSlide: 3,
-    // centerInsufficientSlides: true,
-
-    navigation: {
-      nextEl: ".swiper-button-next-paths",
-      prevEl: ".swiper-button-prev-paths",
-    },
-    slidesPerView: 7,
-    spaceBetween: 0,
-    breakpoints: {
-      "@0.00": {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      "@0.75": {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      },
-      "@1.00": {
-        slidesPerView: 5,
-        spaceBetween: 40,
-      },
-      "@1.50": {
-        slidesPerView: 6,
-        spaceBetween: 50,
-      },
-    },
-  });
-  allcourseswiper.push(swiper);
-
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", tabsText);
 
@@ -438,6 +406,38 @@ function tabs() {
           document.querySelector(`.swiper-container${i}`).style =
             "display: block";
         });
+
+        const swiper = new Swiper(".swiper-tabs", {
+          loop: true,
+          initialSlide: 3,
+          // centerInsufficientSlides: true,
+
+          navigation: {
+            nextEl: ".swiper-button-next-paths",
+            prevEl: ".swiper-button-prev-paths",
+          },
+          slidesPerView: 7,
+          spaceBetween: 0,
+          breakpoints: {
+            "@0.00": {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            "@0.75": {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+            "@1.00": {
+              slidesPerView: 5,
+              spaceBetween: 40,
+            },
+            "@1.50": {
+              slidesPerView: 6,
+              spaceBetween: 50,
+            },
+          },
+        });
+        allcourseswiper.push(swiper);
         document.body.style = "visibility:visible";
       });
   }
