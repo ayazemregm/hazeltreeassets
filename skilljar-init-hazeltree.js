@@ -260,14 +260,6 @@ function initializeSwiper() {
 
 // tabs
 function tabs() {
-  let tabContainer = `<div class="tab-contentBG">
-  <div id="tabs-content" class="tabs-content">
-    <div id="tab-container">
-
-    </div>
-  </div>
-</div>`;
-
   let tabsText = `
   <div class="tabs-top">
     <div class="tabs-text-wrapper">
@@ -324,7 +316,7 @@ function tabs() {
       },
     },
   });
-
+  allcourseswiper.push(swiper);
 
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", tabsText);
@@ -361,6 +353,7 @@ function tabs() {
     </div>`;
 
     let tab = filteredPaths[i - 1].children.item(2).innerHTML;
+    console.log(filteredPaths);
     console.log(tab);
     let elBtnTemplate = `<div class="swiper-slide"><button id="pathTab${i}" class="tab-nav-item">${tab}</button></div>`;
 
@@ -371,7 +364,7 @@ function tabs() {
     document
       .getElementById("tabs-content")
       .insertAdjacentHTML("afterbegin", tabTemplate);
-
+    console.log(document.getElementById("paths-sliders"));
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
     axios
