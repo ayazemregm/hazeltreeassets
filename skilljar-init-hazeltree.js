@@ -56,7 +56,6 @@ window.addEventListener("load", () => {
   console.log(searchBox);
   if (window.location.href.includes("?q=")) {
     let skilljarContent = document.getElementById("skilljar-content");
-    let searchInfo = document.getElementById("catalog-search-info");
     let catalogContent = document.getElementById("catalog-content");
 
     skilljarContent.style = "visibility: hidden;"
@@ -81,6 +80,10 @@ window.addEventListener("load", () => {
       console.log(event);
       let skilljarContent = document.getElementById("skilljar-content");
       skilljarContent.style = "visibility: hidden;"
+      if (catalogContent) {
+        catalogContent.style = "max-width: unset;"
+        catalogContent.style = "display: none;";
+      }
       let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center;">
       <h1 style="color:#fff">
         Search Results
