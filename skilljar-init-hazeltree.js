@@ -169,14 +169,14 @@ function initializeSwiper() {
     ) {
       let sliders = document.getElementById("course-sliders");
 
-      let swiperSlide = `<div class="swiper-slide"></div>`;
+      let swiperSlide = `<div class="swiper-slide all-courses-slide"></div>`;
       sliders.insertAdjacentHTML("beforeend", swiperSlide);
       filteredCourses.push(courses.item(i));
       allCourses.push(courses.item(i));
     }
   }
 
-  let swiperSliders = document.querySelectorAll(".swiper-slide");
+  let swiperSliders = document.querySelectorAll(".all-courses-slide");
 
   for (let i = 0; i < filteredCourses.length; i++) {
     let courseNode = filteredCourses[i];
@@ -239,7 +239,7 @@ function tabs() {
         <div class="tabs-nav">
          <div class="swiper-container">
            <div class="swiper-tabs swiper-all">
-             <div id="paths-sliders" class="swiper-wrapper-tabs"></div>
+             <div id="paths-sliders" class="swiper-wrapper"></div>
            </div>
            <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
             <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
@@ -254,7 +254,6 @@ function tabs() {
 
   const swiper = new Swiper(".swiper-tabs", {
     loop: true,
-    wrapperClass: "swiper-wrapper-tabs",
     initialSlide: 3,
     // centerInsufficientSlides: true,
 
