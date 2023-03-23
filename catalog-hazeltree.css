@@ -270,6 +270,7 @@ footer {
   transform: translateX(75px) scale(0.5);
   color: #f57f13;
   z-index: 1;
+  top: 80%;
 }
 
 
@@ -277,6 +278,7 @@ footer {
   transform: translateX(-75px) scale(0.4);
   color: #f57f13;
   z-index: 1;
+  top: 80%;
 }
 
 
