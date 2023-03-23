@@ -67,6 +67,7 @@ window.addEventListener("load", () => {
       <h1 style="color:#fff">
         Search Results
       </h1>
+      <a href="/"><button type="button">Back</button></a>
     </div>`;
     if (!document.getElementById("searchRes")) {
       skilljarContent.insertAdjacentHTML("afterbegin", searchResHeader);
