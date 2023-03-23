@@ -78,22 +78,26 @@ window.addEventListener("load", () => {
   if (searchBox) {
     searchBox.addEventListener("input", (event) => {
       console.log(event);
+      skilljarContent.style = "visibility: hidden;"
+
       let skilljarContent = document.getElementById("skilljar-content");
       let catalogContent = document.getElementById("catalog-content");
-      skilljarContent.style = "visibility: hidden;"
-      if (catalogContent) {
-        catalogContent.style = "max-width: unset;"
-        catalogContent.style = "display: none;";
-      }
+      document.querySelector(".tabs-top").style = "display: none;"
+      document.querySelector(".all-courses-swiper").style = "display: none;"
+      document.getElementById("courseTitle").style = "display: none;"
+      document.getElementById("catalog-courses").style = "display: block;"
+
       let searchResHeader = `<div id="searchRes" style="background-color: black; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center;">
       <h1 style="color:#fff">
         Search Results
       </h1>
       <a href="/"><button type="button">Back</button></a>
       </div>`;
+
       if (!document.getElementById("searchRes")) {
         skilljarContent.insertAdjacentHTML("afterbegin", searchResHeader);
       }
+
       document.body.style = "visibility: visible;";
       skilljarContent.style = "visibility: visible;";
 
@@ -139,7 +143,7 @@ function addCourseTitle() {
 function initializeSwiper() {
   let swiperTemplate = `  
 <!-- Slider main container -->
-<div class="swiper-container">
+<div class="swiper-container all-courses-swiper">
   <div class="swiper swiper-all">
     <!-- Additional required wrapper -->
     <div id="course-sliders" class="swiper-wrapper">
