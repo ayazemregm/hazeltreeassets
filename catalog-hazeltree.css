@@ -95,11 +95,10 @@ body {
 
 
 #courseTitle {
-  margin: 0 auto;
   margin-top: 6.25rem;
   margin-bottom: 3rem;
   width: 100vw;
-  padding: 2% 15%;
+  padding: 2% 5%;
   color: #fff;
   background-color: #000;
 }
@@ -130,7 +129,6 @@ body {
 }
 
 .tabs-center {
-  max-width: 72rem;
   margin: 0 auto;
   color: #fff;
   margin-bottom: 3rem;

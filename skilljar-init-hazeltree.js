@@ -118,7 +118,7 @@ function defaultActions() {
 function addCourseTitle() {
   let courseTitles = `
     <div id="courseTitle">
-      <div style="max-width: 72rem;">
+      <div>
         <h1 style="color:#fff">Available Courses</h1>
         <p>You can view all of the courses available to you below.</p>
       </div>
