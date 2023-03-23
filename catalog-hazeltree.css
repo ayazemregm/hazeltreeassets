@@ -285,7 +285,9 @@ footer {
   width: 100%;
 }
 
-
+.filter-option {
+  background: #f57f13;
+}
 
 .card-image img {
   width: 240px;
