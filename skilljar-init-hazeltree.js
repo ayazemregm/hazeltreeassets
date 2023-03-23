@@ -220,6 +220,12 @@ function initializeSwiper() {
 
   const swiper = new Swiper(".swiper", {
     loop: true,
+    on: {
+      activeIndexChange: function fireResize() {
+        console.log("swiperfired");
+        window.dispatchEvent(new Event('resize'));
+      }
+    },
     initialSlide: 0,
     // centerInsufficientSlides: true,
 
@@ -405,6 +411,7 @@ function tabs() {
           const swiper = new Swiper(`.swiper${i}`, {
             centerInsufficientSlides: true,
             initialSlide: 0,
+
             loop: false,
             navigation: {
               nextEl: `.swiper-button-next${i}`,
