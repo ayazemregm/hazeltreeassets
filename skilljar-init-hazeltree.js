@@ -157,14 +157,12 @@ function defaultActions() {
 // add course
 function addCourseTitle() {
   let courseTitles = `
-<div id="courseTitle">
-   <h1 style="color:#fff" >
-     Available Courses
-   </h1>
-   <p>
-   You can view all of the courses available to you below.
-   </p>
- </div>`;
+    <div id="courseTitle">
+      <div style="max-width: 72rem;">
+        <h1 style="color:#fff">Available Courses</h1>
+        <p>You can view all of the courses available to you below.</p>
+      </div>
+    </div>`;
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", courseTitles);
 
@@ -267,10 +265,8 @@ function tabs() {
   let tabsText = `<div class="tabs-top">
   <div class="tabs-text-wrapper">
   <div class="tabs-center">
-    <div style="max-width: 72rem;">
     <h1 style="color:#fff;">Learning Paths</h1>
-        <p style="font-size:1.125rem;">Find courses grouped by product type and user role in these tailored Learning Paths.</p>
-    </div>
+    <p style="font-size:1.125rem;">Find courses grouped by product type and user role in these tailored Learning Paths.</p>
     </div>
     </div>
       <section class="tabs">
