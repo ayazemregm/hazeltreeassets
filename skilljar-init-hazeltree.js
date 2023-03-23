@@ -266,10 +266,12 @@ function tabs() {
 
   let tabsText = `<div class="tabs-top">
   <div class="tabs-text-wrapper">
-  <div class="tabs-center ">
-   <h1 style="color:#fff;">Learning Paths</h1>
+  <div class="tabs-center">
+    <div style="max-width: 72rem;">
+    <h1 style="color:#fff;">Learning Paths</h1>
         <p style="font-size:1.125rem;">Find courses grouped by product type and user role in these tailored Learning Paths.</p>
-      </div>
+    </div>
+    </div>
     </div>
       <section class="tabs">
         <div id="tabs-title">
