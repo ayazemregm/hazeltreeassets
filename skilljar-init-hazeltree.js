@@ -239,7 +239,7 @@ function tabs() {
         <div class="tabs-nav">
          <div class="swiper-container">
            <div class="swiper-tabs swiper-all">
-             <div id="paths-sliders" class="swiper-wrapper"></div>
+             <div id="paths-sliders" class="swiper-wrapper-tabs"></div>
            </div>
            <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
             <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
@@ -254,6 +254,7 @@ function tabs() {
 
   const swiper = new Swiper(".swiper-tabs", {
     loop: true,
+    wrapperClass: "swiper-wrapper-tabs",
     initialSlide: 3,
     // centerInsufficientSlides: true,
 
@@ -321,7 +322,12 @@ function tabs() {
     let tab = filteredPaths[i - 1].children.item(2).innerHTML;
     console.log(filteredPaths);
     console.log(tab);
-    let elBtnTemplate = `<div class="swiper-slide"><button id="pathTab${i}" class="tab-nav-item">${tab}</button></div>`;
+    let tabSwiperEl = document.createElement("div");
+    tabSwiperEl.classList.add("swiper-slide");
+    let elBtnTemplate = `
+    <div class="swiper-slide">
+    <button id="pathTab${i}" class="tab-nav-item">${tab}</button>
+    </div>`;
 
     if (i === 1) {
       elBtnTemplate = `<div class="swiper-slide"><button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button></div>`;
