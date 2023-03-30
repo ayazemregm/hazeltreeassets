@@ -314,7 +314,8 @@ footer {
   display: none;
 }
 
-.headercoursesandpaths {
+.headercoursesandpaths,
+.headercoursesandpaths:hover {
   all: unset;
   padding-right: 20px;
   color: white;
