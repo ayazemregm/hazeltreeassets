@@ -57,8 +57,8 @@ window.addEventListener("load", () => {
 
   let header = document.getElementById("header-right");
   if (header) {
-    let template = `<a class="headercoursesandpaths" href="/?=paths">Learning Paths</a>
-    <a class="headercoursesandpaths" href="/?=courses">All Courses</a>`;
+    let template = `<a style="all: unset; padding-right: 20px; color: white;" href="/?=paths">Learning Paths</a>
+    <a style="all: unset; padding-right: 20px; color: white;" href="/?=courses">All Courses</a>`;
     header.insertAdjacentHTML("afterbegin", template);
   }
 

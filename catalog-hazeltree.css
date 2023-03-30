@@ -314,12 +314,6 @@ footer {
   display: none;
 }
 
-.headercoursesandpaths,
-.headercoursesandpaths:hover {
-  all: unset;
-  padding-right: 20px;
-  color: white;
-}
 
 @media only screen and (max-width: 40em) {
 
