@@ -180,7 +180,7 @@ function initializeSwiper() {
       let sliders = document.getElementById("course-sliders");
 
       let swiperSlide = `<div class="swiper-slide all-courses-slide"></div>`;
-      sliders.insertAdjacentHTML("beforeend", swiperSlide);
+      sliders.insertAdjacentHTML("afterbegin", swiperSlide);
       filteredCourses.push(courses.item(i));
       allCourses.push(courses.item(i));
     }
