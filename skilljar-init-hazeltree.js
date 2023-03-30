@@ -195,7 +195,7 @@ function initializeSwiper() {
   }
 
   const swiper = new Swiper(".swiper", {
-    loop: true,
+
     on: {
       activeIndexChange: function fireResize() {
         console.log("swiperfired");
