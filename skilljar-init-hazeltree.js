@@ -40,14 +40,26 @@ window.addEventListener("load", () => {
       document.body.style = "visibility: visible;";
       break;
   }
+  if (window.location.href.includes("?=paths")) {
+    let catalogContent = document.getElementById("catalog-content");
+    let offset = catalogContent.getBoundingClientRect().top;
+    window.scrollTo({ top: offset - 50 });
 
+  } else if (window.location.href.includes("?=courses")) {
+    let catalogContent = document.getElementById("catalog-content");
+    let offset = catalogContent.getBoundingClientRect().bottom;
+    window.scrollTo({ top: offset - 50 });
+  }
   let header = document.getElementById("header-right");
   if (header) {
-
     let template = `<button class="headercoursesandpaths">Learning Paths</button>
     <button class="headercoursesandpaths">All Courses</button>`;
     header.insertAdjacentHTML("afterbegin", template);
-
+    document.querySelectorAll("headercoursesandpaths").forEach((e) => {
+      e.onclick = function () {
+        window.location.href = "/?=paths";
+      };
+    })
   }
 
 
