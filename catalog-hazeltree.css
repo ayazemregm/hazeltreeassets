@@ -314,6 +314,11 @@ footer {
   display: none;
 }
 
+.headercoursesandpaths {
+  padding-right: 20px;
+  color: white;
+}
+
 @media only screen and (max-width: 40em) {
 
   .swiper-button-next,
