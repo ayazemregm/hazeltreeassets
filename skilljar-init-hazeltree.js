@@ -16,16 +16,7 @@ window.addEventListener("load", () => {
   switch (end) {
     case "/":
       console.log("landingpage");
-      if (window.location.href.includes("?=paths")) {
-        let catalogContent = document.getElementById("catalog-content");
-        let offset = catalogContent.getBoundingClientRect().bottom;
-        window.scrollTo({ top: offset - 50 });
 
-      } else if (window.location.href.includes("?=courses")) {
-        let catalogContent = document.getElementById("catalog-content");
-        let offset = catalogContent.getBoundingClientRect().bottom;
-        window.scrollTo({ top: offset - 50 });
-      }
       let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", catalogCss);
       if (!window.location.href.includes("?q=")) {
@@ -57,8 +48,9 @@ window.addEventListener("load", () => {
 
   let header = document.getElementById("header-right");
   if (header) {
-    let template = `<a style="all: unset; padding-right: 20px; color: white;" href="/?=paths">Learning Paths</a>
-    <a style="all: unset; padding-right: 20px; color: white;" href="/?=courses">All Courses</a>`;
+    document.head.insertAdjacentHTML("beforeend", `<style>#header-right{display: flex;align-items: center;} .headerheight{height:unset;}</style>`);
+    let template = `<a style="padding-right: 20px; color: white;" href="/?=paths">Learning Paths</a>
+    <a style="padding-right: 20px; color: white;" href="/?=courses">All Courses</a>`;
     header.insertAdjacentHTML("afterbegin", template);
   }
 
@@ -328,10 +320,15 @@ function tabs() {
         let pathCourses = parsedDom.getElementById("catalog-courses");
 
         if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
+
+          ////empty tab skip
           tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
           document
             .getElementById("tabs-content")
             .insertAdjacentHTML("afterbegin", tabTemplate);
+
+
+
           for (let k = 0; k < pathCourses.children.length; k++) {
             let tabSliders = document.getElementById(`tab-sliders${i}`);
 
@@ -443,6 +440,18 @@ function tabs() {
           },
         });
         allcourseswiper.push(swiper);
+
+        if (window.location.href.includes("?=paths")) {
+          let catalogContent = document.getElementById("catalog-content");
+          let offset = catalogContent.getBoundingClientRect().bottom;
+          window.scrollTo({ top: offset - 50 });
+
+        } else if (window.location.href.includes("?=courses")) {
+          let catalogContent = document.getElementById("catalog-content");
+          let offset = catalogContent.getBoundingClientRect().bottom;
+          window.scrollTo({ top: offset - 50 });
+        }
+
         document.body.style = "visibility:visible";
       });
   }
