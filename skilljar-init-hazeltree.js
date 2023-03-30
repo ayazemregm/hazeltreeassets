@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
       console.log("landingpage");
       if (window.location.href.includes("?=paths")) {
         let catalogContent = document.getElementById("catalog-content");
-        let offset = catalogContent.getBoundingClientRect().top;
+        let offset = catalogContent.getBoundingClientRect().bottom;
         window.scrollTo({ top: offset - 50 });
 
       } else if (window.location.href.includes("?=courses")) {
@@ -58,9 +58,8 @@ window.addEventListener("load", () => {
   let header = document.getElementById("header-right");
   if (header) {
     let template = `<a class="headercoursesandpaths" href="/?=paths">Learning Paths</a>
-    <a class="headercoursesandpaths" href="/?=courses>All Courses</a>`;
+    <a class="headercoursesandpaths" href="/?=courses">All Courses</a>`;
     header.insertAdjacentHTML("afterbegin", template);
-
   }
 
 
