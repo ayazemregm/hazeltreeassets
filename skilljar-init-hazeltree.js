@@ -441,6 +441,8 @@ function tabs() {
         });
         allcourseswiper.push(swiper);
 
+
+        document.body.style = "visibility:visible";
         if (window.location.href.includes("?=paths")) {
           let catalogContent = document.getElementById("catalog-content");
           let offset = catalogContent.getBoundingClientRect().top;
@@ -451,8 +453,6 @@ function tabs() {
           let offset = catalogContent.getBoundingClientRect().top;
           window.scrollTo({ top: offset, behavior: "instant" });
         }
-
-        document.body.style = "visibility:visible";
       });
   }
 }
