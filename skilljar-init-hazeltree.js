@@ -40,6 +40,17 @@ window.addEventListener("load", () => {
       document.body.style = "visibility: visible;";
       break;
   }
+
+  let header = document.getElementById("header-right");
+  if (header) {
+
+    let template = `<a href="">Learning Paths</a>
+    <a href="">All Courses</a>`;
+    header.insertAdjacentHTML("afterbegin", template);
+
+  }
+
+
   let sjPageDetail = document.querySelector(".sj-page-detail-course");
   let sjPageCurriculum = document.querySelector(".sj-page-curriculum");
 
@@ -269,7 +280,6 @@ function tabs() {
     ) {
       let clonedItem = courses.item(i).cloneNode(true);
       filteredPaths.push(clonedItem);
-      // courses.item(i).remove();
     }
   }
   for (let i = 1; i <= filteredPaths.length; i++) {
@@ -327,13 +337,12 @@ function tabs() {
               }
             });
             if (dataCourse[0]) {
-
               dataCourse[0].children.item(1).firstChild.attributes[0].nodeValue =
                 dataCourse[0].children.item(1).firstChild.attributes[1].nodeValue;
+              let cloneNode = dataCourse[0].cloneNode(true);
+              courseNodeEl.appendChild(cloneNode);
+              tabSliders.insertAdjacentElement("afterbegin", courseNodeEl);
             }
-            let cloneNode = dataCourse[0].cloneNode(true);
-            courseNodeEl.appendChild(cloneNode);
-            tabSliders.insertAdjacentElement("afterbegin", courseNodeEl);
           }
 
           const swiper = new Swiper(`.swiper${i}`, {
