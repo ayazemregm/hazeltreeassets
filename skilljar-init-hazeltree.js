@@ -443,13 +443,13 @@ function tabs() {
 
         if (window.location.href.includes("?=paths")) {
           let catalogContent = document.getElementById("catalog-content");
-          let offset = catalogContent.getBoundingClientRect().bottom;
-          window.scrollTo({ top: offset - 50, behavior: "instant" });
+          let offset = catalogContent.getBoundingClientRect().top;
+          window.scrollTo({ top: offset - 150, behavior: "instant" });
 
         } else if (window.location.href.includes("?=courses")) {
           let catalogContent = document.getElementById("courseTitle");
-          let offset = catalogContent.getBoundingClientRect().bottom;
-          window.scrollTo({ top: offset - 50, behavior: "instant" });
+          let offset = catalogContent.getBoundingClientRect().top;
+          window.scrollTo({ top: offset, behavior: "instant" });
         }
 
         document.body.style = "visibility:visible";
