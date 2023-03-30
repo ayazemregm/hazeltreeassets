@@ -5,13 +5,27 @@ let allcourseswiper = [];
 let allCourses = [];
 
 window.addEventListener("load", () => {
+
   defaultActions();
   footer();
   let footerCss = `<link rel="stylesheet" href="${sourceLink}footer.css">`;
   document.head.insertAdjacentHTML("beforeend", footerCss);
+
+
+
   switch (end) {
     case "/":
       console.log("landingpage");
+      if (window.location.href.includes("?=paths")) {
+        let catalogContent = document.getElementById("catalog-content");
+        let offset = catalogContent.getBoundingClientRect().top;
+        window.scrollTo({ top: offset - 50 });
+
+      } else if (window.location.href.includes("?=courses")) {
+        let catalogContent = document.getElementById("catalog-content");
+        let offset = catalogContent.getBoundingClientRect().bottom;
+        window.scrollTo({ top: offset - 50 });
+      }
       let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", catalogCss);
       if (!window.location.href.includes("?q=")) {
@@ -40,26 +54,13 @@ window.addEventListener("load", () => {
       document.body.style = "visibility: visible;";
       break;
   }
-  if (window.location.href.includes("?=paths")) {
-    let catalogContent = document.getElementById("catalog-content");
-    let offset = catalogContent.getBoundingClientRect().top;
-    window.scrollTo({ top: offset - 50 });
 
-  } else if (window.location.href.includes("?=courses")) {
-    let catalogContent = document.getElementById("catalog-content");
-    let offset = catalogContent.getBoundingClientRect().bottom;
-    window.scrollTo({ top: offset - 50 });
-  }
   let header = document.getElementById("header-right");
   if (header) {
-    let template = `<a class="headercoursesandpaths">Learning Paths</a>
-    <a class="headercoursesandpaths">All Courses</a>`;
+    let template = `<a class="headercoursesandpaths" href="/?=paths">Learning Paths</a>
+    <a class="headercoursesandpaths" href="/?=courses>All Courses</a>`;
     header.insertAdjacentHTML("afterbegin", template);
-    document.querySelectorAll("headercoursesandpaths").forEach((e) => {
-      e.onclick = function () {
-        window.location.href = "/?=paths";
-      };
-    })
+
   }
 
 
