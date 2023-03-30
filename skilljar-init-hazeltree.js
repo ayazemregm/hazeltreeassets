@@ -52,8 +52,8 @@ window.addEventListener("load", () => {
   }
   let header = document.getElementById("header-right");
   if (header) {
-    let template = `<button class="headercoursesandpaths">Learning Paths</button>
-    <button class="headercoursesandpaths">All Courses</button>`;
+    let template = `<a class="headercoursesandpaths">Learning Paths</a>
+    <a class="headercoursesandpaths">All Courses</a>`;
     header.insertAdjacentHTML("afterbegin", template);
     document.querySelectorAll("headercoursesandpaths").forEach((e) => {
       e.onclick = function () {
