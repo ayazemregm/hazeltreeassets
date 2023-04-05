@@ -247,7 +247,7 @@ function initializeSwiper() {
 }
 
 // tabs
-function tabs() {
+async function tabs() {
   let tabsText = `
   <div class="tabs-top">
     <div class="tabs-text-wrapper">
@@ -321,9 +321,10 @@ function tabs() {
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
-    axios
+    await axios
       .get(axiosUrl)
       .then((e) => {
+
         let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
         let pathCourses = parsedDom.getElementById("catalog-courses");
 
@@ -416,11 +417,8 @@ function tabs() {
               tabContent.children.item(s).style = "display:none";
               let pathsliders = document.getElementById(`paths-sliders`)
               for (let p = 0; p < pathsliders.children.length; p++) {
-                console.log(pathsliders.children.item(p).firstChild);
                 pathsliders.children.item(p).children.item(0).classList.remove("tab-nav-item-active");
-
               }
-
             }
             document
               .getElementById(`pathTab${i}`)
