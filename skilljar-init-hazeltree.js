@@ -408,11 +408,18 @@ function tabs() {
       .finally(function () {
         if (document.getElementById(`pathTab${i}`)) {
 
-          document.getElementById(`pathTab${i}`).addEventListener("click", () => {
+          let tab = document.getElementById(`pathTab${i}`)
+
+          tab.addEventListener("click", () => {
             let tabContent = document.getElementById("tabs-content");
             for (let s = 0; s < tabContent.children.length; s++) {
               tabContent.children.item(s).style = "display:none";
-              document.getElementById(`pathTab${s + 1}`).classList.remove("tab-nav-item-active");
+              let pathsliders = document.getElementById(`paths-sliders`)
+              for (let p = 0; p < pathsliders.children.length; p++) {
+                pathsliders.children.item(0).classList.remove("tab-nav-item-active");
+
+              }
+
             }
             document
               .getElementById(`pathTab${i}`)
