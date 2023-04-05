@@ -317,7 +317,10 @@ function tabs() {
     if (i === 1) {
       elBtnTemplate = `<div class="swiper-slide"><button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button></div>`;
     }
-
+    tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
+    document
+      .getElementById("tabs-content")
+      .insertAdjacentHTML("afterbegin", tabTemplate);
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
@@ -329,14 +332,6 @@ function tabs() {
         let pathCourses = parsedDom.getElementById("catalog-courses");
 
         if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
-
-          ////empty tab skip
-
-          tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
-          document
-            .getElementById("tabs-content")
-            .insertAdjacentHTML("afterbegin", tabTemplate);
-
 
           for (let k = 0; k < pathCourses.children.length; k++) {
             let tabSliders = document.getElementById(`tab-sliders${i}`);
