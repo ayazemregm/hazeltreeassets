@@ -469,7 +469,7 @@ function tabs() {
 
           } else if (window.location.href.includes("?=courses")) {
             let catalogContent = document.getElementById("courseTitle");
-            let offset = catalogContent.getBoundingClientRect().top;
+            let offset = catalogContent.getBoundingClientRect().bottom;
             window.scrollTo({ top: offset, behavior: "instant" });
           }
         }
