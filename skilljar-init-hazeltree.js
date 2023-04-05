@@ -61,8 +61,6 @@ window.addEventListener("load", () => {
     document.body.style = "visibility: visible;";
   }
   console.log(window.location.pathname);
-  if (window.location.pathname) {
-  }
   // Search Event Listener
   let searchBox = document.getElementById("catalogSearchInput");
   console.log(searchBox);
@@ -95,7 +93,8 @@ window.addEventListener("load", () => {
 
       let skilljarContent = document.getElementById("skilljar-content");
       skilljarContent.style = "visibility: hidden;"
-      if (event.target.value == "") {
+      if (event.target.value === "") {
+        console.log("disablesearch");
         document.querySelector(".tabs-top").style = "display: block;"
         document.querySelector(".all-courses-swiper").style = "display: block;"
         document.getElementById("courseTitle").style = "display: block;"
