@@ -400,10 +400,23 @@ async function tabs() {
               "display: none";
           }
           allcourseswiper.push(swiper);
+          document.body.style = "visibility:visible";
         }
       })
       .catch(function (error) {
-        // handle error
+        if (i === filteredPaths.length) {
+
+          if (window.location.href.includes("?=paths")) {
+            let catalogContent = document.getElementById("catalog-content");
+            let offset = catalogContent.getBoundingClientRect().top;
+            window.scrollTo({ top: offset - 150, behavior: "instant" });
+
+          } else if (window.location.href.includes("?=courses")) {
+            let catalogContent = document.getElementById("courseTitle");
+            let offset = catalogContent.getBoundingClientRect().top;
+            window.scrollTo({ top: offset, behavior: "instant" });
+          }
+        }
         console.log(error);
       })
       .finally(function () {
