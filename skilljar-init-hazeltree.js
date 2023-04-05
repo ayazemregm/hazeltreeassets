@@ -95,6 +95,7 @@ window.addEventListener("load", () => {
       skilljarContent.style = "visibility: hidden;"
       if (event.target.value === "") {
         console.log("disablesearch");
+        document.querySelector(".catalog-center-width").style = "display: none;"
       }
 
       document.querySelector(".tabs-top").style = "display: none;"
@@ -387,7 +388,7 @@ function tabs() {
               "display: none";
           }
           allcourseswiper.push(swiper);
-          document.body.style = "visibility:visible";
+
         }
       })
       .catch(function (error) {
