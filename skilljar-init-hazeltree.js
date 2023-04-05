@@ -11,12 +11,9 @@ window.addEventListener("load", () => {
   let footerCss = `<link rel="stylesheet" href="${sourceLink}footer.css">`;
   document.head.insertAdjacentHTML("beforeend", footerCss);
 
-
-
   switch (end) {
     case "/":
       console.log("landingpage");
-
       let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", catalogCss);
       if (!window.location.href.includes("?q=")) {
@@ -310,10 +307,7 @@ function tabs() {
       elBtnTemplate = `<div class="swiper-slide"><button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button></div>`;
     }
 
-    tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
-    document
-      .getElementById("tabs-content")
-      .insertAdjacentHTML("afterbegin", tabTemplate);
+
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
     axios
@@ -325,7 +319,10 @@ function tabs() {
         if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
 
           ////empty tab skip
-
+          tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
+          document
+            .getElementById("tabs-content")
+            .insertAdjacentHTML("afterbegin", tabTemplate);
 
 
 
@@ -398,19 +395,23 @@ function tabs() {
         console.log(error);
       })
       .finally(function () {
-        document.getElementById(`pathTab${i}`).addEventListener("click", () => {
-          let tabContent = document.getElementById("tabs-content");
-          for (let s = 0; s < tabContent.children.length; s++) {
-            tabContent.children.item(s).style = "display:none";
-            document.getElementById(`pathTab${s + 1}`).classList.remove("tab-nav-item-active");
-          }
-          document
-            .getElementById(`pathTab${i}`)
-            .classList.add("tab-nav-item-active");
-          document.querySelector(`.swiper-container${i}`).style =
-            "display: block";
-        });
 
+        if (document.getElementById(`pathTab${i}`)) {
+
+          document.getElementById(`pathTab${i}`).addEventListener("click", () => {
+            let tabContent = document.getElementById("tabs-content");
+            for (let s = 0; s < tabContent.children.length; s++) {
+              tabContent.children.item(s).style = "display:none";
+              document.getElementById(`pathTab${s + 1}`).classList.remove("tab-nav-item-active");
+            }
+            document
+              .getElementById(`pathTab${i}`)
+              .classList.add("tab-nav-item-active");
+            document.querySelector(`.swiper-container${i}`).style =
+              "display: block";
+          });
+
+        }
         const swiper = new Swiper(".swiper-tabs", {
           centerInsufficientSlides: true,
 
@@ -441,18 +442,20 @@ function tabs() {
         });
         allcourseswiper.push(swiper);
 
+        if (i === filteredPaths.length) {
+          document.body.style = "visibility:visible";
+          if (window.location.href.includes("?=paths")) {
+            let catalogContent = document.getElementById("catalog-content");
+            let offset = catalogContent.getBoundingClientRect().top;
+            window.scrollTo({ top: offset - 150, behavior: "instant" });
 
-        document.body.style = "visibility:visible";
-        if (window.location.href.includes("?=paths")) {
-          let catalogContent = document.getElementById("catalog-content");
-          let offset = catalogContent.getBoundingClientRect().top;
-          window.scrollTo({ top: offset - 150, behavior: "instant" });
-
-        } else if (window.location.href.includes("?=courses")) {
-          let catalogContent = document.getElementById("courseTitle");
-          let offset = catalogContent.getBoundingClientRect().top;
-          window.scrollTo({ top: offset, behavior: "instant" });
+          } else if (window.location.href.includes("?=courses")) {
+            let catalogContent = document.getElementById("courseTitle");
+            let offset = catalogContent.getBoundingClientRect().top;
+            window.scrollTo({ top: offset, behavior: "instant" });
+          }
         }
+
       });
   }
 }
