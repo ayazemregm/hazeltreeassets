@@ -247,7 +247,7 @@ function initializeSwiper() {
 }
 
 // tabs
-async function tabs() {
+function tabs() {
   let tabsText = `
   <div class="tabs-top">
     <div class="tabs-text-wrapper">
@@ -321,7 +321,7 @@ async function tabs() {
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
-    await axios
+    axios
       .get(axiosUrl)
       .then((e) => {
 
