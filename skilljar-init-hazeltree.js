@@ -91,8 +91,19 @@ window.addEventListener("load", () => {
   if (searchBox) {
     searchBox.addEventListener("input", (event) => {
       console.log(event);
+
+
       let skilljarContent = document.getElementById("skilljar-content");
       skilljarContent.style = "visibility: hidden;"
+      if (event.target.value == "") {
+        document.querySelector(".tabs-top").style = "display: block;"
+        document.querySelector(".all-courses-swiper").style = "display: block;"
+        document.getElementById("courseTitle").style = "display: block;"
+        document.getElementById("catalog-courses").style = "display: none;"
+        if (document.getElementById("searchRes")) {
+          document.getElementById("searchRes").remove();
+        }
+      }
 
       document.querySelector(".tabs-top").style = "display: none;"
       document.querySelector(".all-courses-swiper").style = "display: none;"
