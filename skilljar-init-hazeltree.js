@@ -416,6 +416,7 @@ function tabs() {
               tabContent.children.item(s).style = "display:none";
               let pathsliders = document.getElementById(`paths-sliders`)
               for (let p = 0; p < pathsliders.children.length; p++) {
+                console.log(pathsliders.children.item(p).firstChild);
                 pathsliders.children.item(p).firstChild.classList.remove("tab-nav-item-active");
 
               }
