@@ -383,10 +383,7 @@ function tabs() {
             },
           });
 
-          if (i !== 1) {
-            document.querySelector(`.swiper-container${i}`).style =
-              "display: none";
-          }
+
           allcourseswiper.push(swiper);
 
         }
@@ -408,6 +405,10 @@ function tabs() {
         console.log(error);
       })
       .finally(function () {
+        if (i !== 1) {
+          document.querySelector(`.swiper-container${i}`).style =
+            "display: none";
+        }
         if (document.getElementById(`pathTab${i}`)) {
 
           let tab = document.getElementById(`pathTab${i}`)
@@ -415,10 +416,8 @@ function tabs() {
           tab.addEventListener("click", () => {
             let tabContent = document.getElementById("tabs-content");
             for (let s = 0; s < tabContent.children.length; s++) {
-              console.log(tabContent.children.item(s));
               tabContent.children.item(s).style = "display:none";
               let pathsliders = document.getElementById(`paths-sliders`)
-              console.log(tabContent.children.item(s));
               for (let p = 0; p < pathsliders.children.length; p++) {
                 pathsliders.children.item(p).children.item(0).classList.remove("tab-nav-item-active");
               }
