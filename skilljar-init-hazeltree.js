@@ -307,7 +307,10 @@ function tabs() {
       elBtnTemplate = `<div class="swiper-slide"><button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button></div>`;
     }
 
-
+    tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
+    document
+      .getElementById("tabs-content")
+      .insertAdjacentHTML("afterbegin", tabTemplate);
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
     axios
@@ -319,10 +322,7 @@ function tabs() {
         if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
 
           ////empty tab skip
-          tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
-          document
-            .getElementById("tabs-content")
-            .insertAdjacentHTML("afterbegin", tabTemplate);
+
 
 
 
@@ -396,22 +396,19 @@ function tabs() {
       })
       .finally(function () {
 
-        if (document.getElementById(`pathTab${i}`)) {
+        document.getElementById(`pathTab${i}`).addEventListener("click", () => {
+          let tabContent = document.getElementById("tabs-content");
+          for (let s = 0; s < tabContent.children.length; s++) {
+            tabContent.children.item(s).style = "display:none";
+            document.getElementById(`pathTab${s + 1}`).classList.remove("tab-nav-item-active");
+          }
+          document
+            .getElementById(`pathTab${i}`)
+            .classList.add("tab-nav-item-active");
+          document.querySelector(`.swiper-container${i}`).style =
+            "display: block";
+        });
 
-          document.getElementById(`pathTab${i}`).addEventListener("click", () => {
-            let tabContent = document.getElementById("tabs-content");
-            for (let s = 0; s < tabContent.children.length; s++) {
-              tabContent.children.item(s).style = "display:none";
-              document.getElementById(`pathTab${s + 1}`).classList.remove("tab-nav-item-active");
-            }
-            document
-              .getElementById(`pathTab${i}`)
-              .classList.add("tab-nav-item-active");
-            document.querySelector(`.swiper-container${i}`).style =
-              "display: block";
-          });
-
-        }
         const swiper = new Swiper(".swiper-tabs", {
           centerInsufficientSlides: true,
 
