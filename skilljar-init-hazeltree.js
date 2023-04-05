@@ -102,6 +102,7 @@ window.addEventListener("load", () => {
         if (document.getElementById("searchRes")) {
           document.getElementById("searchRes").remove();
         }
+        return;
       }
 
       document.querySelector(".tabs-top").style = "display: none;"
