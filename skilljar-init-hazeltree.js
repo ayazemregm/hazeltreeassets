@@ -414,6 +414,7 @@ function tabs() {
           tab.addEventListener("click", () => {
             let tabContent = document.getElementById("tabs-content");
             for (let s = 0; s < tabContent.children.length; s++) {
+              console.log(tabContent.children.item(s));
               tabContent.children.item(s).style = "display:none";
               let pathsliders = document.getElementById(`paths-sliders`)
               for (let p = 0; p < pathsliders.children.length; p++) {
