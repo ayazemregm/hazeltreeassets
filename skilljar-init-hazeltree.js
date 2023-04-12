@@ -336,7 +336,7 @@ function tabs() {
 
             let dataCourse = allCourses.filter((e) => {
               if (
-                !e.classList.contains("not-found") && !e.classList.contains("search-only") &&
+                !e.classList.contains("not-found") && !courseNode.classList.contains("search-only") &&
                 e.dataset["type"] == "-c" &&
                 e.dataset.course == courseNode.dataset.course
               ) {
