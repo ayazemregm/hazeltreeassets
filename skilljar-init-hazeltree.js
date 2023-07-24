@@ -241,7 +241,7 @@ function initializeSwiper() {
 }
 
 // tabs
-async function tabs() {
+function tabs() {
 
   let tabsText = `
   <div class="tabs-top">
@@ -316,7 +316,7 @@ async function tabs() {
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
-    await axios
+    axios
       .get(axiosUrl)
       .then((e) => {
         console.log(i);
@@ -325,7 +325,8 @@ async function tabs() {
         console.log(pathCourses);
 
         if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
-          tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
+          tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i]);
+
           document
             .getElementById("tabs-content")
             .insertAdjacentHTML("afterbegin", tabTemplate);
