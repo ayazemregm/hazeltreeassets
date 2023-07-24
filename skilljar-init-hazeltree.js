@@ -472,7 +472,7 @@ function tabs() {
         allcourseswiper.push(swiper);
 
         if (i === filteredPaths.length) {
-          console.log(orderedList);
+          console.log(orderedPaths);
           document.body.style = "visibility:visible";
           if (window.location.href.includes("?=paths")) {
             let catalogContent = document.getElementById("catalog-content");
