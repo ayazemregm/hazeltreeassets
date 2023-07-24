@@ -278,6 +278,11 @@ function tabs() {
 
   let courses = catalogCourses.children;
 
+  let tabsInner = document.querySelector(".tabs-top");
+  tabsInner.insertAdjacentHTML("beforeend", tabsInnerSection);
+
+  let tabsNav = document.getElementById("paths-sliders");
+
   let filteredPaths = [];
   console.log(filteredPaths);
 
@@ -292,10 +297,7 @@ function tabs() {
   }
 
   if (filteredPaths.length > 0) {
-    let tabsInner = document.querySelector(".tabs-top");
-    tabsInner.insertAdjacentHTML("beforeend", tabsInnerSection);
 
-    let tabsNav = document.getElementById("paths-sliders");
 
     for (let i = 1; i <= filteredPaths.length; i++) {
       let tabTemplate = `  
@@ -495,7 +497,7 @@ function tabs() {
   } else {
     let learningPaths = document.getElementById("tabs-content");
     if (learningPaths.children.length < 1) {
-      learningPaths.insertAdjacentHTML("beforeend", "You do not have any learning paths available");
+      learningPaths.insertAdjacentHTML("beforeend", `<p style="font-size:1.125rem;">You do not have any learning paths available</p>`);
 
     }
     document.body.style = "visibility:visible";
