@@ -414,7 +414,7 @@ function tabs() {
       })
       .finally(function () {
 
-        orderedList.forEach((e) => { console.log(e); });
+
         if (i !== 1) {
           document.querySelector(`.swiper-container${i}`).style =
             "display: none";
@@ -471,6 +471,7 @@ function tabs() {
         allcourseswiper.push(swiper);
 
         if (i === filteredPaths.length) {
+          console.log(orderedList);
           document.body.style = "visibility:visible";
           if (window.location.href.includes("?=paths")) {
             let catalogContent = document.getElementById("catalog-content");
