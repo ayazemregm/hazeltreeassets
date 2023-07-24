@@ -252,16 +252,14 @@ function tabs() {
   let tabsText = `
   <div class="tabs-top">
     <div class="tabs-text-wrapper">
-      <div class="tabs-center">
+      <div id="tabs-center">
         <h1 style="color:#fff;">Learning Paths</h1>
         <p style="font-size:1.125rem;">Find courses grouped by product type and user role in these tailored Learning Paths.</p>
       </div>
     </div>
-    
   </div>`;
 
-  let tabsWrapper = document.getElementsByClassName("tabs-center");
-  tabsWrapper.item(0).insertAdjacentHTML("beforeend", `<section class="tabs">
+  let tabsInner = `<section class="tabs">
   <div id="tabs-title">
     <div class="tabs-nav">
      <div class="swiper-container swiper-tabs-container">
@@ -270,13 +268,16 @@ function tabs() {
        </div>
        <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
         <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
-     </div>
-    </div>
-  </div>
- <div class="tab-contentBG">
+       </div>
+      </div>
+      </div>
+      <div class="tab-contentBG">
     <div id="tabs-content" class="tabs-content"></div>
   </div>
-</section>`);;
+</section>`
+
+  let tabsWrapper = document.getElementsByClassName("tabs-top");
+  tabsWrapper.insertAdjacentHTML("beforeend", tabsInner);;
 
   let filteredPaths = [];
   console.log(filteredPaths);
