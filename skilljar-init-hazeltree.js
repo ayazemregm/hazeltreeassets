@@ -176,6 +176,7 @@ function initializeSwiper() {
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let courses = catalogCourses.children;
   let filteredCourses = [];
+  console.log(filteredCourses);
 
   for (let i = 0; i < courses.length; i++) {
     if (
