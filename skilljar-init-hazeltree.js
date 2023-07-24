@@ -243,7 +243,7 @@ function initializeSwiper() {
 // tabs
 function tabs() {
 
-  let tabsText = `
+  let tabsTop = `
   <div class="tabs-top">
     <div class="tabs-text-wrapper">
       <div class="tabs-center">
@@ -270,7 +270,10 @@ function tabs() {
   </div>`;
 
   let catalogContent = document.getElementById("catalog-content");
-  catalogContent.insertAdjacentHTML("beforeend", tabsText);
+  catalogContent.insertAdjacentHTML("beforeend", tabsTop);
+
+  let tabsInner = document.querySelector(".tabs-top");
+  tabsInner.insertAdjacentHTML("beforeend", "afdsd");
 
   let tabsNav = document.getElementById("paths-sliders");
 
