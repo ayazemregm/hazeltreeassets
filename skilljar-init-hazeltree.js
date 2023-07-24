@@ -276,6 +276,7 @@ function tabs() {
   </div>
 </section>`
 
+  catalogContent.insertAdjacentHTML("beforeend", tabsText);
   let tabsWrapper = document.getElementsByClassName("tabs-top");
   tabsWrapper.insertAdjacentHTML("beforeend", tabsInner);;
 
@@ -288,7 +289,6 @@ function tabs() {
 
 
   let catalogContent = document.getElementById("catalog-content");
-  catalogContent.insertAdjacentHTML("beforeend", tabsText);
 
   let tabsNav = document.getElementById("paths-sliders");
 
