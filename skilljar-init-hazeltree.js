@@ -391,8 +391,10 @@ function tabs() {
 
         } else {
           console.log("removing");
-          let emptyPath = document.getElementById(`pathTab${i}`).parentElement();
-          emptyPath.remove();
+          let emptyPath = document.getElementById(`pathTab${i}`);
+          let parent = emptyPath.parentElement();
+          console.log(emptyPath);
+          console.log(parent);
         }
       })
       .catch(function (error) {
