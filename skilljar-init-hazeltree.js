@@ -3,6 +3,7 @@ let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
 let allcourseswiper = [];
 
 let allCourses = [];
+let orderedPaths = [];
 
 window.addEventListener("load", () => {
 
@@ -313,7 +314,7 @@ function tabs() {
       elBtnTemplate = `<div class="swiper-slide"><button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button></div>`;
     }
 
-    let orderedList = [];
+
     tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
     document
       .getElementById("tabs-content")
@@ -322,7 +323,7 @@ function tabs() {
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
 
-    let isAvailable = false;
+
     axios
       .get(axiosUrl)
       .then((e) => {
@@ -332,7 +333,7 @@ function tabs() {
         console.log(pathCourses);
 
         if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
-          orderedList[i] = elBtnTemplate;
+          orderedPaths[i - 1] = elBtnTemplate;
 
           for (let k = 0; k < pathCourses.children.length; k++) {
             let tabSliders = document.getElementById(`tab-sliders${i}`);
