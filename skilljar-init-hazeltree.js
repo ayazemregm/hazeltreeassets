@@ -470,7 +470,7 @@ function tabs() {
             },
           });
           allcourseswiper.push(swiper);
-          console.log(orderedPaths);
+
 
 
           if (i === filteredPaths.length) {
