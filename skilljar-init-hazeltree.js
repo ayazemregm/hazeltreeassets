@@ -325,8 +325,7 @@ function tabs() {
         console.log(pathCourses);
 
         if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
-          tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i]);
-
+          tabsNav.insertAdjacentElement("beforeend", elBtnTemplate);
           document
             .getElementById("tabs-content")
             .insertAdjacentHTML("afterbegin", tabTemplate);
@@ -468,9 +467,8 @@ function tabs() {
 
 
 
-        document.body.style = "visibility:visible";
         if (i === filteredPaths.length) {
-
+          document.body.style = "visibility:visible";
           if (window.location.href.includes("?=paths")) {
             let catalogContent = document.getElementById("catalog-content");
             let offset = catalogContent.getBoundingClientRect().top;
