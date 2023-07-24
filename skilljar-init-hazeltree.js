@@ -305,13 +305,13 @@ function tabs() {
     let tab = filteredPaths[i - 1].children.item(2).innerHTML;
     let tabSwiperEl = document.createElement("div");
     tabSwiperEl.classList.add("swiper-slide");
-    let elBtnTemplate = `
-    <div class="swiper-slide">
-    <button id="pathTab${i}" class="tab-nav-item">${tab}</button>
-    </div>`;
+
+    let elBtnTemplate = document.createElement("div");
+    elBtnTemplate.classList.add("swiper-slide");
+    elBtnTemplate.innerHTML = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button>`;
 
     if (i === 1) {
-      elBtnTemplate = `<div class="swiper-slide"><button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button></div>`;
+      elBtnTemplate.innerHTML = `<button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button>`;
     }
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
@@ -325,7 +325,7 @@ function tabs() {
         console.log(pathCourses);
 
         if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
-          tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
+          tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i]);
           document
             .getElementById("tabs-content")
             .insertAdjacentHTML("afterbegin", tabTemplate);
