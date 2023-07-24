@@ -496,9 +496,10 @@ function tabs() {
   } else {
     let learningPaths = document.getElementById("tabs-content");
     if (learningPaths.children.length < 1) {
-      learningPaths.insertAdjacentHTML("beforeend", `<p style="font-size:1.125rem;">You do not have any learning paths available</p>`);
+      learningPaths.insertAdjacentHTML("beforeend", `<p style="font-size:1.125rem; padding-left:5rem;">You do not have any learning paths available</p>`);
 
     }
+    document.querySelector(".tabs-nav").style = "visibility:hidden";
     document.body.style = "visibility:visible";
   }
 }
