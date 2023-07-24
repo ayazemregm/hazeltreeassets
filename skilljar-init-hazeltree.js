@@ -390,7 +390,9 @@ function tabs() {
           allcourseswiper.push(swiper);
 
         } else {
-          document.getElementById(`pathTab${i}`).remove();
+          console.log("removing");
+          let emptyPath = document.getElementById(`pathTab${i}`).parentElement();
+          emptyPath.remove();
         }
       })
       .catch(function (error) {
