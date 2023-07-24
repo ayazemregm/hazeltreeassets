@@ -278,6 +278,7 @@ function tabs() {
   let courses = catalogCourses.children;
 
   let filteredPaths = [];
+  console.log(filteredPaths);
 
   for (let i = 0; i < courses.length; i++) {
     if (
