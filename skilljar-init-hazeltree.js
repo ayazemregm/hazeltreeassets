@@ -389,11 +389,11 @@ function tabs() {
 
           allcourseswiper.push(swiper);
 
-        } else {
+        } else if (pathCourses.children !== null) {
           console.log("removing");
-          // let emptyPath = document.getElementById(`pathTab${i}`);
-          // let parent = emptyPath.parentElement.remove();
-          // allcourseswiper[allcourseswiper.length - 1].removeSlide(i);
+          let emptyPath = document.getElementById(`pathTab${i}`);
+          let parent = emptyPath.parentElement.remove();
+          allcourseswiper[allcourseswiper.length - 1].removeSlide(i);
         }
       })
       .catch(function (error) {
