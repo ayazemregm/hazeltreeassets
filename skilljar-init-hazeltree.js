@@ -389,6 +389,8 @@ function tabs() {
 
           allcourseswiper.push(swiper);
 
+        } else {
+          document.getElementById(`pathTab${i}`).remove();
         }
       })
       .catch(function (error) {
