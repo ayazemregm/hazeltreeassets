@@ -192,58 +192,57 @@ function initializeSwiper() {
   }
   if (filteredCourses.length > 0) {
 
-
-
-    let catalogCourses = document.getElementById("catalog-courses");
-    let catalogContent = document.getElementById("catalog-content");
-
-    let swiperSliders = document.querySelectorAll(".all-courses-slide");
-
-    for (let i = 0; i < filteredCourses.length; i++) {
-      let courseNode = filteredCourses[i].cloneNode(true);
-
-      swiperSliders.item(i).appendChild(courseNode);
-    }
-
-    const swiper = new Swiper(".swiper", {
-
-      on: {
-        activeIndexChange: function fireResize() {
-          console.log("swiperfired");
-          window.dispatchEvent(new Event('resize'));
-        }
-      },
-      initialSlide: 0,
-      // centerInsufficientSlides: true,
-
-      navigation: {
-        nextEl: ".swiper-button-next0",
-        prevEl: ".swiper-button-prev0",
-      },
-      slidesPerView: 5,
-      spaceBetween: 0,
-      breakpoints: {
-        "@0.00": {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        "@0.75": {
-          slidesPerView: 2,
-          spaceBetween: 30,
-        },
-        "@1.00": {
-          slidesPerView: 3,
-          spaceBetween: 40,
-        },
-        "@1.50": {
-          slidesPerView: 4,
-          spaceBetween: 50,
-        },
-      },
-    });
-
-    allcourseswiper.push(swiper);
   }
+
+  let catalogCourses = document.getElementById("catalog-courses");
+  let catalogContent = document.getElementById("catalog-content");
+
+  let swiperSliders = document.querySelectorAll(".all-courses-slide");
+
+  for (let i = 0; i < filteredCourses.length; i++) {
+    let courseNode = filteredCourses[i].cloneNode(true);
+
+    swiperSliders.item(i).appendChild(courseNode);
+  }
+
+  const swiper = new Swiper(".swiper", {
+
+    on: {
+      activeIndexChange: function fireResize() {
+        console.log("swiperfired");
+        window.dispatchEvent(new Event('resize'));
+      }
+    },
+    initialSlide: 0,
+    // centerInsufficientSlides: true,
+
+    navigation: {
+      nextEl: ".swiper-button-next0",
+      prevEl: ".swiper-button-prev0",
+    },
+    slidesPerView: 5,
+    spaceBetween: 0,
+    breakpoints: {
+      "@0.00": {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      "@0.75": {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      "@1.00": {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      "@1.50": {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
+  });
+
+  allcourseswiper.push(swiper);
 }
 
 // tabs
@@ -252,50 +251,40 @@ function tabs() {
   let tabsText = `
   <div class="tabs-top">
     <div class="tabs-text-wrapper">
-      <div id="tabs-center">
+      <div class="tabs-center">
         <h1 style="color:#fff;">Learning Paths</h1>
         <p style="font-size:1.125rem;">Find courses grouped by product type and user role in these tailored Learning Paths.</p>
       </div>
     </div>
+    <section class="tabs">
+      <div id="tabs-title">
+        <div class="tabs-nav">
+         <div class="swiper-container swiper-tabs-container">
+           <div class="swiper-tabs swiper-all">
+             <div id="paths-sliders" class="swiper-wrapper" style="align-items: end;"></div>
+           </div>
+           <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
+            <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
+         </div>
+        </div>
+      </div>
+     <div class="tab-contentBG">
+        <div id="tabs-content" class="tabs-content"></div>
+      </div>
+    </section>
   </div>`;
-
-  let tabsInner = `<section class="tabs">
-  <div id="tabs-title">
-    <div class="tabs-nav">
-     <div class="swiper-container swiper-tabs-container">
-       <div class="swiper-tabs swiper-all">
-         <div id="paths-sliders" class="swiper-wrapper" style="align-items: end;"></div>
-       </div>
-       <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
-        <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
-       </div>
-      </div>
-      </div>
-      <div class="tab-contentBG">
-    <div id="tabs-content" class="tabs-content"></div>
-  </div>
-</section>`
 
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", tabsText);
-  let tabsWrapper = document.getElementsByClassName("tabs-top");
-  console.log(tabsWrapper);
-
-  tabsWrapper.item(0).insertAdjacentHTML("beforeend", tabsInner);
-
-  let filteredPaths = [];
-  console.log(filteredPaths);
-
-
-  let catalogCourses = document.getElementById("catalog-courses");
-  let courses = catalogCourses.children;
-
-
 
   let tabsNav = document.getElementById("paths-sliders");
 
+  let catalogCourses = document.getElementById("catalog-courses");
 
+  let courses = catalogCourses.children;
 
+  let filteredPaths = [];
+  console.log(filteredPaths);
 
   for (let i = 0; i < courses.length; i++) {
     if (
