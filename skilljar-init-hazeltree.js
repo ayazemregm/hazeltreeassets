@@ -315,10 +315,7 @@ function tabs() {
     }
 
 
-    tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
-    document
-      .getElementById("tabs-content")
-      .insertAdjacentHTML("afterbegin", tabTemplate);
+
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
@@ -470,9 +467,18 @@ function tabs() {
           },
         });
         allcourseswiper.push(swiper);
+        console.log(orderedPaths);
+
 
         if (i === filteredPaths.length) {
-          console.log(orderedPaths);
+
+          orderedPaths.forEach(() => {
+            tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
+            document
+              .getElementById("tabs-content")
+              .insertAdjacentHTML("afterbegin", tabTemplate);
+          })
+
           document.body.style = "visibility:visible";
           if (window.location.href.includes("?=paths")) {
             let catalogContent = document.getElementById("catalog-content");
