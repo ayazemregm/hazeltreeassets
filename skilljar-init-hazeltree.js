@@ -467,9 +467,9 @@ async function tabs() {
 
 
 
+        document.body.style = "visibility:visible";
         if (i === filteredPaths.length) {
 
-          document.body.style = "visibility:visible";
           if (window.location.href.includes("?=paths")) {
             let catalogContent = document.getElementById("catalog-content");
             let offset = catalogContent.getBoundingClientRect().top;
