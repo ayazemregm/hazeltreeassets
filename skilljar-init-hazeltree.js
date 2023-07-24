@@ -334,7 +334,6 @@ function tabs() {
           console.log(pathCourses);
 
           if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
-            orderedPaths[i - 1] = elBtnTemplate;
 
             for (let k = 0; k < pathCourses.children.length; k++) {
               let tabSliders = document.getElementById(`tab-sliders${i}`);
