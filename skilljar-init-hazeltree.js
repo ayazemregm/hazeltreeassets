@@ -251,31 +251,28 @@ function tabs() {
         <p style="font-size:1.125rem;">Find courses grouped by product type and user role in these tailored Learning Paths.</p>
       </div>
     </div>
-    <section class="tabs">
-      <div id="tabs-title">
-        <div class="tabs-nav">
-         <div class="swiper-container swiper-tabs-container">
-           <div class="swiper-tabs swiper-all">
-             <div id="paths-sliders" class="swiper-wrapper" style="align-items: end;"></div>
-           </div>
-           <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
-            <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
-         </div>
-        </div>
-      </div>
-     <div class="tab-contentBG">
-        <div id="tabs-content" class="tabs-content"></div>
-      </div>
-    </section>
+    
   </div>`;
+
+  let tabsInnerSection = `<section class="tabs">
+  <div id="tabs-title">
+    <div class="tabs-nav">
+     <div class="swiper-container swiper-tabs-container">
+       <div class="swiper-tabs swiper-all">
+         <div id="paths-sliders" class="swiper-wrapper" style="align-items: end;"></div>
+       </div>
+       <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
+        <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
+     </div>
+    </div>
+  </div>
+ <div class="tab-contentBG">
+    <div id="tabs-content" class="tabs-content"></div>
+  </div>
+</section>`;
 
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", tabsTop);
-
-  let tabsInner = document.querySelector(".tabs-top");
-  tabsInner.insertAdjacentHTML("beforeend", "afdsd");
-
-  let tabsNav = document.getElementById("paths-sliders");
 
   let catalogCourses = document.getElementById("catalog-courses");
 
@@ -295,7 +292,10 @@ function tabs() {
   }
 
   if (filteredPaths.length > 0) {
+    let tabsInner = document.querySelector(".tabs-top");
+    tabsInner.insertAdjacentHTML("beforeend", tabsInnerSection);
 
+    let tabsNav = document.getElementById("paths-sliders");
 
     for (let i = 1; i <= filteredPaths.length; i++) {
       let tabTemplate = `  
