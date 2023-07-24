@@ -498,6 +498,7 @@ function tabs() {
       learningPaths.insertAdjacentHTML("beforeend", "You do not have any learning paths available");
 
     }
+    document.body.style = "visibility:visible";
   }
 }
 // footer
