@@ -277,7 +277,6 @@ function tabs() {
   let catalogCourses = document.getElementById("catalog-courses");
 
   let courses = catalogCourses.children;
-
   let tabsInner = document.querySelector(".tabs-top");
   tabsInner.insertAdjacentHTML("beforeend", tabsInnerSection);
 
