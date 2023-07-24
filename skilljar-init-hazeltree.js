@@ -290,8 +290,12 @@ function tabs() {
       filteredPaths.push(clonedItem);
     }
   }
-  for (let i = 1; i <= filteredPaths.length; i++) {
-    let tabTemplate = `  
+
+  if (filteredPaths.length > 0) {
+
+
+    for (let i = 1; i <= filteredPaths.length; i++) {
+      let tabTemplate = `  
     <!-- Slider main container -->
     <div class="swiper-container swiper-container${i}">
       <div class="swiper${i} swiper-all">
@@ -302,186 +306,194 @@ function tabs() {
       <div class="swiper-button-next${i} swiper-button-next swiper-button-next-all"></div>
     </div>`;
 
-    let tab = filteredPaths[i - 1].children.item(2).innerHTML;
-    let tabSwiperEl = document.createElement("div");
-    tabSwiperEl.classList.add("swiper-slide");
+      let tab = filteredPaths[i - 1].children.item(2).innerHTML;
+      let tabSwiperEl = document.createElement("div");
+      tabSwiperEl.classList.add("swiper-slide");
 
-    let elBtnTemplate = document.createElement("div");
-    elBtnTemplate.classList.add("swiper-slide");
-    elBtnTemplate.innerHTML = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button>`;
+      let elBtnTemplate = document.createElement("div");
+      elBtnTemplate.classList.add("swiper-slide");
+      elBtnTemplate.innerHTML = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button>`;
 
-    if (i === 1) {
-      elBtnTemplate.innerHTML = `<button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button>`;
-    }
+      if (i === 1) {
+        elBtnTemplate.innerHTML = `<button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button>`;
+      }
 
-    let axiosUrl = `${filteredPaths[i - 1].href}`;
-    // console.log(filteredPaths);
-    axios
-      .get(axiosUrl)
-      .then((e) => {
-        console.log(i);
-        let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
-        let pathCourses = parsedDom.getElementById("catalog-courses");
-        console.log(pathCourses);
+      let axiosUrl = `${filteredPaths[i - 1].href}`;
+      // console.log(filteredPaths);
+      axios
+        .get(axiosUrl)
+        .then((e) => {
+          console.log(i);
+          let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
+          let pathCourses = parsedDom.getElementById("catalog-courses");
+          console.log(pathCourses);
 
-        if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
-          tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i - 1]);
-          document
-            .getElementById("tabs-content")
-            .insertAdjacentHTML("afterbegin", tabTemplate);
+          if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
+            tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i - 1]);
+            document
+              .getElementById("tabs-content")
+              .insertAdjacentHTML("afterbegin", tabTemplate);
 
-          for (let k = 0; k < pathCourses.children.length; k++) {
-            let tabSliders = document.getElementById(`tab-sliders${i}`);
+            for (let k = 0; k < pathCourses.children.length; k++) {
+              let tabSliders = document.getElementById(`tab-sliders${i}`);
 
-            let courseNode = pathCourses.children[k];
+              let courseNode = pathCourses.children[k];
 
-            let courseNodeEl = document.createElement("div");
-            courseNodeEl.classList.add("swiper-slide");
+              let courseNodeEl = document.createElement("div");
+              courseNodeEl.classList.add("swiper-slide");
 
-            let dataCourse = allCourses.filter((e) => {
-              if (
-                !e.classList.contains("not-found") && !courseNode.classList.contains("search-only") &&
-                e.dataset["type"] == "-c" &&
-                e.dataset.course == courseNode.dataset.course
-              ) {
-                return e;
+              let dataCourse = allCourses.filter((e) => {
+                if (
+                  !e.classList.contains("not-found") && !courseNode.classList.contains("search-only") &&
+                  e.dataset["type"] == "-c" &&
+                  e.dataset.course == courseNode.dataset.course
+                ) {
+                  return e;
+                }
+              });
+              if (dataCourse[0]) {
+                dataCourse[0].children.item(1).firstChild.attributes[0].nodeValue =
+                  dataCourse[0].children.item(1).firstChild.attributes[1].nodeValue;
+                let cloneNode = dataCourse[0].cloneNode(true);
+                courseNodeEl.appendChild(cloneNode);
+                tabSliders.insertAdjacentElement("beforeend", courseNodeEl);
               }
+            }
+
+            const swiper = new Swiper(`.swiper${i}`, {
+              centerInsufficientSlides: true,
+              initialSlide: 0,
+
+              loop: false,
+              navigation: {
+                nextEl: `.swiper-button-next${i}`,
+                prevEl: `.swiper-button-prev${i}`,
+              },
+              slidesPerView: 5,
+              spaceBetween: 0,
+              breakpoints: {
+                "@0.00": {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                "@0.75": {
+                  slidesPerView: 2,
+                  spaceBetween: 30,
+                },
+                "@1.00": {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
+                },
+                "@1.50": {
+                  slidesPerView: 4,
+                  spaceBetween: 50,
+                },
+              },
             });
-            if (dataCourse[0]) {
-              dataCourse[0].children.item(1).firstChild.attributes[0].nodeValue =
-                dataCourse[0].children.item(1).firstChild.attributes[1].nodeValue;
-              let cloneNode = dataCourse[0].cloneNode(true);
-              courseNodeEl.appendChild(cloneNode);
-              tabSliders.insertAdjacentElement("beforeend", courseNodeEl);
+
+
+            allcourseswiper.push(swiper);
+
+          }
+        })
+        .catch(function (error) {
+          if (i === filteredPaths.length) {
+
+            if (window.location.href.includes("?=paths")) {
+              let catalogContent = document.getElementById("catalog-content");
+              let offset = catalogContent.getBoundingClientRect().top;
+              window.scrollTo({ top: offset - 150, behavior: "instant" });
+
+            } else if (window.location.href.includes("?=courses")) {
+              let catalogContent = document.getElementById("courseTitle");
+              let offset = catalogContent.getBoundingClientRect().top;
+              window.scrollTo({ top: offset, behavior: "instant" });
             }
           }
+          console.log(error);
+        })
+        .finally(function () {
+          let container = document.querySelector(`.swiper-container${i}`);
 
-          const swiper = new Swiper(`.swiper${i}`, {
+          if (i !== 1 && container) {
+            container.style = "display: none";
+          }
+          if (document.getElementById(`pathTab${i}`)) {
+
+            let tab = document.getElementById(`pathTab${i}`)
+
+            tab.addEventListener("click", () => {
+              let tabContent = document.getElementById("tabs-content");
+              for (let s = 0; s < tabContent.children.length; s++) {
+                tabContent.children.item(s).style = "display:none";
+                let pathsliders = document.getElementById(`paths-sliders`)
+                for (let p = 0; p < pathsliders.children.length; p++) {
+                  pathsliders.children.item(p).children.item(0).classList.remove("tab-nav-item-active");
+                }
+              }
+              document
+                .getElementById(`pathTab${i}`)
+                .classList.add("tab-nav-item-active");
+              document.querySelector(`.swiper-container${i}`).style =
+                "display: block";
+            });
+
+          }
+          const swiper = new Swiper(".swiper-tabs", {
             centerInsufficientSlides: true,
-            initialSlide: 0,
 
-            loop: false,
             navigation: {
-              nextEl: `.swiper-button-next${i}`,
-              prevEl: `.swiper-button-prev${i}`,
+              nextEl: ".swiper-button-next-paths",
+              prevEl: ".swiper-button-prev-paths",
             },
-            slidesPerView: 5,
+            slidesPerView: 7,
             spaceBetween: 0,
             breakpoints: {
               "@0.00": {
-                slidesPerView: 1,
+                slidesPerView: 3,
                 spaceBetween: 20,
               },
               "@0.75": {
-                slidesPerView: 2,
+                slidesPerView: 4,
                 spaceBetween: 30,
               },
               "@1.00": {
-                slidesPerView: 3,
+                slidesPerView: 5,
                 spaceBetween: 40,
               },
               "@1.50": {
-                slidesPerView: 4,
+                slidesPerView: 6,
                 spaceBetween: 50,
               },
             },
           });
-
-
           allcourseswiper.push(swiper);
 
-        }
-      })
-      .catch(function (error) {
-        if (i === filteredPaths.length) {
 
-          if (window.location.href.includes("?=paths")) {
-            let catalogContent = document.getElementById("catalog-content");
-            let offset = catalogContent.getBoundingClientRect().top;
-            window.scrollTo({ top: offset - 150, behavior: "instant" });
 
-          } else if (window.location.href.includes("?=courses")) {
-            let catalogContent = document.getElementById("courseTitle");
-            let offset = catalogContent.getBoundingClientRect().top;
-            window.scrollTo({ top: offset, behavior: "instant" });
-          }
-        }
-        console.log(error);
-      })
-      .finally(function () {
-        let container = document.querySelector(`.swiper-container${i}`);
+          if (i === filteredPaths.length) {
+            document.body.style = "visibility:visible";
+            if (window.location.href.includes("?=paths")) {
+              let catalogContent = document.getElementById("catalog-content");
+              let offset = catalogContent.getBoundingClientRect().top;
+              window.scrollTo({ top: offset - 150, behavior: "instant" });
 
-        if (i !== 1 && container) {
-          container.style = "display: none";
-        }
-        if (document.getElementById(`pathTab${i}`)) {
-
-          let tab = document.getElementById(`pathTab${i}`)
-
-          tab.addEventListener("click", () => {
-            let tabContent = document.getElementById("tabs-content");
-            for (let s = 0; s < tabContent.children.length; s++) {
-              tabContent.children.item(s).style = "display:none";
-              let pathsliders = document.getElementById(`paths-sliders`)
-              for (let p = 0; p < pathsliders.children.length; p++) {
-                pathsliders.children.item(p).children.item(0).classList.remove("tab-nav-item-active");
-              }
+            } else if (window.location.href.includes("?=courses")) {
+              let catalogContent = document.getElementById("courseTitle");
+              let offset = catalogContent.getBoundingClientRect().bottom;
+              window.scrollTo({ top: offset, behavior: "instant" });
             }
-            document
-              .getElementById(`pathTab${i}`)
-              .classList.add("tab-nav-item-active");
-            document.querySelector(`.swiper-container${i}`).style =
-              "display: block";
-          });
-
-        }
-        const swiper = new Swiper(".swiper-tabs", {
-          centerInsufficientSlides: true,
-
-          navigation: {
-            nextEl: ".swiper-button-next-paths",
-            prevEl: ".swiper-button-prev-paths",
-          },
-          slidesPerView: 7,
-          spaceBetween: 0,
-          breakpoints: {
-            "@0.00": {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            "@0.75": {
-              slidesPerView: 4,
-              spaceBetween: 30,
-            },
-            "@1.00": {
-              slidesPerView: 5,
-              spaceBetween: 40,
-            },
-            "@1.50": {
-              slidesPerView: 6,
-              spaceBetween: 50,
-            },
-          },
-        });
-        allcourseswiper.push(swiper);
 
 
-
-        if (i === filteredPaths.length) {
-          document.body.style = "visibility:visible";
-          if (window.location.href.includes("?=paths")) {
-            let catalogContent = document.getElementById("catalog-content");
-            let offset = catalogContent.getBoundingClientRect().top;
-            window.scrollTo({ top: offset - 150, behavior: "instant" });
-
-          } else if (window.location.href.includes("?=courses")) {
-            let catalogContent = document.getElementById("courseTitle");
-            let offset = catalogContent.getBoundingClientRect().bottom;
-            window.scrollTo({ top: offset, behavior: "instant" });
           }
-        }
 
-      });
+        });
+    }
+  } else {
+    let learningPaths = document.getElementById("tabs-content");
+    if (learningPaths.children.length < 1) {
+      learningPaths.insertAdjacentHTML("beforeend", "You do not have any learning paths available");
+    }
   }
 }
 // footer
