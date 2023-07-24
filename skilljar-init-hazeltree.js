@@ -325,7 +325,7 @@ function tabs() {
         console.log(pathCourses);
 
         if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
-          tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i]);
+          tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i - 1]);
           document
             .getElementById("tabs-content")
             .insertAdjacentHTML("afterbegin", tabTemplate);
