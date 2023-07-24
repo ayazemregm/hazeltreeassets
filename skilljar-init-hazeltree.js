@@ -170,12 +170,13 @@ function initializeSwiper() {
     <div class="swiper-button-next0 swiper-button-next swiper-button-next-all"></div>
 </div>`;
 
+  let catalogCourses = document.getElementById("catalog-courses");
+  let catalogContent = document.getElementById("catalog-content");
+
+  catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
   let courses = catalogCourses.children;
   let filteredCourses = [];
   console.log(filteredCourses);
-
-
-  catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
 
   for (let i = 0; i < courses.length; i++) {
     if (
@@ -190,12 +191,6 @@ function initializeSwiper() {
       allCourses.push(courses.item(i));
     }
   }
-  if (filteredCourses.length > 0) {
-
-  }
-
-  let catalogCourses = document.getElementById("catalog-courses");
-  let catalogContent = document.getElementById("catalog-content");
 
   let swiperSliders = document.querySelectorAll(".all-courses-slide");
 
@@ -498,6 +493,7 @@ function tabs() {
     let learningPaths = document.getElementById("tabs-content");
     if (learningPaths.children.length < 1) {
       learningPaths.insertAdjacentHTML("beforeend", "You do not have any learning paths available");
+
     }
   }
 }
