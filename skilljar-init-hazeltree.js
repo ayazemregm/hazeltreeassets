@@ -314,6 +314,10 @@ function tabs() {
     }
 
     let orderedList = [];
+    tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
+    document
+      .getElementById("tabs-content")
+      .insertAdjacentHTML("afterbegin", tabTemplate);
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
@@ -410,15 +414,7 @@ function tabs() {
       })
       .finally(function () {
 
-        orderedList.forEach((e) => {
-          console.log(orderedList);
-          tabsNav.insertAdjacentHTML("beforeend", e);
-          document
-            .getElementById("tabs-content")
-            .insertAdjacentHTML("afterbegin", tabTemplate);
-          console.log(e);
-
-        });
+        orderedList.forEach((e) => { console.log(e); });
         if (i !== 1) {
           document.querySelector(`.swiper-container${i}`).style =
             "display: none";
