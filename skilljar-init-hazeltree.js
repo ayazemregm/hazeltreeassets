@@ -3,7 +3,6 @@ let sourceLink = "https://ayazemregm.github.io/hazeltreeassets/";
 let allcourseswiper = [];
 
 let allCourses = [];
-let orderedPaths = [];
 
 window.addEventListener("load", () => {
 
@@ -243,6 +242,7 @@ function initializeSwiper() {
 
 // tabs
 function tabs() {
+  let promiseArray = [];
   let tabsText = `
   <div class="tabs-top">
     <div class="tabs-text-wrapper">
@@ -315,185 +315,184 @@ function tabs() {
     }
 
 
-
+    tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
+    document
+      .getElementById("tabs-content")
+      .insertAdjacentHTML("afterbegin", tabTemplate);
 
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
 
+    promiseArray.push(
+      axios
+        .get(axiosUrl)
+        .then((e) => {
+          console.log(i);
 
-    axios
-      .get(axiosUrl)
-      .then((e) => {
+          let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
+          let pathCourses = parsedDom.getElementById("catalog-courses");
+          console.log(pathCourses);
 
-        let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
-        let pathCourses = parsedDom.getElementById("catalog-courses");
-        console.log(pathCourses);
+          if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
+            orderedPaths[i - 1] = elBtnTemplate;
 
-        if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
-          orderedPaths[i - 1] = elBtnTemplate;
+            for (let k = 0; k < pathCourses.children.length; k++) {
+              let tabSliders = document.getElementById(`tab-sliders${i}`);
 
-          for (let k = 0; k < pathCourses.children.length; k++) {
-            let tabSliders = document.getElementById(`tab-sliders${i}`);
+              let courseNode = pathCourses.children[k];
 
-            let courseNode = pathCourses.children[k];
+              let courseNodeEl = document.createElement("div");
+              courseNodeEl.classList.add("swiper-slide");
 
-            let courseNodeEl = document.createElement("div");
-            courseNodeEl.classList.add("swiper-slide");
-
-            let dataCourse = allCourses.filter((e) => {
-              if (
-                !e.classList.contains("not-found") && !courseNode.classList.contains("search-only") &&
-                e.dataset["type"] == "-c" &&
-                e.dataset.course == courseNode.dataset.course
-              ) {
-                return e;
+              let dataCourse = allCourses.filter((e) => {
+                if (
+                  !e.classList.contains("not-found") && !courseNode.classList.contains("search-only") &&
+                  e.dataset["type"] == "-c" &&
+                  e.dataset.course == courseNode.dataset.course
+                ) {
+                  return e;
+                }
+              });
+              if (dataCourse[0]) {
+                dataCourse[0].children.item(1).firstChild.attributes[0].nodeValue =
+                  dataCourse[0].children.item(1).firstChild.attributes[1].nodeValue;
+                let cloneNode = dataCourse[0].cloneNode(true);
+                courseNodeEl.appendChild(cloneNode);
+                tabSliders.insertAdjacentElement("beforeend", courseNodeEl);
               }
+            }
+
+            const swiper = new Swiper(`.swiper${i}`, {
+              centerInsufficientSlides: true,
+              initialSlide: 0,
+
+              loop: false,
+              navigation: {
+                nextEl: `.swiper-button-next${i}`,
+                prevEl: `.swiper-button-prev${i}`,
+              },
+              slidesPerView: 5,
+              spaceBetween: 0,
+              breakpoints: {
+                "@0.00": {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                "@0.75": {
+                  slidesPerView: 2,
+                  spaceBetween: 30,
+                },
+                "@1.00": {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
+                },
+                "@1.50": {
+                  slidesPerView: 4,
+                  spaceBetween: 50,
+                },
+              },
             });
-            if (dataCourse[0]) {
-              dataCourse[0].children.item(1).firstChild.attributes[0].nodeValue =
-                dataCourse[0].children.item(1).firstChild.attributes[1].nodeValue;
-              let cloneNode = dataCourse[0].cloneNode(true);
-              courseNodeEl.appendChild(cloneNode);
-              tabSliders.insertAdjacentElement("beforeend", courseNodeEl);
+
+
+            allcourseswiper.push(swiper);
+
+          }
+        })
+        .catch(function (error) {
+          if (i === filteredPaths.length) {
+
+            if (window.location.href.includes("?=paths")) {
+              let catalogContent = document.getElementById("catalog-content");
+              let offset = catalogContent.getBoundingClientRect().top;
+              window.scrollTo({ top: offset - 150, behavior: "instant" });
+
+            } else if (window.location.href.includes("?=courses")) {
+              let catalogContent = document.getElementById("courseTitle");
+              let offset = catalogContent.getBoundingClientRect().top;
+              window.scrollTo({ top: offset, behavior: "instant" });
             }
           }
+          console.log(error);
+        })
+        .finally(function () {
 
-          const swiper = new Swiper(`.swiper${i}`, {
+
+          if (i !== 1) {
+            document.querySelector(`.swiper-container${i}`).style =
+              "display: none";
+          }
+          if (document.getElementById(`pathTab${i}`)) {
+
+            let tab = document.getElementById(`pathTab${i}`)
+
+            tab.addEventListener("click", () => {
+              let tabContent = document.getElementById("tabs-content");
+              for (let s = 0; s < tabContent.children.length; s++) {
+                tabContent.children.item(s).style = "display:none";
+                let pathsliders = document.getElementById(`paths-sliders`)
+                for (let p = 0; p < pathsliders.children.length; p++) {
+                  pathsliders.children.item(p).children.item(0).classList.remove("tab-nav-item-active");
+                }
+              }
+              document
+                .getElementById(`pathTab${i}`)
+                .classList.add("tab-nav-item-active");
+              document.querySelector(`.swiper-container${i}`).style =
+                "display: block";
+            });
+
+          }
+          const swiper = new Swiper(".swiper-tabs", {
             centerInsufficientSlides: true,
-            initialSlide: 0,
 
-            loop: false,
             navigation: {
-              nextEl: `.swiper-button-next${i}`,
-              prevEl: `.swiper-button-prev${i}`,
+              nextEl: ".swiper-button-next-paths",
+              prevEl: ".swiper-button-prev-paths",
             },
-            slidesPerView: 5,
+            slidesPerView: 7,
             spaceBetween: 0,
             breakpoints: {
               "@0.00": {
-                slidesPerView: 1,
+                slidesPerView: 3,
                 spaceBetween: 20,
               },
               "@0.75": {
-                slidesPerView: 2,
+                slidesPerView: 4,
                 spaceBetween: 30,
               },
               "@1.00": {
-                slidesPerView: 3,
+                slidesPerView: 5,
                 spaceBetween: 40,
               },
               "@1.50": {
-                slidesPerView: 4,
+                slidesPerView: 6,
                 spaceBetween: 50,
               },
             },
           });
-
-
           allcourseswiper.push(swiper);
-
-        }
-      })
-      .catch(function (error) {
-        if (i === filteredPaths.length) {
-
-          if (window.location.href.includes("?=paths")) {
-            let catalogContent = document.getElementById("catalog-content");
-            let offset = catalogContent.getBoundingClientRect().top;
-            window.scrollTo({ top: offset - 150, behavior: "instant" });
-
-          } else if (window.location.href.includes("?=courses")) {
-            let catalogContent = document.getElementById("courseTitle");
-            let offset = catalogContent.getBoundingClientRect().top;
-            window.scrollTo({ top: offset, behavior: "instant" });
-          }
-        }
-        console.log(error);
-      })
-      .finally(function () {
+          console.log(orderedPaths);
 
 
-        if (i !== 1) {
-          document.querySelector(`.swiper-container${i}`).style =
-            "display: none";
-        }
-        if (document.getElementById(`pathTab${i}`)) {
+          if (i === filteredPaths.length) {
 
-          let tab = document.getElementById(`pathTab${i}`)
+            document.body.style = "visibility:visible";
+            if (window.location.href.includes("?=paths")) {
+              let catalogContent = document.getElementById("catalog-content");
+              let offset = catalogContent.getBoundingClientRect().top;
+              window.scrollTo({ top: offset - 150, behavior: "instant" });
 
-          tab.addEventListener("click", () => {
-            let tabContent = document.getElementById("tabs-content");
-            for (let s = 0; s < tabContent.children.length; s++) {
-              tabContent.children.item(s).style = "display:none";
-              let pathsliders = document.getElementById(`paths-sliders`)
-              for (let p = 0; p < pathsliders.children.length; p++) {
-                pathsliders.children.item(p).children.item(0).classList.remove("tab-nav-item-active");
-              }
+            } else if (window.location.href.includes("?=courses")) {
+              let catalogContent = document.getElementById("courseTitle");
+              let offset = catalogContent.getBoundingClientRect().bottom;
+              window.scrollTo({ top: offset, behavior: "instant" });
             }
-            document
-              .getElementById(`pathTab${i}`)
-              .classList.add("tab-nav-item-active");
-            document.querySelector(`.swiper-container${i}`).style =
-              "display: block";
-          });
-
-        }
-        const swiper = new Swiper(".swiper-tabs", {
-          centerInsufficientSlides: true,
-
-          navigation: {
-            nextEl: ".swiper-button-next-paths",
-            prevEl: ".swiper-button-prev-paths",
-          },
-          slidesPerView: 7,
-          spaceBetween: 0,
-          breakpoints: {
-            "@0.00": {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            "@0.75": {
-              slidesPerView: 4,
-              spaceBetween: 30,
-            },
-            "@1.00": {
-              slidesPerView: 5,
-              spaceBetween: 40,
-            },
-            "@1.50": {
-              slidesPerView: 6,
-              spaceBetween: 50,
-            },
-          },
-        });
-        allcourseswiper.push(swiper);
-        console.log(orderedPaths);
-
-
-        if (i === filteredPaths.length) {
-
-          orderedPaths.forEach(() => {
-            tabsNav.insertAdjacentHTML("beforeend", elBtnTemplate);
-            document
-              .getElementById("tabs-content")
-              .insertAdjacentHTML("afterbegin", tabTemplate);
-          })
-
-          document.body.style = "visibility:visible";
-          if (window.location.href.includes("?=paths")) {
-            let catalogContent = document.getElementById("catalog-content");
-            let offset = catalogContent.getBoundingClientRect().top;
-            window.scrollTo({ top: offset - 150, behavior: "instant" });
-
-          } else if (window.location.href.includes("?=courses")) {
-            let catalogContent = document.getElementById("courseTitle");
-            let offset = catalogContent.getBoundingClientRect().bottom;
-            window.scrollTo({ top: offset, behavior: "instant" });
           }
-        }
 
-      });
+        }));
   }
+
+  Promise.all(promiseArray).then(() => { console.log("promises worked"); });
 }
 // footer
 function footer() {
