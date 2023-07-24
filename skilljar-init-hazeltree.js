@@ -281,7 +281,7 @@ function tabs() {
   let tabsWrapper = document.getElementsByClassName("tabs-top");
   console.log(tabsWrapper);
 
-  // tabsWrapper.insertAdjacentHTML("beforeend", tabsInner);
+  tabsWrapper.item(0).insertAdjacentHTML("beforeend", tabsInner);
 
   let filteredPaths = [];
   console.log(filteredPaths);
