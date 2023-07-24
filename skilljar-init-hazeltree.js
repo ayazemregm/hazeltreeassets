@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
   }
 
   let header = document.getElementById("header-right");
-  if (header) {
+  if (header & window.location.pathname.includes("login")) {
     document.head.insertAdjacentHTML("beforeend", `<style>#header-right{display: flex;align-items: center;} .headerheight{height:unset !important;}</style>`);
     let template = `<a style="padding-right: 20px; color: white;" href="/?=paths">Learning Paths</a>
     <a style="padding-right: 20px; color: white;" href="/?=courses">All Courses</a>`;
