@@ -289,7 +289,12 @@ function tabs() {
       filteredPaths.push(clonedItem);
     }
   }
-  let promiseChain = new Promise();
+  let promiseChain = new Promise(function (resolve, reject) {
+    console.log("resolved");
+    resolve(1);
+  });
+
+
   for (let i = 1; i <= filteredPaths.length; i++) {
     let tabTemplate = `  
     <!-- Slider main container -->
@@ -318,6 +323,7 @@ function tabs() {
     let axiosUrl = `${filteredPaths[i - 1].href}`;
     // console.log(filteredPaths);
     promiseChain.then(() => {
+      console.log("resolving");
       axios
         .get(axiosUrl)
         .then((e) => {
@@ -491,6 +497,8 @@ function tabs() {
         });
     });
   }
+
+
 }
 // footer
 function footer() {
