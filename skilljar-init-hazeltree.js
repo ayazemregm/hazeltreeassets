@@ -389,7 +389,7 @@ function tabs() {
 
           allcourseswiper.push(swiper);
 
-        } else if (pathCourses !== null) {
+        } else if (pathCourses == null) {
           console.log("removing");
           let emptyPath = document.getElementById(`pathTab${i}`);
           let parent = emptyPath.parentElement.remove();
