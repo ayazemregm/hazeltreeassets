@@ -172,8 +172,8 @@ function initializeSwiper() {
 
   let catalogCourses = document.getElementById("catalog-courses");
   let catalogContent = document.getElementById("catalog-content");
-
   catalogContent.insertAdjacentHTML("beforeend", swiperTemplate);
+
   let courses = catalogCourses.children;
   let filteredCourses = [];
   console.log(filteredCourses);
@@ -192,52 +192,57 @@ function initializeSwiper() {
     }
   }
 
-  let swiperSliders = document.querySelectorAll(".all-courses-slide");
+  if (filteredCourses.length > 0) {
+    let swiperSliders = document.querySelectorAll(".all-courses-slide");
 
-  for (let i = 0; i < filteredCourses.length; i++) {
-    let courseNode = filteredCourses[i].cloneNode(true);
+    for (let i = 0; i < filteredCourses.length; i++) {
+      let courseNode = filteredCourses[i].cloneNode(true);
 
-    swiperSliders.item(i).appendChild(courseNode);
+      swiperSliders.item(i).appendChild(courseNode);
+    }
+
+    const swiper = new Swiper(".swiper", {
+
+      on: {
+        activeIndexChange: function fireResize() {
+          console.log("swiperfired");
+          window.dispatchEvent(new Event('resize'));
+        }
+      },
+      initialSlide: 0,
+      // centerInsufficientSlides: true,
+
+      navigation: {
+        nextEl: ".swiper-button-next0",
+        prevEl: ".swiper-button-prev0",
+      },
+      slidesPerView: 5,
+      spaceBetween: 0,
+      breakpoints: {
+        "@0.00": {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        "@0.75": {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        "@1.00": {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        "@1.50": {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
+
+    allcourseswiper.push(swiper);
+  } else {
+    catalogContent.insertAdjacentHTML("beforeend", `<p style="font-size:1.125rem; padding-left:5rem;">You do not have any courses available</p>`);
+    document.body.style = "visibility:visible";
   }
-
-  const swiper = new Swiper(".swiper", {
-
-    on: {
-      activeIndexChange: function fireResize() {
-        console.log("swiperfired");
-        window.dispatchEvent(new Event('resize'));
-      }
-    },
-    initialSlide: 0,
-    // centerInsufficientSlides: true,
-
-    navigation: {
-      nextEl: ".swiper-button-next0",
-      prevEl: ".swiper-button-prev0",
-    },
-    slidesPerView: 5,
-    spaceBetween: 0,
-    breakpoints: {
-      "@0.00": {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      "@0.75": {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      "@1.00": {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-      "@1.50": {
-        slidesPerView: 4,
-        spaceBetween: 50,
-      },
-    },
-  });
-
-  allcourseswiper.push(swiper);
 }
 
 // tabs
