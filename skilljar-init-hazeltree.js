@@ -4,6 +4,8 @@ let allcourseswiper = [];
 
 let allCourses = [];
 
+let promiseCount = 0;
+
 window.addEventListener("load", () => {
 
   defaultActions();
@@ -425,6 +427,7 @@ function tabs() {
           console.log(error);
         })
         .finally(function () {
+          promiseCount++;
           let container = document.querySelector(`.swiper-container${i}`);
 
           if (i !== 1 && container) {
@@ -485,17 +488,17 @@ function tabs() {
             },
           });
           allcourseswiper.push(swiper);
-          if (i === filteredPaths.length) {
+          if (promiseCount === filteredPaths.length) {
 
 
-            try {
-              let currTabs = document.getElementById("paths-sliders");
-              console.log(currTabs);
-              console.log(currTabs.children.item(0).children.item(0));
-              currTabs.children.item(0).children.item(0).click();
-            } catch (error) {
-              console.log(error);
-            }
+
+            let currTabs = document.getElementById("paths-sliders");
+            console.log(currTabs);
+            console.log(currTabs.children.item(0).children.item(0));
+            currTabs.children.item(0).children.item(0).click();
+
+
+
 
 
             document.body.style = "visibility:visible";
