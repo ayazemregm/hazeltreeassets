@@ -334,11 +334,11 @@ function tabs() {
       }
       if (filteredPaths[i - 1].children.item(5).innerText.trim() !== "0 Courses") {
         console.log(filteredPaths[i - 1].children.item(5).innerText.trim());
+        tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i - 1]);
+        document
+          .getElementById("tabs-content")
+          .insertAdjacentHTML("afterbegin", tabTemplate);
       }
-      tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i - 1]);
-      document
-        .getElementById("tabs-content")
-        .insertAdjacentHTML("afterbegin", tabTemplate);
       let axiosUrl = `${filteredPaths[i - 1].href}`;
 
       axios
