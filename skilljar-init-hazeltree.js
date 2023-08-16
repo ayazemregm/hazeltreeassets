@@ -278,10 +278,10 @@ function tabs() {
         <div id="tabs-title">
             <div class="tabs-nav">
                 <div class="swiper-container swiper-tabs-container">
+                <div class="swiper-pagination-paths"></div>
                     <div class="swiper-tabs swiper-all">
                         <div id="paths-sliders" class="swiper-wrapper" style="align-items: end;"></div>
                     </div>
-                    <div class="swiper-pagination-paths"></div>
                     <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
                     <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
                 </div>
@@ -325,6 +325,7 @@ function tabs() {
         <div id="tab-sliders${i}" class="swiper-wrapper">
         </div>
       </div>
+      <div class="swiper-pagination-paths-inner"></div>
       <div class="swiper-button-prev${i} swiper-button-prev swiper-button-prev-all"></div>
       <div class="swiper-button-next${i} swiper-button-next swiper-button-next-all"></div>
     </div>`;
@@ -391,6 +392,10 @@ function tabs() {
               },
               pagination: {
                 el: '.swiper-pagination-paths',
+                type: 'bullets',
+              },
+              pagination: {
+                el: '.swiper-pagination-paths-inner',
                 type: 'bullets',
               },
               slidesPerView: 5,

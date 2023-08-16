@@ -345,11 +345,13 @@ footer {
     flex-direction: row;
     justify-content: center;
     margin: 5px 0;
-
   }
 
-  .swiper-pagination-bullet {
-    background: white;
+  .swiper-pagination-paths-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px 0;
   }
 
   .swiper-pagination-bullet-active {
