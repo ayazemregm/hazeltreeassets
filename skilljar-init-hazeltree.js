@@ -229,6 +229,7 @@ function initializeSwiper() {
       pagination: {
         el: '.swiper-pagination-all',
         type: 'bullets',
+        clickable: true
       },
       slidesPerView: 5,
       spaceBetween: 0,
@@ -325,7 +326,7 @@ function tabs() {
         <div id="tab-sliders${i}" class="swiper-wrapper">
         </div>
       </div>
-      <div class="swiper-pagination-paths-inner"></div>
+      <div class="swiper-pagination-paths-inner${i}"></div>
       <div class="swiper-button-prev${i} swiper-button-prev swiper-button-prev-all"></div>
       <div class="swiper-button-next${i} swiper-button-next swiper-button-next-all"></div>
     </div>`;
@@ -385,13 +386,14 @@ function tabs() {
               centerInsufficientSlides: true,
               initialSlide: 0,
 
+
               loop: false,
               navigation: {
                 nextEl: `.swiper-button-next${i}`,
                 prevEl: `.swiper-button-prev${i}`,
               },
               pagination: {
-                el: '.swiper-pagination-paths-inner',
+                el: `.swiper - pagination - paths - inner${i}`,
                 type: 'bullets',
               },
               slidesPerView: 5,
@@ -439,7 +441,7 @@ function tabs() {
         })
         .finally(function () {
           promiseCount++;
-          let container = document.querySelector(`.swiper-container${i}`);
+          let container = document.querySelector(`.swiper - container${i}`);
 
           if (i !== 1 && container) {
             container.style = "display: none";
@@ -452,7 +454,7 @@ function tabs() {
               let tabContent = document.getElementById("tabs-content");
               for (let s = 0; s < tabContent.children.length; s++) {
                 tabContent.children.item(s).style = "display:none";
-                let pathsliders = document.getElementById(`paths-sliders`)
+                let pathsliders = document.getElementById(`paths - sliders`)
                 for (let p = 0; p < pathsliders.children.length; p++) {
                   if (pathsliders.children.item(p).children.item(0).id !== `pathTab${i}`) {
                     pathsliders.children.item(p).children.item(0).classList.remove("tab-nav-item-active");
@@ -461,7 +463,7 @@ function tabs() {
                   }
                 }
               }
-              let tabSwiper = document.querySelector(`.swiper-container${i}`);
+              let tabSwiper = document.querySelector(`.swiper - container${i}`);
               console.log(tabSwiper);
               tabSwiper.style = "display:block";
 
@@ -537,7 +539,7 @@ function tabs() {
   } else {
     let learningPaths = document.getElementById("tabs-content");
     if (learningPaths.children.length < 1) {
-      learningPaths.insertAdjacentHTML("beforeend", `<p style="font-size:1.125rem; padding-left:5rem;">You do not have any learning paths available</p>`);
+      learningPaths.insertAdjacentHTML("beforeend", `< p style = "font-size:1.125rem; padding-left:5rem;" > You do not have any learning paths available</p > `);
 
     }
     document.querySelector(".tabs-nav").style = "visibility:hidden";
@@ -547,50 +549,50 @@ function tabs() {
 // footer
 function footer() {
   let footer = `
-     <footer id="hz-footer">
-      <div class="footer-wrapper">  
-      <div>
-        <img height="17px" width="150px" src="https://hazeltree.com/wp-content/uploads/2020/04/Hazeltree-nav-logo.png" />
-        <div>
-          <a href="mailto:webmaster@example.com">info@hazeltree.com</a>
-        </div>
-      </div>
-      <div >
-        <p>New York(HQ)</p>
-        <p>
-          150 West 30th Street, 11th FL<br>
-          New York, NY 10001<br>
-         United States<br>
-        </p>
-        <p>
-         Tel: <a href="tel:2127270883">(212) 727-0883</a>
-        </p>
-      </div>
-      <div>
-        <p>London</p>
-        <p>
-          20 North Audley Street,<br>
-          London, W1K 6WE<br>
-          United Kingdom<br>
-        </p>
-        <p>
-          Tel: <a href="tel:442081583200">44 208 158 3200</a>
-        </p>
-      </div>
-      <div>
-        <p>Hong Kong</p>
-        <p>
-        Unit 905, 9/F, Kinwick Centre, 32<br>
-        Hollywood Rd<br>
-        Central, Hong Kong<br>
-        </p>
-        <p>
-          Tel: <a href="tel:852 5808 2954">+852 5808 2954</a>
-        </p>
-      </div>
-      </div>
-    </footer>
-  `;
+              < footer id = "hz-footer" >
+                <div class="footer-wrapper">
+                  <div>
+                    <img height="17px" width="150px" src="https://hazeltree.com/wp-content/uploads/2020/04/Hazeltree-nav-logo.png" />
+                    <div>
+                      <a href="mailto:webmaster@example.com">info@hazeltree.com</a>
+                    </div>
+                  </div>
+                  <div >
+                    <p>New York(HQ)</p>
+                    <p>
+                      150 West 30th Street, 11th FL<br>
+                        New York, NY 10001<br>
+                          United States<br>
+                          </p>
+                          <p>
+                            Tel: <a href="tel:2127270883">(212) 727-0883</a>
+                          </p>
+                        </div>
+                        <div>
+                          <p>London</p>
+                          <p>
+                            20 North Audley Street,<br>
+                              London, W1K 6WE<br>
+                                United Kingdom<br>
+                                </p>
+                                <p>
+                                  Tel: <a href="tel:442081583200">44 208 158 3200</a>
+                                </p>
+                              </div>
+                              <div>
+                                <p>Hong Kong</p>
+                                <p>
+                                  Unit 905, 9/F, Kinwick Centre, 32<br>
+                                    Hollywood Rd<br>
+                                      Central, Hong Kong<br>
+                                      </p>
+                                      <p>
+                                        Tel: <a href="tel:852 5808 2954">+852 5808 2954</a>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </footer>
+                                `;
 
   let skilljarContent = document.getElementById("skilljar-content");
 
@@ -612,20 +614,20 @@ function removeHeader() {
 
 function addLoginText() {
   let template = `
-   <div>
-        <div>
-          <img src="https://cc.sj-cdn.net/instructor/1tohle0jm7gj4-hazeltree-university/themes/k9ioygic70ad/header-logo.1676544242.svg" alt="">
-              </div>
+                                <div>
+                                  <div>
+                                    <img src="https://cc.sj-cdn.net/instructor/1tohle0jm7gj4-hazeltree-university/themes/k9ioygic70ad/header-logo.1676544242.svg" alt="">
+                                  </div>
 
-              <div style="color:white;">
-                <p>Hazeltree's innovative cloud-based treasury solutions deliver enhanced transparency, liquidity,
-                  improved performance and risk mitigation.</p>
-                <div>
+                                  <div style="color:white;">
+                                    <p>Hazeltree's innovative cloud-based treasury solutions deliver enhanced transparency, liquidity,
+                                      improved performance and risk mitigation.</p>
+                                    <div>
 
-                </div>
-              </div>
-            </div>
-  `;
+                                    </div>
+                                  </div>
+                                </div>
+                                `;
   document
     .querySelectorAll(".row")[2]
     .insertAdjacentHTML("afterbegin", template);
