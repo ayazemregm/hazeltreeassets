@@ -445,7 +445,7 @@ function tabs() {
                   pathsliders.children.item(p).children.item(0).classList.remove("tab-nav-item-active");
                 }
               }
-              let tabSwiper = document.getElementById(`swiper-container${i}`);
+              let tabSwiper = document.querySelector(`.swiper-container${i}`);
               tabSwiper.style = "display:block";
 
             });
