@@ -333,15 +333,23 @@ footer {
   }
 
   .swiper-pagination-all {
-    visibility: visible;
+    visibility: visible !important;
     margin: 5px 0;
-    background: #f57f13 !important;
+
   }
 
   .swiper-pagination-paths {
-    visibility: visible;
+    visibility: visible !important;
     margin: 5px 0;
-    background: #f57f13 !important;
+
+  }
+
+  .swiper-pagination-bullet {
+    background: white;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #f57f13;
   }
 
 
