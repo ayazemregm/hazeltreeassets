@@ -474,8 +474,13 @@ function tabs() {
           const swiper = new Swiper(".swiper-tabs", {
             centerInsufficientSlides: true,
             on: {
-              activeIndexChange: function fireResize() {
+              activeIndexChange: function changePathonSlide() {
                 console.log(this.activeIndex);
+                let bullets = document.querySelector(".swiper-pagination-paths");
+                bullets.childNodes.forEach((e) => { e.classList.remove("swiper-pagination-bullet-active") });
+                bullets.childNodes.item(this.activeIndex).classList.add("swiper-pagination-bullet-active");
+                let button = document.getElementById("paths-sliders");
+                button.childNodes.item(1).childNodes.item(0).click();
               }
             },
 
