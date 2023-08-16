@@ -13,17 +13,21 @@
 label span {
   color: white;
 }
+
 #login-tab-left span,
 #login-tab-right span {
   color: orange;
   border-right: 0px;
 }
+
 #button-sign-in {
   background-color: orange;
 }
+
 #forgot-password span {
   color: white;
 }
+
 #login-content {
   border-top: 0px;
 }
@@ -31,13 +35,16 @@ label span {
 .row {
   display: flex;
 }
+
 .row .row {
   display: flex;
   flex-direction: column;
 }
+
 .white-bg {
   background-color: transparent;
 }
+
 #tabs {
   display: flex;
   justify-content: flex-end;
@@ -46,6 +53,7 @@ label span {
 .row .columns.large-6 {
   width: 100%;
 }
+
 #login-content.row:first-of-type {
   gap: 5rem;
 }
@@ -54,5 +62,10 @@ label span {
   .row {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  #acbtn,
+  #lpbtn {
+    display: none;
   }
 }

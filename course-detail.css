@@ -7,8 +7,7 @@
   height: 0;
 }
 
-.sj-page-curriculum {
-}
+.sj-page-curriculum {}
 
 .dp-summary-wrapper,
 .cp-summary-wrapper {
@@ -18,10 +17,12 @@
 .sj-text-x-of-y-lessons-completed span {
   color: #fff;
 }
+
 #resume-button a {
   color: #fff;
   background-color: #f57f13;
 }
+
 .purchase-button {
   color: #fff;
   background-color: #f57f13;
@@ -36,22 +37,27 @@
 .sj-text-available-as-part-of {
   color: #fff;
 }
+
 .inline-collapsible-section__label__icons__expand,
 .inline-collapsible-section__label__icons__collapse {
   background-color: #fff;
 }
+
 .social-media-wrapper {
   display: none;
 }
+
 .dp-summary-wrapper {
   border: unset;
 }
+
 footer {
   background-color: #100f0d;
   color: white;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
 .footer-wrapper {
   max-width: 72rem;
   margin: 0 auto;
@@ -64,6 +70,7 @@ footer {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+
   .footer-wrapper {
     flex-direction: column;
     flex-wrap: wrap;
@@ -78,8 +85,26 @@ footer {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+
   .footer-wrapper {
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768) {
+
+  .swiper-button-next-all {
+    display: none;
+  }
+
+
+  .swiper-button-prev-all {
+    display: none;
+  }
+
+  #acbtn,
+  #lpbtn {
+    display: none;
   }
 }

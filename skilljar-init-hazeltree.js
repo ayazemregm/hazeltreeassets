@@ -50,13 +50,13 @@ window.addEventListener("load", () => {
     if (window.location.hostname.includes("accounts")) {
       let link = document.getElementById("header-left").children.item(0).href;
       document.head.insertAdjacentHTML("beforeend", `<style>#header-right{display: flex;align-items: center;} .headerheight{height:unset !important;}</style>`);
-      let template = `<a style="padding-right: 20px; color: white;" href="${link}?=paths">Learning Paths</a>
-      <a style="padding-right: 20px; color: white;" href="${link}?=courses">All Courses</a>`;
+      let template = `<a id="lpbtn" style="padding-right: 20px; color: white;" href="${link}?=paths">Learning Paths</a>
+      <a id="acbtn" style="padding-right: 20px; color: white;" href="${link}?=courses">All Courses</a>`;
       header.insertAdjacentHTML("afterbegin", template);
     } else {
       document.head.insertAdjacentHTML("beforeend", `<style>#header-right{display: flex;align-items: center;} .headerheight{height:unset !important;}</style>`);
-      let template = `<a style="padding-right: 20px; color: white;" href="/?=paths">Learning Paths</a>
-      <a style="padding-right: 20px; color: white;" href="/?=courses">All Courses</a>`;
+      let template = `<a id="lpbtn" style="padding-right: 20px; color: white;" href="/?=paths">Learning Paths</a>
+      <a id="acbtn" style="padding-right: 20px; color: white;" href="/?=courses">All Courses</a>`;
       header.insertAdjacentHTML("afterbegin", template);
     }
   }
