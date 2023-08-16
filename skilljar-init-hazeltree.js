@@ -456,6 +456,37 @@ function tabs() {
             });
 
           }
+          const swiper = new Swiper(".swiper-tabs", {
+            centerInsufficientSlides: true,
+
+            navigation: {
+              nextEl: ".swiper-button-next-paths",
+              prevEl: ".swiper-button-prev-paths",
+            },
+            slidesPerView: 7,
+            spaceBetween: 0,
+            breakpoints: {
+              "@0.00": {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              "@0.75": {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+              "@1.00": {
+                slidesPerView: 5,
+                spaceBetween: 40,
+              },
+              "@1.50": {
+                slidesPerView: 6,
+                spaceBetween: 50,
+              },
+            },
+          });
+          allcourseswiper.push(swiper);
+
+
 
           if (i === filteredPaths.length) {
             document.body.style = "visibility:visible";
@@ -475,36 +506,6 @@ function tabs() {
 
         });
     }
-
-    const swiper = new Swiper(".swiper-tabs", {
-      centerInsufficientSlides: true,
-
-      navigation: {
-        nextEl: ".swiper-button-next-paths",
-        prevEl: ".swiper-button-prev-paths",
-      },
-      slidesPerView: 7,
-      spaceBetween: 0,
-      breakpoints: {
-        "@0.00": {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        "@0.75": {
-          slidesPerView: 4,
-          spaceBetween: 30,
-        },
-        "@1.00": {
-          slidesPerView: 5,
-          spaceBetween: 40,
-        },
-        "@1.50": {
-          slidesPerView: 6,
-          spaceBetween: 50,
-        },
-      },
-    });
-    allcourseswiper.push(swiper);
   } else {
     let learningPaths = document.getElementById("tabs-content");
     if (learningPaths.children.length < 1) {
