@@ -266,7 +266,7 @@ footer {
 }
 
 .swiper-button-next-paths {
-  transform: translateX(75px) scale(0.5);
+  transform: translateX(75px) scale(0.4);
   color: #f57f13;
   z-index: 1;
   top: 65%;
