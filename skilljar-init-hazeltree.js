@@ -226,6 +226,10 @@ function initializeSwiper() {
         nextEl: ".swiper-button-next0",
         prevEl: ".swiper-button-prev0",
       },
+      pagination: {
+        el: '.swiper-pagination-all',
+        type: 'bullets',
+      },
       slidesPerView: 5,
       spaceBetween: 0,
       breakpoints: {
