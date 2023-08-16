@@ -456,6 +456,7 @@ function tabs() {
             try {
               let currTabs = document.getElementById("paths-sliders");
               console.log(currTabs);
+              console.log(currTabs.children.item(0).children.item(0));
               currTabs.children.item(0).children.item(0).click();
             } catch (error) {
               console.log(error);
