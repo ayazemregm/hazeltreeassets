@@ -336,7 +336,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 5px 0;
+    margin: 3% 0;
 
   }
 
@@ -344,14 +344,14 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 5px 0;
+    margin: 3% 0;
   }
 
   .swiper-pagination-paths-inner {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 5px 0;
+    margin: 3% 0;
   }
 
   .swiper-pagination-bullet-active {
