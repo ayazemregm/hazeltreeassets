@@ -470,19 +470,19 @@ function tabs() {
             spaceBetween: 0,
             breakpoints: {
               "@0.00": {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 20,
               },
               "@0.75": {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 30,
               },
               "@1.00": {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 40,
               },
               "@1.50": {
-                slidesPerView: 5,
+                slidesPerView: 4,
                 spaceBetween: 50,
               },
             },
