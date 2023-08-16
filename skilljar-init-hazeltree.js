@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
 
   switch (end) {
     case "/":
-      console.log("landingpage");
+
       let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", catalogCss);
       if (!window.location.href.includes("?q=")) {
@@ -23,14 +23,14 @@ window.addEventListener("load", () => {
       initializeSwiper();
       break;
     case "/accounts/login/":
-      console.log("login");
+
       let loginCss = `<link rel="stylesheet" href="${sourceLink}login-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", loginCss);
       removeHeader();
       addLoginText();
       break;
     case "/accounts/signup/":
-      console.log("signup");
+
       let signUp = `<link rel="stylesheet" href="${sourceLink}login-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", signUp);
       removeHeader();
@@ -38,7 +38,7 @@ window.addEventListener("load", () => {
       document.body.style = "visibility: visible;";
       break;
     default:
-      console.log("Default Fired");
+
       document.body.style = "visibility: visible;";
       break;
   }
@@ -68,10 +68,10 @@ window.addEventListener("load", () => {
     document.head.insertAdjacentHTML("beforeend", course_detail);
     document.body.style = "visibility: visible;";
   }
-  console.log(window.location.pathname);
+
   // Search Event Listener
   let searchBox = document.getElementById("catalogSearchInput");
-  console.log(searchBox);
+
   if (window.location.href.includes("?q=")) {
     let skilljarContent = document.getElementById("skilljar-content");
     skilljarContent.style = "visibility: hidden;"
@@ -96,13 +96,13 @@ window.addEventListener("load", () => {
   }
   if (searchBox) {
     searchBox.addEventListener("input", (event) => {
-      console.log(event);
+
 
 
       let skilljarContent = document.getElementById("skilljar-content");
       skilljarContent.style = "visibility: hidden;"
       if (event.target.value === "") {
-        console.log("disablesearch");
+
         document.querySelector(".catalog-center-width").style = "display: none;"
       }
 
@@ -134,7 +134,7 @@ function defaultActions() {
   let ep_footer = document.getElementById("ep-footer");
   let lp_footer = document.getElementById("lp-footer");
   let lessonbody = document.querySelector(".sj-page-lesson");
-  console.log(lessonbody);
+
   if (ep_footer !== null && ep_footer !== undefined) {
     ep_footer.remove();
   }
@@ -184,7 +184,7 @@ function initializeSwiper() {
 
   let courses = catalogCourses.children;
   let filteredCourses = [];
-  console.log(filteredCourses);
+
 
   for (let i = 0; i < courses.length; i++) {
     if (
@@ -213,7 +213,6 @@ function initializeSwiper() {
 
       on: {
         activeIndexChange: function fireResize() {
-          console.log("swiperfired");
           window.dispatchEvent(new Event('resize'));
         }
       },
@@ -298,7 +297,6 @@ function tabs() {
   let tabsNav = document.getElementById("paths-sliders");
 
   let filteredPaths = [];
-  console.log(filteredPaths);
 
   for (let i = 0; i < courses.length; i++) {
     if (
@@ -334,23 +332,20 @@ function tabs() {
       if (i === 1) {
         elBtnTemplate.innerHTML = `<button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button>`;
       }
-      if (filteredPaths[i - 1].children.item(5).innerHTML !== "0 Courses") {
-        console.log(filteredPaths[i - 1].children.item(5).innerHTML);
+      if (filteredPaths[i - 1].children.item(5).innerText !== "0 Courses") {
+        console.log(filteredPaths[i - 1].children.item(5).innerText);
       }
       tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i - 1]);
       document
         .getElementById("tabs-content")
         .insertAdjacentHTML("afterbegin", tabTemplate);
       let axiosUrl = `${filteredPaths[i - 1].href}`;
-      // console.log(filteredPaths);
+
       axios
         .get(axiosUrl)
         .then((e) => {
-          console.log(i);
           let parsedDom = new DOMParser().parseFromString(e.data, "text/html");
           let pathCourses = parsedDom.getElementById("catalog-courses");
-          console.log(pathCourses);
-
           if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
 
             for (let k = 0; k < pathCourses.children.length; k++) {
