@@ -347,7 +347,7 @@ footer {
     margin: 3% 0;
   }
 
-  .swiper-pagination-paths-inner {
+  .swiper-all .swiper-pagination-bullets {
     display: flex;
     flex-direction: row;
     justify-content: center;
