@@ -270,6 +270,7 @@ footer {
   color: #f57f13;
   z-index: 1;
   top: 65%;
+  right: calc(100px - 1vw);
 }
 
 
@@ -278,6 +279,7 @@ footer {
   color: #f57f13;
   z-index: 1;
   top: 65%;
+  left: calc(100px - 1vw);
 }
 
 .swiper-tabs-container {
