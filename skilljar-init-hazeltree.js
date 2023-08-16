@@ -229,6 +229,7 @@ function initializeSwiper() {
       pagination: {
         el: '.swiper-pagination-all',
         type: 'bullets',
+        clickable: true
       },
       slidesPerView: 5,
       spaceBetween: 0,
