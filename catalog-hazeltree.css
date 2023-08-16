@@ -358,6 +358,9 @@ footer {
     background: #f57f13;
   }
 
+  .swiper-pagination-paths .swiper-pagination-bullet {
+    background: white;
+  }
 
   #acbtn,
   #lpbtn {
