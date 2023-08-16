@@ -175,7 +175,7 @@ function initializeSwiper() {
     <div id="course-sliders" class="swiper-wrapper">
       <!-- Slides --></div>
       </div>
-    <div class="swiper-pagination-all" style="display: flex; justify-content: center"></div>
+    <div class="swiper-pagination-all"></div>
     <!-- If we need navigation buttons -->
     <div class="swiper-button-prev0 swiper-button-prev swiper-button-prev-all"></div>
     <div class="swiper-button-next0 swiper-button-next swiper-button-next-all"></div>
@@ -281,7 +281,7 @@ function tabs() {
                     <div class="swiper-tabs swiper-all">
                         <div id="paths-sliders" class="swiper-wrapper" style="align-items: end;"></div>
                     </div>
-                    <div class="swiper-pagination-paths" style="display: flex; justify-content: center"></div>
+                    <div class="swiper-pagination-paths"></div>
                     <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
                     <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
                 </div>

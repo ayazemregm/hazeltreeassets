@@ -314,11 +314,11 @@ footer {
 }
 
 .swiper-pagination-all {
-  visibility: hidden;
+  display: none;
 }
 
 .swiper-pagination-paths {
-  visibility: hidden;
+  display: none;
 }
 
 @media only screen and (max-width: 768) {
@@ -333,13 +333,18 @@ footer {
   }
 
   .swiper-pagination-all {
-    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
     margin: 5px 0;
 
   }
 
   .swiper-pagination-paths {
-    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin: 5px 0;
 
   }
