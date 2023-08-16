@@ -332,7 +332,7 @@ function tabs() {
       if (i === 1) {
         elBtnTemplate.innerHTML = `<button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button>`;
       }
-      if (filteredPaths[i - 1].children.item(5).innerText !== "0 Courses") {
+      if (filteredPaths[i - 1].children.item(5).innerText.trim() !== "0 Courses") {
         console.log(filteredPaths[i - 1].children.item(5).innerText.trim());
       }
       tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i - 1]);
