@@ -448,6 +448,7 @@ function tabs() {
                 }
               }
               let tabSwiper = document.querySelector(`.swiper-container${i}`);
+              console.log(tabSwiper);
               tabSwiper.style = "display:block";
 
             });
