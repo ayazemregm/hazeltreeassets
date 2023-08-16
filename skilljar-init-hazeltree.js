@@ -323,7 +323,7 @@ function tabs() {
         <div id="tab-sliders${i}" class="swiper-wrapper">
         </div>
       </div>
-      <div class="swiper-pagination-paths-inner${i}" style="display: flex; flex-direction: row; justify-content: center; margin: 3% 0;"></div>
+      <div class="swiper-pagination-paths-inner${i}"></div>
       <div class="swiper-button-prev${i} swiper-button-prev swiper-button-prev-all"></div>
       <div class="swiper-button-next${i} swiper-button-next swiper-button-next-all"></div>
     </div>`;
