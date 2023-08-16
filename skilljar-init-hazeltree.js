@@ -393,7 +393,7 @@ function tabs() {
                 prevEl: `.swiper-button-prev${i}`,
               },
               pagination: {
-                el: `.swiper - pagination - paths - inner${i}`,
+                el: `.swiper-pagination-paths-inner${i}`,
                 type: 'bullets',
               },
               slidesPerView: 5,
