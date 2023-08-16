@@ -279,10 +279,10 @@ function tabs() {
         <div id="tabs-title">
             <div class="tabs-nav">
                 <div class="swiper-container swiper-tabs-container">
-                <div class="swiper-tabs swiper-all">
-                <div id="paths-sliders" class="swiper-wrapper" style="align-items: end;"></div>
-                </div>
-                <div class="swiper-pagination-paths"></div>
+                    <div class="swiper-tabs swiper-all">
+                        <div id="paths-sliders" class="swiper-wrapper" style="align-items: end;"></div>
+                    </div>
+                    <div class="swiper-pagination-paths"></div>
                     <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
                     <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
                 </div>
@@ -473,6 +473,11 @@ function tabs() {
 
           const swiper = new Swiper(".swiper-tabs", {
             centerInsufficientSlides: true,
+            on: {
+              activeIndexChange: function fireResize() {
+                console.log(this.activeIndex);
+              }
+            },
 
             navigation: {
               nextEl: ".swiper-button-next-paths",
