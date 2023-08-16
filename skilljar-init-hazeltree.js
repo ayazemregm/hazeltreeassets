@@ -15,7 +15,6 @@ window.addEventListener("load", () => {
 
   switch (end) {
     case "/":
-
       let catalogCss = `<link rel="stylesheet" href="${sourceLink}catalog-hazeltree.css">`;
       document.head.insertAdjacentHTML("beforeend", catalogCss);
       if (!window.location.href.includes("?q=")) {
@@ -98,8 +97,6 @@ window.addEventListener("load", () => {
   }
   if (searchBox) {
     searchBox.addEventListener("input", (event) => {
-
-
 
       let skilljarContent = document.getElementById("skilljar-content");
       skilljarContent.style = "visibility: hidden;"
@@ -538,7 +535,7 @@ function tabs() {
             } else if (window.location.href.includes("?=courses")) {
               let catalogContent = document.getElementById("courseTitle");
               let offset = catalogContent.getBoundingClientRect().bottom;
-              window.scrollTo({ top: offset, behavior: "instant" });
+              window.scrollTo({ top: offset + 150, behavior: "instant" });
             }
 
 
