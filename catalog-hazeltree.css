@@ -334,11 +334,13 @@ footer {
 
   .swiper-pagination-all {
     visibility: visible;
+    margin: 5px 0;
     background: #f57f13 !important;
   }
 
   .swiper-pagination-paths {
     visibility: visible;
+    margin: 5px 0;
     background: #f57f13 !important;
   }
 
