@@ -443,9 +443,8 @@ function tabs() {
                 let pathsliders = document.getElementById(`paths-sliders`)
                 for (let p = 0; p < pathsliders.children.length; p++) {
                   if (pathsliders.children.item(p).children.item(0).id !== `pathTab${i}`) {
-                    console.log(`pathTab${i}`);
+                    pathsliders.children.item(p).children.item(0).classList.remove("tab-nav-item-active");
                   }
-                  pathsliders.children.item(p).children.item(0).classList.remove("tab-nav-item-active");
                 }
               }
               let tabSwiper = document.querySelector(`.swiper-container${i}`);
