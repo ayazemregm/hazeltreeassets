@@ -477,6 +477,11 @@ function tabs() {
               nextEl: ".swiper-button-next-paths",
               prevEl: ".swiper-button-prev-paths",
             },
+
+            pagination: {
+              el: '.swiper-pagination-paths',
+              type: 'bullets',
+            },
             slidesPerView: 4,
             spaceBetween: 0,
             breakpoints: {
