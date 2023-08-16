@@ -452,7 +452,7 @@ function tabs() {
           if (i === filteredPaths.length) {
 
             try {
-              let currTabs = document.getElementById("path-sliders");
+              let currTabs = document.getElementById("paths-sliders");
               console.log(currTabs);
               currTabs.children.item(0).children.item(0).click();
             } catch (error) {
