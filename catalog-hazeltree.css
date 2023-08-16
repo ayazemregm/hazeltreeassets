@@ -317,18 +317,12 @@ footer {
 @media only screen and (max-width: 544) {
 
   .swiper-button-next-paths {
-    transform: translateX(75px) scale(0.5);
-    color: #f57f13;
-    z-index: 1;
-    top: 65%;
+    display: none;
   }
 
 
   .swiper-button-prev-paths {
-    transform: translateX(-75px) scale(0.4);
-    color: #f57f13;
-    z-index: 1;
-    top: 65%;
+    display: none;
   }
 }
 
@@ -377,18 +371,6 @@ footer {
   .catalog-center-width.one-col-full {
     width: 100%;
     padding: 0px 0px;
-  }
-
-  .swiper-button-prev {
-    transform: translateX(-75px) scale(0.8);
-    color: #f57f13;
-    z-index: 1;
-  }
-
-  .swiper-button-next {
-    transform: translateX(75px) scale(0.8);
-    color: #f57f13;
-    z-index: 1;
   }
 
 }
