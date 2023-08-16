@@ -315,11 +315,7 @@ footer {
   display: none;
 }
 
-.swiper-pagination-all {
-  display: none;
-}
-
-.swiper-pagination-paths {
+.swiper-pagination-bullets {
   display: none;
 }
 
@@ -401,9 +397,7 @@ footer {
     right: calc(100px - 3vw);
   }
 
-
   .swiper-button-prev-paths {
-
     left: calc(100px - 3vw);
   }
 }
