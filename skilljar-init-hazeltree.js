@@ -275,8 +275,8 @@ function tabs() {
                     <div class="swiper-tabs swiper-all">
                         <div id="paths-sliders" class="swiper-wrapper" style="align-items: end;"></div>
                     </div>
-                    <div class="swiper-button-prev-paths"></div>
-                    <div class="swiper-button-next-paths"></div>
+                    <div class="swiper-button-prev-paths swiper-button-prev swiper-button-prev-all"></div>
+                    <div class="swiper-button-next-paths swiper-button-next swiper-button-next-all"></div>
                 </div>
             </div>
         </div>
@@ -285,37 +285,6 @@ function tabs() {
         </div>
     </section>
 `;
-
-
-  const swiper = new Swiper(".swiper-tabs", {
-    centerInsufficientSlides: true,
-
-    navigation: {
-      nextEl: ".swiper-button-next-paths",
-      prevEl: ".swiper-button-prev-paths",
-    },
-    slidesPerView: 4,
-    spaceBetween: 0,
-    breakpoints: {
-      "@0.00": {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      "@0.75": {
-        slidesPerView: 4,
-        spaceBetween: 30,
-      },
-      "@1.00": {
-        slidesPerView: 5,
-        spaceBetween: 40,
-      },
-      "@1.50": {
-        slidesPerView: 6,
-        spaceBetween: 50,
-      },
-    },
-  });
-  allcourseswiper.push(swiper);
 
   let catalogContent = document.getElementById("catalog-content");
   catalogContent.insertAdjacentHTML("beforeend", tabsTop);
@@ -340,7 +309,6 @@ function tabs() {
       filteredPaths.push(clonedItem);
     }
   }
-
 
   if (filteredPaths.length > 0) {
     for (let i = 1; i <= filteredPaths.length; i++) {
@@ -490,7 +458,40 @@ function tabs() {
           }
 
 
+
+
           if (i === filteredPaths.length) {
+
+            const swiper = new Swiper(".swiper-tabs", {
+              centerInsufficientSlides: true,
+
+              navigation: {
+                nextEl: ".swiper-button-next-paths",
+                prevEl: ".swiper-button-prev-paths",
+              },
+              slidesPerView: 7,
+              spaceBetween: 0,
+              breakpoints: {
+                "@0.00": {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                "@0.75": {
+                  slidesPerView: 4,
+                  spaceBetween: 30,
+                },
+                "@1.00": {
+                  slidesPerView: 5,
+                  spaceBetween: 40,
+                },
+                "@1.50": {
+                  slidesPerView: 6,
+                  spaceBetween: 50,
+                },
+              },
+            });
+            allcourseswiper.push(swiper);
+
             document.body.style = "visibility:visible";
             if (window.location.href.includes("?=paths")) {
               let catalogContent = document.getElementById("catalog-content");
