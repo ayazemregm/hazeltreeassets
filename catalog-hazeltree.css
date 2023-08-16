@@ -313,6 +313,13 @@ footer {
   display: none;
 }
 
+.swiper-pagination-all {
+  display: none;
+}
+
+.swiper-pagination-paths {
+  display: none;
+}
 
 @media only screen and (max-width: 768) {
 
@@ -324,6 +331,15 @@ footer {
   .swiper-button-prev-all {
     display: none;
   }
+
+  .swiper-pagination-all {
+    background: #f57f13;
+  }
+
+  .swiper-pagination-paths {
+    background: #f57f13;
+  }
+
 
   #acbtn,
   #lpbtn {
