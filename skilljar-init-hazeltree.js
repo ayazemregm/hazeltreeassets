@@ -335,6 +335,10 @@ function tabs() {
         elBtnTemplate.innerHTML = `<button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button>`;
       }
 
+      tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i - 1]);
+      document
+        .getElementById("tabs-content")
+        .insertAdjacentHTML("afterbegin", tabTemplate);
       let axiosUrl = `${filteredPaths[i - 1].href}`;
       // console.log(filteredPaths);
       axios
@@ -346,10 +350,6 @@ function tabs() {
           console.log(pathCourses);
 
           if (pathCourses && pathCourses.children !== null && pathCourses.children.length > 0) {
-            tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i - 1]);
-            document
-              .getElementById("tabs-content")
-              .insertAdjacentHTML("afterbegin", tabTemplate);
 
             for (let k = 0; k < pathCourses.children.length; k++) {
               let tabSliders = document.getElementById(`tab-sliders${i}`);
@@ -460,37 +460,37 @@ function tabs() {
 
 
 
+          const swiper = new Swiper(".swiper-tabs", {
+            centerInsufficientSlides: true,
+
+            navigation: {
+              nextEl: ".swiper-button-next-paths",
+              prevEl: ".swiper-button-prev-paths",
+            },
+            slidesPerView: 7,
+            spaceBetween: 0,
+            breakpoints: {
+              "@0.00": {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              "@0.75": {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+              "@1.00": {
+                slidesPerView: 5,
+                spaceBetween: 40,
+              },
+              "@1.50": {
+                slidesPerView: 6,
+                spaceBetween: 50,
+              },
+            },
+          });
+          allcourseswiper.push(swiper);
           if (i === filteredPaths.length) {
 
-            const swiper = new Swiper(".swiper-tabs", {
-              centerInsufficientSlides: true,
-
-              navigation: {
-                nextEl: ".swiper-button-next-paths",
-                prevEl: ".swiper-button-prev-paths",
-              },
-              slidesPerView: 7,
-              spaceBetween: 0,
-              breakpoints: {
-                "@0.00": {
-                  slidesPerView: 3,
-                  spaceBetween: 20,
-                },
-                "@0.75": {
-                  slidesPerView: 4,
-                  spaceBetween: 30,
-                },
-                "@1.00": {
-                  slidesPerView: 5,
-                  spaceBetween: 40,
-                },
-                "@1.50": {
-                  slidesPerView: 6,
-                  spaceBetween: 50,
-                },
-              },
-            });
-            allcourseswiper.push(swiper);
 
             document.body.style = "visibility:visible";
             if (window.location.href.includes("?=paths")) {
