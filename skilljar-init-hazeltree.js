@@ -391,10 +391,6 @@ function tabs() {
                 prevEl: `.swiper-button-prev${i}`,
               },
               pagination: {
-                el: '.swiper-pagination-paths',
-                type: 'bullets',
-              },
-              pagination: {
                 el: '.swiper-pagination-paths-inner',
                 type: 'bullets',
               },
