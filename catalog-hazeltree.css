@@ -380,13 +380,13 @@ footer {
 
   .swiper-button-next-paths {
 
-    right: calc(100px - 5vw);
+    right: calc(100px - 1vw);
   }
 
 
   .swiper-button-prev-paths {
 
-    left: calc(100px - 5vw);
+    left: calc(100px - 1vw);
   }
 }
 
