@@ -329,9 +329,7 @@ function tabs() {
       elBtnTemplate.classList.add("swiper-slide");
       elBtnTemplate.innerHTML = `<button id="pathTab${i}" class="tab-nav-item">${tab}</button>`;
 
-      if (i === 1) {
-        elBtnTemplate.innerHTML = `<button id="pathTab1" class="tab-nav-item tab-nav-item-active">${tab}</button>`;
-      }
+
       if (filteredPaths[i - 1].children.item(5).innerText.trim() !== "0 Courses") {
         console.log(filteredPaths[i - 1].children.item(5).innerText.trim());
         tabsNav.insertBefore(elBtnTemplate, tabsNav.children[i - 1]);
@@ -444,6 +442,8 @@ function tabs() {
                 for (let p = 0; p < pathsliders.children.length; p++) {
                   if (pathsliders.children.item(p).children.item(0).id !== `pathTab${i}`) {
                     pathsliders.children.item(p).children.item(0).classList.remove("tab-nav-item-active");
+                  } else {
+                    pathsliders.children.item(p).children.item(0).classList.add("tab-nav-item-active");
                   }
                 }
               }
