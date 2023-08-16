@@ -466,23 +466,23 @@ function tabs() {
               nextEl: ".swiper-button-next-paths",
               prevEl: ".swiper-button-prev-paths",
             },
-            slidesPerView: 7,
+            slidesPerView: 4,
             spaceBetween: 0,
             breakpoints: {
               "@0.00": {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 20,
               },
               "@0.75": {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 30,
               },
               "@1.00": {
-                slidesPerView: 5,
+                slidesPerView: 4,
                 spaceBetween: 40,
               },
               "@1.50": {
-                slidesPerView: 6,
+                slidesPerView: 5,
                 spaceBetween: 50,
               },
             },
