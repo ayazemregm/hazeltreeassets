@@ -463,7 +463,6 @@ function tabs() {
                 }
               }
               let tabSwiper = document.querySelector(`.swiper-container${i}`);
-              console.log(tabSwiper);
               tabSwiper.style = "display:block";
 
             });
@@ -480,7 +479,7 @@ function tabs() {
                 bullets.childNodes.forEach((e) => { e.classList.remove("swiper-pagination-bullet-active") });
                 bullets.childNodes.item(this.activeIndex).classList.add("swiper-pagination-bullet-active");
                 let button = document.getElementById("paths-sliders");
-                button.childNodes.item(1).childNodes.item(0).click();
+                button.childNodes.item(this.activeIndex).childNodes.item(0).click();
               }
             },
 
