@@ -324,7 +324,7 @@ function tabs() {
     </div>`;
 
       let tab = filteredPaths[i - 1].children.item(2).innerHTML;
-      console.log(filteredPaths[i - 1].children);
+      console.log(filteredPaths[i - 1].children.item(5));
       let tabSwiperEl = document.createElement("div");
       tabSwiperEl.classList.add("swiper-slide");
 
