@@ -314,14 +314,14 @@ footer {
 }
 
 
-@media only screen and (max-width: 544) {
+@media only screen and (max-width: 768) {
 
-  .swiper-button-next-paths {
+  .swiper-button-next-all {
     display: none;
   }
 
 
-  .swiper-button-prev-paths {
+  .swiper-button-prev-all {
     display: none;
   }
 }
