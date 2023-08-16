@@ -314,11 +314,11 @@ footer {
 }
 
 .swiper-pagination-all {
-  display: none;
+  display: none !important;
 }
 
 .swiper-pagination-paths {
-  display: none;
+  display: none !important;
 }
 
 @media only screen and (max-width: 768) {
@@ -333,11 +333,11 @@ footer {
   }
 
   .swiper-pagination-all {
-    background: #f57f13;
+    background: #f57f13 !important;
   }
 
   .swiper-pagination-paths {
-    background: #f57f13;
+    background: #f57f13 !important;
   }
 
 
