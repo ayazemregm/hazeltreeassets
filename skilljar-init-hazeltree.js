@@ -394,6 +394,7 @@ function tabs() {
               pagination: {
                 el: `.swiper-pagination-paths-inner${i}`,
                 type: 'bullets',
+                clickable: true
               },
               slidesPerView: 5,
               spaceBetween: 0,
@@ -491,6 +492,7 @@ function tabs() {
             pagination: {
               el: '.swiper-pagination-paths',
               type: 'bullets',
+              clickable: true
             },
             slidesPerView: 4,
             spaceBetween: 0,
