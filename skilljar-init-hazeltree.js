@@ -324,6 +324,7 @@ function tabs() {
     </div>`;
 
       let tab = filteredPaths[i - 1].children.item(2).innerHTML;
+      console.log(filteredPaths[i - 1].children);
       let tabSwiperEl = document.createElement("div");
       tabSwiperEl.classList.add("swiper-slide");
 
@@ -456,9 +457,6 @@ function tabs() {
             });
 
           }
-
-
-
 
           const swiper = new Swiper(".swiper-tabs", {
             centerInsufficientSlides: true,
