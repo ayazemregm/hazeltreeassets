@@ -445,11 +445,9 @@ function tabs() {
                   pathsliders.children.item(p).children.item(0).classList.remove("tab-nav-item-active");
                 }
               }
-              document
-                .getElementById(`pathTab${i}`)
-                .classList.add("tab-nav-item-active");
-              document.querySelector(`.swiper-container${i}`).style =
-                "display: block";
+              let currTabs = document.getElementById(`path-sliders`);
+              currTabs.children.item(0).children.item(0).click();
+
             });
 
           }
