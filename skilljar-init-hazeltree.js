@@ -446,6 +446,7 @@ function tabs() {
                 }
               }
               let currTabs = document.getElementById(`path-sliders`);
+              console.log(currTabs.children.item(0).children.item(0));
               currTabs.children.item(0).children.item(0).click();
 
             });
